@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SaleProduct } from 'src/common-module/sale-product';
-import { MyServiceHttpService } from '../Services/my-service-http.service';
+import { MyServerHttpService } from '../Services/my-server-http-service.service';
 
 @Component({
   selector: 'app-product-sale',
@@ -11,14 +10,14 @@ import { MyServiceHttpService } from '../Services/my-service-http.service';
 })
 export class ProductSaleComponent implements OnInit {
   saleProducts!: SaleProduct[];
-  private router!: Router;
-  constructor(private MyServerHttpService: MyServiceHttpService) {
-    this.MyServerHttpService.getSaleProductList().subscribe((data: SaleProduct[]) => {
+  constructor(private myServerHttpService: MyServerHttpService, private router: Router) {
+    this.myServerHttpService.getSaleProductList().subscribe((data) => {
+      console.log(data);
       this.saleProducts = data;
     })
    }
-  addToCart(item: any){
-      this.MyServerHttpService.addToCart(item);
+  addToCart(item: SaleProduct){
+      this.myServerHttpService.addToCart(item);
       this.router.navigate(['shopping-cart']);
   }
   ngOnInit(): void {

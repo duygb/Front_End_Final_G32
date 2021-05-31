@@ -1,1 +1,21 @@
-<p>shopping-cart works!</p>
+<main>
+    <header class="container">
+        <app-cart-header [numberItems]="numberItems"></app-cart-header>
+    </header>
+    <section class="container">
+        <app-product-list   
+            [cart] = "cart" 
+            (onRemoveProduct) = "handleRemoveProduct($event)" 
+            (onUpdateQuantity) = "handleUpdateQuantity($event)">
+        </app-product-list>
+    </section>
+    <section class="container">
+        <app-pro-code
+            (onApplyPromoCode) = "handleApplyPromoCode($event)">
+        </app-pro-code>
+        <!-- ---- -->
+        <app-summary-cart 
+            [summaryCart] = "summaryCart">
+        </app-summary-cart>
+    </section>
+</main>

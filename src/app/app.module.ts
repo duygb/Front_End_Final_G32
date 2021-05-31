@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule} from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,8 +12,11 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ProductSaleComponent } from './product-sale/product-sale.component';
 import { MemberCardComponent } from './member-card/member-card.component';
+import { ProductListComponent } from './shopping-cart/product-list/product-list.component';
+import { ProCodeComponent } from './shopping-cart/pro-code/pro-code.component';
+import { SummaryCartComponent } from './shopping-cart/summary-cart/summary-cart.component';
 import { ProductSaleListComponent } from './product-sale/product-sale-list/product-sale-list.component';
-
+import { CartHeaderComponent } from './shopping-cart/cart-header/cart-header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +27,18 @@ import { ProductSaleListComponent } from './product-sale/product-sale-list/produ
     ProductComponent,
     ProductSaleComponent,
     MemberCardComponent,
-    ProductSaleListComponent
+    ProductSaleListComponent,
+    ProductListComponent,
+    ProCodeComponent,
+    SummaryCartComponent,
+    CartHeaderComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

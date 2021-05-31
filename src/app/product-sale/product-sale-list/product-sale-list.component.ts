@@ -10,7 +10,7 @@ export class ProductSaleListComponent implements OnInit {
   @Input() saleProducts!: SaleProduct[];
   @Output() onAddToCart = new EventEmitter();
   constructor() { }
-  public addToCart(item: any){
+  public addToCart(item: SaleProduct){
     this.onAddToCart.emit(item);
   }
   ngOnInit(): void {

@@ -1,7 +1,5 @@
-<app-header></app-header>
 <app-product-sale-list 
     [saleProducts]="saleProducts"
-    (onAddToCart) = ""
+    (onAddToCart) = "addToCart($event)"
 >
 </app-product-sale-list>
-<app-footer></app-footer>

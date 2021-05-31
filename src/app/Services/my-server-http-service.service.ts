@@ -1,12 +1,12 @@
 import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MyServiceHttpService {
+export class MyServerHttpService {
   private httpOptions = {
     headers:  new HttpHeaders({
       'Content-Type' : 'application/json'
@@ -14,11 +14,19 @@ export class MyServiceHttpService {
   };
   private REST_API_SERVER = 'http://localhost:3000';
   constructor(private httpClient: HttpClient) {}
-  public getSaleProductList(): any{
+  public getProducts(): Observable<any>{
+    const url = `${this.REST_API_SERVER}/products`;
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
+  }
+  public getSaleProductList(): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public addToCart(item: any){
+  public getCart(): Observable<any>{
+    const url = `${this.REST_API_SERVER}/cart`;
+    return this.httpClient.get(url, this.httpOptions).pipe(catchError(this.handleError));
+  }
+  public addToCart(item: any): Observable<any>{
     const url = `${this.REST_API_SERVER}/cart`;
     return this.httpClient.post(url,item,this.httpOptions).pipe(catchError(this.handleError));
   }
