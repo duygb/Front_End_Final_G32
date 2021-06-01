@@ -17,6 +17,9 @@ import { ProCodeComponent } from './shopping-cart/pro-code/pro-code.component';
 import { SummaryCartComponent } from './shopping-cart/summary-cart/summary-cart.component';
 import { ProductSaleListComponent } from './product-sale/product-sale-list/product-sale-list.component';
 import { CartHeaderComponent } from './shopping-cart/cart-header/cart-header.component';
+import { AppBootstrapModule } from './app-bootstrap.module';
+import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
+import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,13 +35,16 @@ import { CartHeaderComponent } from './shopping-cart/cart-header/cart-header.com
     ProCodeComponent,
     SummaryCartComponent,
     CartHeaderComponent,
+    SidebarComponent,
+    TitleBoxComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

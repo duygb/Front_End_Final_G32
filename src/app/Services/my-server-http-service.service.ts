@@ -28,7 +28,7 @@ export class MyServerHttpService {
   }
   public addToCart(item: any): Observable<any>{
     const url = `${this.REST_API_SERVER}/cart`;
-    return this.httpClient.post(url,item,this.httpOptions).pipe(catchError(this.handleError));
+    return this.httpClient.put(url,item,this.httpOptions).pipe(catchError(this.handleError));
   }
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

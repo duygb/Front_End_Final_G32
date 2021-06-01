@@ -1,0 +1,45 @@
+.all-title-box{
+    background: url("./../images/all-bg-title.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0px;
+    position: relative;
+}
+.all-title-box::before{
+    background: rgba(0,0,0,0.6);
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.all-title-box h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+.all-title-box .breadcrumb{
+    background: #d33b33;
+    margin: 0px;
+    display: inline-block;
+    border-radius: 0px;
+}
+.all-title-box .breadcrumb li{
+    display: inline-block;
+    color: #010101;
+    font-size: 16px;
+}
+.all-title-box .breadcrumb li a{
+    color: #ffffff;
+    font-size: 16px;
+}
+.all-title-box .breadcrumb-item + .breadcrumb-item::before{
+    color: #010101;
+}

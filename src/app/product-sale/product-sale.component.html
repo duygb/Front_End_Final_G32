@@ -1,5 +1,18 @@
-<app-product-sale-list 
-    [saleProducts]="saleProducts"
-    (onAddToCart) = "addToCart($event)"
->
-</app-product-sale-list>
+<app-title-box></app-title-box>
+
+<div class="shop-box-inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
+                <app-product-sale-list
+                [saleProducts]="saleProducts"
+                (onAddToCart) = "addToCart($event)"
+                >
+                </app-product-sale-list>
+            </div>
+        </div>
+    </div>
+</div>
