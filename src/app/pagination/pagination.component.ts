@@ -15,11 +15,17 @@ export class PaginationComponent implements OnInit {
 /*   @Input() allSaleProducts!: SaleProduct[];
   @Input() saleProducts!: SaleProduct[]; */
   @Input() pagination!: Pagination;
-  constructor() { }
-  ngOnInit(): void {
+  constructor() {
     for (let index = 1; index <= this.pagination.visiblePage; index++) {
+    console.log(index); 
+  }
+  console.log(this.pagination.totalPagination); 
+}
+  ngOnInit(): void {
+   /*  for (let index = 1; index <= this.pagination.visiblePage; index++) {
       console.log(index); 
     }
+    console.log(this.pagination.totalPagination); */
   }
  /*  firstPage(){
     this.onFirstPage.emit();

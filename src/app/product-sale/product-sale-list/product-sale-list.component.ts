@@ -13,12 +13,13 @@ import { Router } from '@angular/router';
 export class ProductSaleListComponent implements OnInit{
   allSaleProducts!: SaleProduct[];
   saleProducts!: SaleProduct[];
-  pagination: Pagination = {
+  public pagination: Pagination = {
     indexPagination: 1,
     totalPagination: 0,
     limitPagination: 6,
     visiblePage: 3
   };
+  visiblePagesNumber: number[] = this.createVisiblePage();
   constructor(
     private myServerHttpService: MyServerHttpService,
     private router: Router
@@ -42,20 +43,27 @@ export class ProductSaleListComponent implements OnInit{
     });
     
   }
-  /* ngAfterContentInit(){
-    this.saleProducts as SaleProduct[];
-    this.allSaleProducts as SaleProduct[];
-    let saleProductsLength = this.saleProducts.length;
-    let allSaleProductsLength = this.saleProducts.length;
-    console.log(saleProductsLength);
-    console.log(allSaleProductsLength);
-  } */
+
   addToCart(item: SaleProduct) {
     this.myServerHttpService.addToCart(item);
     this.router.navigate(['shopping-cart']);
   }
   indexPaginationChange(value: number){
     this.pagination.indexPagination = value;
+    this.myServerHttpService.getSaleProductList(this.pagination.indexPagination,this.pagination.limitPagination).subscribe((data) => {
+      this.saleProducts = data;
+      console.log(data);
+      this.visiblePagesNumber = this.createVisiblePage();
+      this.router.navigate(['sale-product']);
+    })
+  }
+  createVisiblePage(): number[]{
+    let result = [];
+    for (let index = 0; index < this.pagination.visiblePage; index++) {
+      result[index] = index + this.pagination.indexPagination;
+    }
+    console.log(result);
+    return result;
   }
   firstPage(){
     this.pagination.indexPagination = 1;
