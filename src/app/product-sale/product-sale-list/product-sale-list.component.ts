@@ -1,3 +1,4 @@
+import { Pagination } from './../../../common-module/pagination';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { SaleProduct } from 'src/common-module/sale-product';
 
@@ -7,9 +8,11 @@ import { SaleProduct } from 'src/common-module/sale-product';
   styleUrls: ['./product-sale-list.component.scss']
 })
 export class ProductSaleListComponent implements OnInit {
+  @Input() allSaleProducts!: SaleProduct[];
   @Input() saleProducts!: SaleProduct[];
+  @Input() pagination!: Pagination;
   @Output() onAddToCart = new EventEmitter();
-  constructor() { }
+  
   public addToCart(item: SaleProduct){
     this.onAddToCart.emit(item);
   }

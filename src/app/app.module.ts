@@ -20,6 +20,7 @@ import { CartHeaderComponent } from './shopping-cart/cart-header/cart-header.com
 import { AppBootstrapModule } from './app-bootstrap.module';
 import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
 import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
+import { PaginationComponent } from './pagination/pagination.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { TitleBoxComponent } from './product-sale/title-box/title-box.component'
     CartHeaderComponent,
     SidebarComponent,
     TitleBoxComponent,
+    PaginationComponent,
 
   ],
   imports: [

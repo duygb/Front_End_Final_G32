@@ -76,8 +76,8 @@ export class ShoppingCartComponent implements DoCheck {
   findProductByID(id: number): Product{
     return this.cart.products.find((product) => product.id === id) as Product;
   }
-  findSaleProductByID(id: number): Product{
-    return this.cart.saleProducts.find((product) => product.id === id) as Product;
+  findSaleProductByID(id: number): SaleProduct{
+    return this.cart.saleProducts.find((product) => product.id === id) as SaleProduct;
   }
   handleUpdateQuantity(p: {item: any, inputQuantityValue: number}) {
     if(p.item instanceof Product != null){

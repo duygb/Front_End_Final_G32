@@ -18,7 +18,11 @@ export class MyServerHttpService {
     const url = `${this.REST_API_SERVER}/products`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getSaleProductList(): Observable<any>{
+  public getSaleProductList(indexPage: number, limit: number): Observable<any>{
+    const url = `${this.REST_API_SERVER}/saleProducts?_page=${indexPage}&_limit=${limit}`;
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
+  }
+  public getAllSaleProducts(): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
@@ -29,6 +33,10 @@ export class MyServerHttpService {
   public addToCart(item: any): Observable<any>{
     const url = `${this.REST_API_SERVER}/cart`;
     return this.httpClient.put(url,item,this.httpOptions).pipe(catchError(this.handleError));
+  }
+  public getPageItems(page:number,limit:number): Observable<any>{
+    const url = `${this.REST_API_SERVER}/saleProducts?_page=${page}`;
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

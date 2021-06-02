@@ -1,7 +1,7 @@
 {
     "posts": [
-      { "id": 1, "title": "json-server1", "author": "typicode1" },
-      { "id": 2, "title": "json-server2", "author": "typicode1" },
+      { "id": 1, "title": "json-server1", "author": "typisku1" },
+      { "id": 2, "title": "json-server2", "author": "typisku1" },
       { "id": 3, "title": "json-server2", "author": "David" },
       { "id": 4, "title": "json-server2", "author": "David" },
       { "id": 5, "title": "json-server2", "author": "David" },
@@ -17,18 +17,18 @@
       { "id": 1, "body": "some comment", "postId": 1 }
     ],
     "profile": [
-      { "id": 1,"name": "typicode" },
-      { "id": 2,"name": "typicode" }
+      { "id": 1,"name": "typisku" },
+      { "id": 2,"name": "typisku" }
     ],
     "products": [
-      {  "id": "PRODUCT-CODE-1",
+      {  "id": "PRODUCT-sku-1",
           "name":"product 1",
         "description": "Description 1",
         "thumbnail": "thumbnail",
         "price": 20,
         "quantity": 10
       },
-      {  "id": "PRODUCT-CODE-2",
+      {  "id": "PRODUCT-sku-2",
         "name":"product 2",
       "description": "Description 2",
       "thumbnail": "thumbnail",
@@ -36,13 +36,13 @@
       "quantity": 15
       },
       {  "id": 3,
-        "name":"PRODUCT-CODE-3",
+        "name":"PRODUCT-sku-3",
       "description": "Description 3",
       "thumbnail": "thumbnail",
       "price": 30,
       "quantity": 20
       },
-      {  "id": "PRODUCT-CODE-4",
+      {  "id": "PRODUCT-sku-4",
         "name":"product 4",
       "description": "Description 4",
       "thumbnail": "thumbnail",
@@ -50,68 +50,421 @@
       "quantity": 25
     },
     {  "id": 5,
-      "name":"PRODUCT-CODE-5",
+      "name":"PRODUCT-sku-5",
     "description": "Description 5",
     "thumbnail": "thumbnail",
     "price": 40,
     "quantity": 30
     }
     ],
-    "saleProducts": [
-      {  "id": "SALE-PRODUCT-CODE-1",
-          "name": "sale-product 1",
-        "description": "Description 1",
-        "thumbnail": "thumbnail",
-        "price": 20,
-        "quantity": 10,
-        "priceToBuy": 15
+    "brands": [
+      {
+        "id": 1,
+        "name": "AIRHOG",
+        "sku": "AIRHOG"
+        
       },
       {
-        "id": "SALE-PRODUCT-CODE-2",
-        "name":"sale-product 2",
-        "description": "Description 2",
-        "thumbnail": "thumbnail",
-        "price": 25,
-        "quantity": 15,
-        "priceToBuy": 15
+        "id": 2,
+        "name": "ANGRY BIRDS",
+        "sku": "AB"
       },
-      {  "id": "SALE-PRODUCT-CODE-3",
-        "name":"sale-product 3",
-      "description": "Description 3",
-      "thumbnail": "thumbnail",
-      "price": 30,
-      "quantity": 20,
-      "priceToBuy": 15
+      {
+        "id": 3,
+        "name": "AVENGERS",
+        "sku": "AVG"
       },
-      {  "id": "SALE-PRODUCT-CODE-4",
-        "name":"sale-product 4",
-      "description": "Description 4",
-      "thumbnail": "thumbnail",
-      "price": 35,
-      "quantity": 25,
-      "priceToBuy": 15
-    },
-    {  "id": "SALE-PRODUCT-CODE-5",
-      "name":"sale-product 5",
-    "description": "Description 5",
-    "thumbnail": "thumbnail",
-    "price": 40,
-    "quantity": 30,
-    "priceToBuy": 15
-    }
+      {
+        "id": 4,
+        "name": "AVENGERS",
+        "sku": "BM"
+      },
+      {
+        "id": 5,
+        "name": "DISNEY PRINCES",
+        "sku": "DP"
+      },
+      {
+        "id": 6,
+        "name": "BRUDER",
+        "sku": "BRU"
+      },
+      {
+        "id": 7,
+        "name": "LEGO",
+        "sku": "LG"
+      },
+      {
+        "id": 8,
+        "name": "DC",
+        "sku": "DC"
+      },
+      {
+        "id": 9,
+        "name": "BBIE",
+        "sku": "BARBIE"
+      },
+      {
+        "id": 10,
+        "name": "BT21",
+        "sku": "BT21"
+      },
+      {
+        "id": 11,
+        "name": "BT21",
+        "sku": "BT21"
+      },
+      {
+        "id": 12,
+        "name": "CANDYLOCK",
+        "sku": "CL"
+      },
+      {
+        "id": 13,
+        "name": "ECOIFFIER",
+        "sku": "EFF"
+      },
+      {
+        "id": 14,
+        "name": "FISHER PRICE 19",
+        "sku": "FP19"
+      },
+      {
+        "id": 15,
+        "name": "HANKY PANKY",
+        "sku": "HK"
+      },
+      {
+        "id": 16,
+        "name": "IWAKO",
+        "sku": "IW"
+      },
+      {
+        "id": 17,
+        "name": "JURASSIC WORLD MATTEL",
+        "sku": "JWM"
+      }
+    ],
+    "age": [
+      {
+        "id":1,
+        "value": "0-12 tháng"
+      },
+      {
+        "id":2,
+        "value": "1-3 tuổi"
+      },
+      {
+        "id":3,
+        "value": "4-6 tuổi"
+      },
+      {
+        "id":4,
+        "value": "6-11 tuổi"
+      },
+      {
+        "id":5,
+        "value": "trên 12 tuổi"
+      }
+    ],
+
+
+    "saleProducts": [
+      { "id": 1,
+        "name": "Máy bay điều khiển Supernova",
+        "brand": "AIRHOG",
+        "SKU": "AIRHOG6044137",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "AIRHOG6044137.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "basePrice": 1199,
+        "priceToBuy": 0,
+        "age": "4-6 tuổi",
+        "sex": "con trai"
+      },
+      {
+        "id":2,
+        "name":"Xe đua đệm khí Drone Power Racer",
+        "brand": "AIRHOG",
+        "SKU": "AIRHOG6041531",
+        "description": "Bức phá giới hạn với xe đua đệm khí siêu mạnh Drone Power Racers. Khả năng tách rời và kết hợp 2 trong 1 siêu linh hoạt giúp Drone Power Racers đạt được tốc độ tới đa khi đua trên mặt đất và bức phá ở những chặng cuối với khả năng bay tăng tốc.",
+        "thumbnail": "AIRHOG6041531.jpg",
+        "discountPercent": 50,
+        "quantity": 10,
+        "basePrice": 999,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con trai"
+      },
+      { 
+        "id": 3,
+        "name": "Xe công trình",
+        "brand": "BRUDER",
+        "SKU": "BRU03651",
+        "description": "Bộ đồ chơi dạng mô hình theo tỷ lệ thu nhỏ 1-16 Xe công trình Mercedes-Benz là một trong những sản phẩm hàng đầu của thương hiệu đồ chơi BRUDER. Với những chức năng vượt trội như cửa xe đóng mở, cần cẩu phía trên có thể kéo dài và quay 360', tương tác với các phụ kiện như palet, cẩn cẩu tái hiện việc di chuyển, 4 chân trụ có thể kéo dài, các cạnh của cần cẩu cũng có tính năng hỗ trợ kéo dài có thể được hạ xuống để thêm vào sự ổn định của xe trong khi nó đang được nạp hoặc dỡ xuống, sức mạnh, độ bền và hiệu quả là điều tối quan trọng hàng ngày khi lái xe trên đường hoặc làm việc tại công trường, dòng xe tải cẩu MB với cánh tay cẩu là một mô hình bắt mắt với các bé, đặc biệt là các bé trai. Đây là một trong những chiếc xe không thể thiếu trong cuộc sống hằng ngày.",
+        "thumbnail": "BRU03651_1.jpg",
+        "discountPercent": 33,
+        "quantity": 10,
+        "basePrice": 2249,
+        "age":[
+                {"value": "1-3 tuổi"},
+                {"value": "4-6 tuổi"}
+              ],
+        "priceToBuy": 0,
+        "sex": "con trai"
+      },
+      {
+        "id": 4,
+        "name": "Xe vệ sinh mặt đường MAN TGS",
+        "brand": "BRUDER",
+        "SKU": "BRU03780",
+        "description": "Được thiết kế tỉ mỉ đến từng chị tiết, chiếc xe chở rác này sẽ mang đến cho các bé nhiều điều bổ ích và thú vị",
+        "thumbnail": "BRU03780.jpg",
+        "discountPercent": 20,
+        "quantity": 10,
+        "basePrice": 2359,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con trai"
+      },
+      {
+        "id": 5,
+        "name": "Búp bê tóc mây bí ẩn (mùa S20)",
+        "brand": "CANDYLOCK",
+        "SKU": "CL6052311A",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "CL6052311A.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 289,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con gái"
+      },
+      {
+        "id": 6,
+        "name": "Bộ đôi bạn thân búp bê tóc mây bí ẩn",
+        "brand": "CANDYLOCK",
+        "SKU": "CL6052312",
+        "description": "Bộ Đôi Bạn Thân Búp Bê Tóc Mây Bí Ẩn là những nàng công chúa xinh đẹp với mái tóc dài đến 38 cm, đặc biệt có mùi hương trên tóc giống nhau. Đôi bạn thân búp bê luôn giấu khuôn mặt và giả dạng như chiếc que kem ốc quế bằng mái tóc tuyệt vời, quyến rũ của mình.",
+        "thumbnail": "CL6052312.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 499,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con gái"
+      },
+      {
+        "id": 7,
+        "name": "Siêu anh hùng Aquaman 12inch",
+        "brand": "DC",
+        "SKU": "DC6060069",
+        "description": "Biệt đội siêu anh hùng công lý với 11 khớp cử động linh hoạt cho bạn thỏa thích tạo nhiều dáng cử động mới lạ cho nhân vật. Thiết kế mang nhiều đường nét chi tiết sắc sảo và phụ kiện tương ứng với từng nhân vật trong phim mang đến một hình ảnh biệt đội siêu anh hùng siêu thực. Nhanh tay sưu tập thêm trọn bộ nhân vật bao gồm: Superman, Aquaman, Flash, Cyborg Thích hợp dành cho trẻ từ 3 tuổi trở lên Sản phẩm bao gồm: 1 nhân vật siêu anh hùng công lý 12 inch",
+        "thumbnail": "DC6060069.jpg",
+        "discountPercent": 20,
+        "quantity": 10,
+        "basePrice": 299,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con trai"
+      },
+      {
+        "id": 8,
+        "name": "Biệt đội anh hùng công lý 4 inch",
+        "brand": "DC",
+        "SKU": "DC6056331",
+        "description": "Nhân vật biệt đội siêu anh hùng công lý 4 inch với 11 khớp nối cho bạn dễ dàng tạo mọi dáng đứng khác nhau Khám phá 3 phụ kiện bí mật như đinh ba, khiên, gươm thần và còn nhiều thiết bị hỗ trợ cho biệt đội công lý trong mỗi hộp sản phẩm. Hãy kết hợp phụ kiện tương ứng với nhân vật để có thể giúp biệt đội hoàn thành nhiệm vụ Đa dạng nhiệm vụ cho bạn thực hiện như Metropolis Mayhem, Alien Attack, Central City Clash hay Coastline Crisis Sản phẩm bao gồm: 1 nhân vật siêu anh hùng, 3 vũ khí bí mật, 1 tờ sưu tập nhân vật và 1 hướng dẫn chơi cùng.",
+        "thumbnail": "DC6056331.jpg",
+        "discountPercent": 20,
+        "quantity": 10,
+        "basePrice": 259,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con trai"
+      },
+      {
+        "id": 9,
+        "name": "Trạm Cứu Hỏa Abrick",
+        "brand": "ECOIFFIER",
+        "SKU": "EFF003026",
+        "description": "Mô hình cứu hỏa hiện đại với máy bay trực thăng, xe cứu hỏa và lính cứu hỏa. Bộ đồ chơi bao gồm 3 lính cứu hỏa, 1 máy bay, 1 xe thang, 2 xe hơi, 1 vòi xịt nước, mô hình đậu máy bay",
+        "thumbnail": "EFF003026.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 999,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 10,
+        "name": "Bộ máy bay phản lực",
+        "brand": "ECOIFFIER",
+        "SKU": "EFF003045",
+        "description": "Bộ máy bay phản lực ECOIFFIER – 003045 là đồ chơi mô phỏng dành mang đến cho trẻ những giờ phút giải trí thú vị và hóa thân thành các nhân vật với nghề nghiệp mình yêu thích.",
+        "thumbnail": "EFF003045.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 499,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 11,
+        "name": "Đồ chơi xếp chồng lúc lắc khổng lồ",
+        "brand": "FISHER PRICE 19",
+        "SKU": "FP19-GJW15",
+        "description": "Bộ xếp chồng Fisher Price nay trở lại với phiên bản “khổng lồ” mới cho bé yêu:",
+        "thumbnail": "FP19-GJW15.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 699,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 12,
+        "name": "Đàn piano phát sáng cho bé",
+        "brand": "FISHER PRICE 19",
+        "SKU": "FP19-FYK56",
+        "description": "Thương hiệu đồ chơi hàng đầu của Mỹ với bề dày lịch sử hơn 90 năm. Top 5 về nhận dạng thương hiệu trên Thế giới, đã có mặt trên 150 Quốc gia. Không chỉ cung cấp những sản phẩm đồ chơi chất lượng, có nhiều chức năng cho vui chơi và tìm hiểu, Fisher Price còn có những sản phẩm cần thiết hỗ trợ bé phát triển toàn diện từ thời điểm lọt lòng.",
+        "thumbnail": "FP19-FYK56.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 779,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 13,
+        "name": "Xe cảnh sát bánh đà nhún nhảy GoGo Justin",
+        "brand": "GOGO BUS",
+        "SKU": "GGB-YS3037C",
+        "description": "Gogo Bus - Xe buýt biến hình thông minh là phim hoạt hình được yêu thích của các bạn nhỏ với chiếc xe biến hình thành nhiều phương tiện giao thông khác nhau Xe cảnh sát bánh đà nhún nhảy GoGo Bus với chức năng: - Đẩy, xe chạy nhanh về phía trước - Xe vừa chạy, vừa nhún nhảy tạo độ vui nhộn cho bé Giúp bé khám phá phương tiện giao thông cùng với hoạt động của bánh đà Xe được làm bằng chất liệu nhựa cao cấp Tăng trí tưởng tượng cho bé và phát triển vận động tinh",
+        "thumbnail": "GGB-YS3037C.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 499,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 14,
+        "name": "Xe cứu hỏa bánh đà nhún nhảy GoGo Firy",
+        "brand": "GOGO BUS",
+        "SKU": "GGB-YS3037B",
+        "description": "Gogo Bus - Xe buýt biến hình thông minh là phim hoạt hình được yêu thích của các bạn nhỏ với chiếc xe biến hình thành nhiều phương tiện giao thông khác nhau Xe cứu hỏa bánh đà nhún nhảy GoGo Firy với chức năng: - Đẩy, xe chạy nhanh về phía trước - Xe vừa chạy, vừa nhún nhảy tạo độ vui nhộn cho bé Giúp bé khám phá phương tiện giao thông cùng với hoạt động của bánh đà Xe được làm bằng chất liệu nhựa cao cấp Tăng trí tưởng tượng cho bé và phát triển vận động tinh",
+        "thumbnail": "GGB-YS3037B.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 499,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 15,
+        "name": "Bộ đôi bạn thân búp bê tóc mây bí ẩn",
+        "brand": "HANKY PANKY",
+        "SKU": "HP1905",
+        "description": "Thương hiệu ảo thuật Hanky Panky đến từ Thái Lan! Các trò ảo thuật từ dễ đến khó, giúp trẻ thực hành biểu diễn một cách dễ dàng và lý thú! Nón Magic - 125 trò ảo thuật Úm ba la! Thỏ con xuất hiện trong chiếc nón? Chiếc đũa thần kỳ biến hóa trong tích tắc! Khám phá ngay!",
+        "thumbnail": "HP1905.jpg",
+        "discountPercent": 25,
+        "quantity": 10,
+        "basePrice": 619,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 16,
+        "name": "Bộ ảo thuật Hang Cọp",
+        "brand": "HANKY PANKY",
+        "SKU": "HP1908",
+        "description": "Thương hiệu ảo thuật Hanky Panky đến từ Thái Lan! Các trò ảo thuật từ dễ đến khó, giúp trẻ thực hành biểu diễn một cách dễ dàng và lý thú! BST 25 trò ảo thuật cùng Hang Cọp Tháo nút thắt mà không cần chạm tay? Cây đũa thần ma thuật lơ lửng hay bóng bay nhiễm từ? Khám phá ngay!",
+        "thumbnail": "HP1908.jpg",
+        "discountPercent": 25,
+        "quantity": 10,
+        "basePrice": 499,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 17,
+        "name": "GÔM LẮP RÁP IWAKO_SET_SINH VẬT BIỂN",
+        "brand": "IWAKO",
+        "SKU": "IW-OMO015",
+        "description": "Gôm lắp ráp Nhật Bản IWAKO với nhiều chủ đề khác nhau (ẩm thực, bánh ngọt, động vật, xe cộ và nhiều chủ để thú vị khác) như một phiên bản thu nhỏ của đồ thật",
+        "thumbnail": "IW-OMO015.jpg",
+        "discountPercent": 10,
+        "quantity": 10,
+        "basePrice": 55,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 18,
+        "name": "GÔM LẮP RÁP IWAKO_SET_KHỦNG LONG",
+        "brand": "IWAKO",
+        "SKU": "IW-OMO014",
+        "description": "Bộ Đôi Bạn Thân Búp Bê Tóc Mây Bí Ẩn là những nàng công chúa xinh đẹp với mái tóc dài đến 38 cm, đặc biệt có mùi hương trên tóc giống nhau. Đôi bạn thân búp bê luôn giấu khuôn mặt và giả dạng như chiếc que kem ốc quế bằng mái tóc tuyệt vời, quyến rũ của mình.",
+        "thumbnail": "IW-OMO014.jpg",
+        "discountPercent": 10,
+        "quantity": 10,
+        "basePrice": 55,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "unisex"
+      },
+      {
+        "id": 19,
+        "name": "Khủng long đầu dày STYGIMOLOCH",
+        "brand": "JURASSIC WORLD MATTEL",
+        "SKU": "JWM-GWT53",
+        "description": "Hãy là một phần của cuộc phiêu lưu Jurassic World với những pha hành động chiến đấu đỉnh cao! Những nhân vật hành động người và khủng long xấp xỉ 6 inch này có các nhân vật con người được người hâm mộ yêu thích như Owen, khủng long Velociraptor Blue, Stygimoloch Stiggy và hơn thế nữa! Mỗi nhân vật hành động của con người có khớp tay và chân, điêu khắc chân thực và trang trí chân thực; mỗi hình khủng long có các tính năng khác nhau các điểm khớp nối, điêu khắc chân thực và trang trí chân thực. Sân khấu các cảnh kể chuyện hoành tráng và các trận chiến với khủng long với những nhân vật này và thể hiện tất cả các hành động và cuộc phiêu lưu của bộ phim! Mỗi con người và hình hành động khủng long được bán riêng, tùy thuộc vào tình trạng sẵn có. Thu thập tất cả! Trong khi đó, bạn sẽ không gặp phải khó khăn gì",
+        "thumbnail": "JWM-GWT53.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 139,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con trai"
+      },
+      {
+        "id": 20,
+        "name": "JW Khủng Long Săn Mồi Carnotaurus TORO",
+        "brand": "JURASSIC WORLD MATTEL",
+        "SKU": "JWM-GNL07",
+        "description": "Hãy là một phần của cuộc phiêu lưu Jurassic World với những pha hành động chiến đấu đỉnh cao! Toro chú khủng long nhân vật chính. Với nhiều âm thanh và các khớp linh hoạt Di chuyển đuôi lên và xuống để làm cho đầu quay lại Di chuyển đuôi lên và xuống để thực hiện hành động đập đầu và trở nên hung dữ hơn. Xoay đuôi để thực hiện hành động đập đầu và gầm rú Nhấn vào nút ở đuôi để mở miệng và thực hiện hành động NGOẠM",
+        "thumbnail": "JWM-GNL07.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "basePrice": 139,
+        "age": "4-6 tuổi",
+        "priceToBuy": 0,
+        "sex": "con trai"
+      }
     ],
     "cart":[
       {
         "id":1,
         "productss": [
-          {  "id": "PRODUCT-CODE-1",
+          {  "id": "PRODUCT-sku-1",
               "name":"product 1",
             "description": "Description 1",
             "thumbnail": "thumbnail",
             "price": 20,
             "quantity": 10
           },
-          {  "id": "PRODUCT-CODE-3",
+          {  "id": "PRODUCT-sku-3",
             "name":"product 3",
           "description": "Description 3",
           "thumbnail": "thumbnail",
@@ -123,7 +476,7 @@
       {
         "id":2,
         "saleProductss": [
-          {  "id": "SALE-PRODUCT-CODE-1",
+          {  "id": "SALE-PRODUCT-sku-1",
               "name": "sale-product 1",
             "description": "Description 1",
             "thumbnail": "thumbnail",
