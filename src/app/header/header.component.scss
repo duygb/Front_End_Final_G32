@@ -1,40 +1,97 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
 }
-.text{
-    height: 50px;
-    width: 200px;
-    margin-left: 120px;
-    text-align: center;
-    .name-Store{
-        font-weight: bold;
-        font-size: 20px;
-        font-family: sans-serif;
-        text-align: center;
-    }
-    .slogan{
-        font-weight: bold;
-        margin-top: 0px;
+// .row-one{
+//     height: 50px;
+//     width: 1349px;
+//     .text{
+//         height: 50px;
+//         width: 200px;
+//         // margin-left: 120px;
+//         position: relative;
+//         left: 120px;
+//         text-align: center;
+//         .name-Store{
+//             font-weight: bold;
+//             font-size: 20px;
+//             font-family: sans-serif;
+//             text-align: center;
+//         }
+//         .slogan{
+//             font-weight: bold;
+//             margin-top: 0px;
+//         }
+//     }
+//     .icon{
+//        background-color: aqua;
+//        height: 50px;
+//        width: 50px;
+//        position: relative;
+//        left: 50px;
+//        top: 0px;
+//        .a{
+
+//        }
+//     }
+
+// }
+
+.nav-custom {
+    background: crimson;
+    font-weight: bold;
+    li {
+        margin-right: 40px;
+        font-size: 18px;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a :hover {
+            background-color: yellowgreen;
+            color: black;
+        }
     }
 }
-.nav-custom{
-    background:crimson ;
-    font-weight: bold;
-   li{
-       margin-right: 40px;
-       font-size: 20px;
-       a{
-           text-decoration: none;
-           color: white;
-           
-       }
-       a :hover{
-           background-color: yellowgreen;
-           color: black;
-
-       }
-   }
-   
-   
+.form-inline {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    .text {
+        height: 50px;
+        width: 200px;
+        position: relative;
+        left: 100px;
+        .name-Store {
+            font-weight: bold;
+            font-size: 20px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .slogan {
+            font-weight: bold;
+            margin-top: 0px;
+            text-align: center;
+        }
+    }
+    .icon {
+        margin-left: auto;
+        height: 50px;
+        width: 50%;
+      
+        .search{
+            width: 80%;
+            height: 50px;
+            margin-top: 10px;
+            .search-form{
+                .form-control{
+                    border-radius: 5px;
+                }
+                .btn{
+                    border-radius: 25px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
 }
