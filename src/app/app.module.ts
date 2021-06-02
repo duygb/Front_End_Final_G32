@@ -21,7 +21,7 @@ import { AppBootstrapModule } from './app-bootstrap.module';
 import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
 import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
 import { PaginationComponent } from './pagination/pagination.component';
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     ShoppingCartComponent,
@@ -38,8 +38,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     CartHeaderComponent,
     SidebarComponent,
     TitleBoxComponent,
-    PaginationComponent,
-
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
