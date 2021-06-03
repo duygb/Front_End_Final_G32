@@ -4,11 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule} from '@angular/forms';
 
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-
 import { AppComponent } from './app.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ProductSaleComponent } from './product-sale/product-sale.component';
@@ -18,11 +17,11 @@ import { ProCodeComponent } from './shopping-cart/pro-code/pro-code.component';
 import { SummaryCartComponent } from './shopping-cart/summary-cart/summary-cart.component';
 import { ProductSaleListComponent } from './product-sale/product-sale-list/product-sale-list.component';
 import { CartHeaderComponent } from './shopping-cart/cart-header/cart-header.component';
-import { AgeComponent } from './age/age.component';
-import { GenderComponent } from './gender/gender.component';
-import { ProductNewComponent } from './product-new/product-new.component';
-import { TrademarkComponent } from './trademark/trademark.component';
-@NgModule({
+import { AppBootstrapModule } from './app-bootstrap.module';
+import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
+import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
+import { PaginationComponent } from './pagination/pagination.component';
+@NgModule({ 
   declarations: [
     AppComponent,
     ShoppingCartComponent,
@@ -37,17 +36,16 @@ import { TrademarkComponent } from './trademark/trademark.component';
     ProCodeComponent,
     SummaryCartComponent,
     CartHeaderComponent,
-    AgeComponent,
-    GenderComponent,
-    ProductNewComponent,
-    TrademarkComponent,
-
+    SidebarComponent,
+    TitleBoxComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
