@@ -26,6 +26,14 @@ export class MyServerHttpService {
     const url = `${this.REST_API_SERVER}/saleProducts`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
+  public getBrands(): Observable<any>{
+    const url = `${this.REST_API_SERVER}/brands`;
+    return this.httpClient.get(url, this.httpOptions).pipe(catchError(this.handleError));
+  }
+  public getAges(): Observable<any>{
+    const url = `${this.REST_API_SERVER}/ages`;
+    return this.httpClient.get(url, this.httpOptions).pipe(catchError(this.handleError));
+  }
   public getCart(): Observable<any>{
     const url = `${this.REST_API_SERVER}/cart`;
     return this.httpClient.get(url, this.httpOptions).pipe(catchError(this.handleError));

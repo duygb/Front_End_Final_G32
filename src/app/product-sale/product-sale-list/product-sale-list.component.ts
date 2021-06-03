@@ -27,20 +27,26 @@ export class ProductSaleListComponent implements OnInit{
   ngOnInit(): void {
     this.myServerHttpService.getSaleProductList(this.pagination.indexPagination,this.pagination.limitPagination).subscribe((data) => {
       this.saleProducts = data as SaleProduct[];
-      console.log(this.saleProducts.length);
+      this.setPriceToBuy(this.saleProducts);
     });
     this.myServerHttpService.getAllSaleProducts().subscribe((data) => {
       this.allSaleProducts = data as SaleProduct[];
+      this.setPriceToBuy(this.allSaleProducts);
 
       if((this.allSaleProducts.length % this.pagination.limitPagination) != 0 ){
         this.pagination.totalPagination = (Math.round(this.allSaleProducts.length / this.pagination.limitPagination))  + 1;
         this.visiblePagesNumber = this.createVisiblePage(this.pagination.indexPagination);
-        console.log(this.pagination.totalPagination);
       }else {
         this.pagination.totalPagination = (Math.round(this.allSaleProducts.length / this.pagination.limitPagination));
         this.visiblePagesNumber = this.createVisiblePage(this.pagination.indexPagination);
-        console.log(this.pagination.totalPagination);
       }
+    });
+  }
+
+  setPriceToBuy(saleProducts: SaleProduct[]){
+    saleProducts.forEach(saleProduct => {
+      saleProduct.priceToBuy = Math.round(saleProduct.basePrice * (100 - saleProduct.discountPercent) / 100 ) * 1000;
+      saleProduct.basePrice = saleProduct.basePrice * 1000;
     });
   }
 
