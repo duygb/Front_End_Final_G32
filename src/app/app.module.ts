@@ -21,6 +21,13 @@ import { AppBootstrapModule } from './app-bootstrap.module';
 import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
 import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
 import { PaginationComponent } from './pagination/pagination.component';
+
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { AgeComponent } from './age/age.component';
+import { GenderComponent } from './gender/gender.component';
+import { ProductNewComponent } from './product-new/product-new.component';
+import { TrademarkComponent } from './trademark/trademark.component';
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -38,14 +45,20 @@ import { PaginationComponent } from './pagination/pagination.component';
     CartHeaderComponent,
     SidebarComponent,
     TitleBoxComponent,
-    PaginationComponent
+    PaginationComponent,
+    AgeComponent,
+    GenderComponent,
+    ProductNewComponent,
+    TrademarkComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AppBootstrapModule
+    AppBootstrapModule,
+    TooltipModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
