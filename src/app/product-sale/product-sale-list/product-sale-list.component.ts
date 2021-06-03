@@ -19,12 +19,11 @@ export class ProductSaleListComponent implements OnInit{
     limitPagination: 6,
     visiblePage: 3
   };
-  visiblePagesNumber: number[] = this.createVisiblePage();
+  visiblePagesNumber: number[] = [];
   constructor(
     private myServerHttpService: MyServerHttpService,
     private router: Router
-  ) {
-  }
+  ) {}
   ngOnInit(): void {
     this.myServerHttpService.getSaleProductList(this.pagination.indexPagination,this.pagination.limitPagination).subscribe((data) => {
       this.saleProducts = data as SaleProduct[];
@@ -35,35 +34,71 @@ export class ProductSaleListComponent implements OnInit{
 
       if((this.allSaleProducts.length % this.pagination.limitPagination) != 0 ){
         this.pagination.totalPagination = (Math.round(this.allSaleProducts.length / this.pagination.limitPagination))  + 1;
+        this.visiblePagesNumber = this.createVisiblePage(this.pagination.indexPagination);
         console.log(this.pagination.totalPagination);
       }else {
         this.pagination.totalPagination = (Math.round(this.allSaleProducts.length / this.pagination.limitPagination));
+        this.visiblePagesNumber = this.createVisiblePage(this.pagination.indexPagination);
         console.log(this.pagination.totalPagination);
       }
     });
-    
   }
 
   addToCart(item: SaleProduct) {
     this.myServerHttpService.addToCart(item);
     this.router.navigate(['shopping-cart']);
   }
-  indexPaginationChange(value: number){
-    this.pagination.indexPagination = value;
+  indexPaginationChange(valueChange: number){
+    this.pagination.indexPagination = valueChange;
     this.myServerHttpService.getSaleProductList(this.pagination.indexPagination,this.pagination.limitPagination).subscribe((data) => {
       this.saleProducts = data;
-      console.log(data);
-      this.visiblePagesNumber = this.createVisiblePage();
+      this.visiblePagesNumber = this.createVisiblePage(valueChange);
       this.router.navigate(['sale-product']);
     })
   }
-  createVisiblePage(): number[]{
+  createVisiblePage(valueChange: number): number[]{
     let result = [];
-    for (let index = 0; index < this.pagination.visiblePage; index++) {
-      result[index] = index + this.pagination.indexPagination;
+    if(this.pagination.visiblePage / 2 == 0){
+      this.pagination.visiblePage++;
+    }
+    let middleIndex = this.pagination.visiblePage / 2;
+    if (middleIndex % 2 != 0) {
+      middleIndex = Math.round(middleIndex) - 1;
+    }
+
+    if(this.pagination.indexPagination < this.pagination.totalPagination){
+      for (let index = 0; index < this.pagination.visiblePage; index++) {
+        if(this.pagination.indexPagination == 1 ){
+          result[index] = index + 1;
+        }else{
+          if(index <= middleIndex){
+            // 3 4 5 6 7
+            result[index] = valueChange - (Math.round(this.pagination.visiblePage / 2) - 1) + index;
+          }else {
+            let temp = 1;
+            result[index] = temp++ + valueChange;
+          }
+        }
+      }
+    }else{
+      for (let index = 0; index < this.pagination.visiblePage; index++) {
+        result[index] = this.pagination.indexPagination - (this.pagination.visiblePage - index) + 1;
+        console.log(result[index]);
+      }
     }
     console.log(result);
     return result;
+  }
+  previousPage(){
+    if(this.pagination.indexPagination != 1 ){
+      this.pagination.indexPagination = this.pagination.indexPagination - 1;
+      this.myServerHttpService.getSaleProductList(this.pagination.indexPagination,this.pagination.limitPagination).subscribe((data) => {
+        this.saleProducts = data;
+        console.log(data);
+        this.visiblePagesNumber = this.createVisiblePage(this.pagination.indexPagination);
+        this.router.navigate(['sale-product']);
+      })
+    }
   }
   firstPage(){
     this.pagination.indexPagination = 1;
@@ -76,24 +111,16 @@ export class ProductSaleListComponent implements OnInit{
     })
   }
   nextPage(){
+    if(this.pagination.indexPagination <= this.pagination.visiblePage)
     this.pagination.indexPagination = this.pagination.indexPagination + 1;
     if (this.pagination.indexPagination > this.pagination.totalPagination) {
       this.pagination.indexPagination = this.pagination.indexPagination - 1;
     }
     this.myServerHttpService.getSaleProductList(this.pagination.indexPagination,this.pagination.limitPagination).subscribe((data) => {
       this.saleProducts = data;
+      this.visiblePagesNumber = this.createVisiblePage(this.pagination.indexPagination);
+      this.router.navigate(['sale-product']);
     })
-  }
-  previousPage(){
-    this.pagination.indexPagination = this.pagination.indexPagination - 1;
-    if(this.pagination.indexPagination = 0){
-      this.pagination.indexPagination = 1;
-      this.ngOnInit();
-    }else {
-      this.myServerHttpService.getSaleProductList(this.pagination.indexPagination, this.pagination.limitPagination).subscribe((data)=>{
-        this.saleProducts = data;
-      })
-    }
   }
 
 }
