@@ -6,7 +6,13 @@ footer{
         background-color: rgb(65, 59, 55);
     }
     .button-size{
-        height: 30px;
+        height: 35px;
+    }
+    .button-size:hover{
+        color: black;
     }
    
+}
+a{
+    text-decoration: none;
 }
