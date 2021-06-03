@@ -12,39 +12,62 @@
         </div>
     </div> -->
     <form action="">
-        <div class="form-inline">
+        <div class="form-inlinee">
             <div class="text">
-                <h1 class="name-Store">CTS</h1>
-                <h5 class="slogan">child toy store</h5>
+                <!-- <h1 class="name-Store">CTS</h1>
+                <h5 class="slogan">child toy store</h5> -->
+                <a href="/"><img src="assets/img/logoCTS.jpg" alt="logoCTS" style="width:100%;"></a>    
             </div>
             <div class="icon">
-                <div class="search">
-                    <form action="" class="search-form">
-                        <div class="form-group has-feedback">
-                            <label for="search" class="sr-only">Search</label>
-                            <input type="text" class="form-control" name="search" id="search" placeholder="search...">
-                            <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+                <div class="form-inline">
+                    <!-- <div class="search">
+                        <form action="" class="search-form">
+                            <div class="form-group has-feedback">
+                                <label for="search" class="sr-only">Search</label>
+                                <input type="text" class="form-control" name="search" id="search"
+                                    placeholder="   Search...">
+                                <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div> -->
+                    
+                    <div class="search">
+                        <input type="text" class="form-control input-sm" maxlength="64" placeholder="  Bạn muốn kiếm gì" />
+                        <a type="submit" class="btn"><i class="fas fa-search"></i></a>
+                    </div>
+
+                    <div class="cart">
+                        <div class="cart-center">
+                            <a href=""><i class="fas fa-shopping-cart"></i></a>
                         </div>
-                    </form>
+                    </div>
+                    <div class="email">
+                        <div class="email-center">
+                           <a href=""> <i class="fas fa-envelope-open-text"></i></a>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <div class="account-center">
+                           <a href=""> <i class="fas fa-user-circle"></i></a>
+                        </div>
+                    </div>
                 </div>
-                
+
             </div>
         </div>
     </form>
 </div>
 <div class="row">
     <nav class="navbar navbar-default">
-      <div class="container-fluid nav-custom">
-        <ul class="nav navbar">
-            <li><a href="#">SẢN PHẨM</a></li>
-            <li><a href="#">ĐỘ TUỔI</a></li>
-            <li><a href="#">GIỚI TÍNH</a></li>
-            <li><a [routerLink]="['/sale-product']">SẢN PHẨM KHUYẾN MÃI</a></li>
-            <li><a href="#">HÀNG MỚI</a></li>
-            <li><a href="#">THƯƠNG HIỆU</a></li>
-            <li><a href="#">THÀNH VIÊN</a></li>
-            <li><a [routerLink]="['/shopping-cart']">CART</a></li>
-        </ul>
-    </div>
+        <div class="container-fluid nav-custom">
+            <ul class="nav navbar effect">
+                <li><a href="/product">SẢN PHẨM</a></li>
+                <li><a href="/age">ĐỘ TUỔI</a></li>
+                <li><a href="/gender">GIỚI TÍNH</a></li>
+                <li><a href="/product-sale">KHUYẾN MÃI</a></li>
+                <li><a href="/product-new">HÀNG MỚI</a></li>
+                <li><a href="/trademark">THƯƠNG HIỆU</a></li>
+            </ul>
+        </div>
     </nav>
-  </div>
+</div>

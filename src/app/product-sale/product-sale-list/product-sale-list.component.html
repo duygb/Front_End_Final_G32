@@ -1,15 +1,10 @@
-<div class="right-product-box">
-    <div class="product-item-filter row">
-        <div class="col-12 col-sm-12 text-center text-sm-left">
-            <div class="toolbar-sorter-right">
-                <span>Sort by </span>
-                <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-                <option data-display="Select">Nothing</option>
-                <option value="1">Popularity</option>
-                <option value="2">High Price → High Price</option>
-                <option value="3">Low Price → High Price</option>
-                <option value="4">Best Selling</option>
-            </select>
+<ul class="products">
+        <li class="row" *ngFor="let saleProduct of saleProducts">
+        <div class="col left">
+            <div class="thumbnail">
+            <a href="#">
+                <img src="{{saleProduct.thumbnail}}" alt="" />
+            </a>
             </div>
             <p>Showing all 4 results</p>
         </div>
@@ -80,6 +75,5 @@
                     (onIndexPaginationChange) = "indexPaginationChange($event)" -->
                 </div>
         </div>
-    </div>
-
-</div>
+    </li>
+</ul>
