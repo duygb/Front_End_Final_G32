@@ -1,0 +1,22 @@
+.main-product {
+    margin-top: 10px;
+    .sidebar {
+        .sidebar-category {
+            margin-top: 10px;
+            .category-title{
+                font-weight: bold;
+                margin-left: 30px;
+            }
+            .list {
+                li {
+                    border-bottom: 1px solid black;
+                    margin-bottom: 10px;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
