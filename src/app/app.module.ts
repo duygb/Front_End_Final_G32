@@ -29,7 +29,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
-import { TrademarkComponent } from './trademark/trademark.component';
+import { MemberCardListComponent } from './member-card/member-card-list/member-card-list.component';
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -51,7 +51,7 @@ import { TrademarkComponent } from './trademark/trademark.component';
     AgeComponent,
     GenderComponent,
     ProductNewComponent,
-    TrademarkComponent
+    MemberCardListComponent
   ],
   imports: [
     BrowserModule,

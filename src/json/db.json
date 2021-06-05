@@ -60,87 +60,121 @@
     "brands": [
       {
         "id": 1,
+        "thumbnail" : "AIRHOG.jpg",
+        "typecode" : "A",
         "name": "AIRHOG",
         "sku": "AIRHOG"
         
       },
       {
         "id": 2,
+        "thumbnail" : "ANGRY BIRDS.jpg",
+        "typecode" : "A",
         "name": "ANGRY BIRDS",
         "sku": "AB"
       },
       {
         "id": 3,
+        "thumbnail" : "AVENGERS.jpg",
+        "typecode" : "A",
         "name": "AVENGERS",
         "sku": "AVG"
       },
       {
         "id": 4,
-        "name": "AVENGERS",
-        "sku": "BM"
+        "thumbnail" : "AQUA DABRA.jpg",
+        "typecode" : "A",
+        "name": "AQUA DABRA",
+        "sku": "AD"
       },
       {
         "id": 5,
+        "thumbnail" : "DISNEY PRINCES.jpg",
+        "typecode" : "D",
         "name": "DISNEY PRINCES",
         "sku": "DP"
       },
       {
         "id": 6,
+        "thumbnail" : "BRUDER.jpg",
+        "typecode" : "B",
         "name": "BRUDER",
         "sku": "BRU"
       },
       {
         "id": 7,
+        "thumbnail" : "LEGO.jpg",
+        "typecode" : "L",
         "name": "LEGO",
         "sku": "LG"
       },
       {
         "id": 8,
+        "thumbnail" : "DC.jpg",
+        "typecode" : "D",
         "name": "DC",
         "sku": "DC"
       },
       {
         "id": 9,
-        "name": "BBIE",
-        "sku": "BARBIE"
+        "thumbnail" : "BARBIE.jpg",
+        "typecode" : "B",
+        "name": "BARBIE",
+        "sku": "BBIE"
       },
       {
         "id": 10,
-        "name": "BT21",
-        "sku": "BT21"
+        "thumbnail" : "DONI DINO.jpg",
+        "typecode" : "D",
+        "name": "DONI DINO",
+        "sku": "DD"
       },
       {
         "id": 11,
+        "thumbnail" : "BT21.jpg",
+        "typecode" : "B",
         "name": "BT21",
         "sku": "BT21"
       },
       {
         "id": 12,
+        "thumbnail" : "CANDYLOCK.jpg",
+        "typecode" : "C",
         "name": "CANDYLOCK",
         "sku": "CL"
       },
       {
         "id": 13,
+        "thumbnail" : "ECOIFFIER.jpg",
+        "typecode" : "E",
         "name": "ECOIFFIER",
         "sku": "EFF"
       },
       {
         "id": 14,
+        "thumbnail" : "FISHER PRICE 19.jpg",
+        "typecode" : "F",
         "name": "FISHER PRICE 19",
         "sku": "FP19"
       },
       {
         "id": 15,
+        "thumbnail" : "HANKY PANKY.jpg",
+        "typecode" : "H",
         "name": "HANKY PANKY",
         "sku": "HK"
       },
       {
         "id": 16,
+        "thumbnail" : "IWAKO.jpg",
+        "typecode" : "I",
         "name": "IWAKO",
         "sku": "IW"
       },
       {
         "id": 17,
+        "thumbnail" : "JURASSIC WORLD MATTEL.jpg",
+        "typecode" : "J",
         "name": "JURASSIC WORLD MATTEL",
         "sku": "JWM"
       }

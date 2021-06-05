@@ -31,6 +31,9 @@ export class ProductSaleComponent implements OnInit{
     sort: '',
     order: '',
   };
+  ageCheck = {
+    
+  }
 
   visiblePagesNumber: number[] = [];
 

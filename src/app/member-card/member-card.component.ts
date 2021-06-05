@@ -1,3 +1,5 @@
+import { Brand } from './common/brand';
+import { MyServerHttpService } from 'src/app/Services/my-server-http-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-card.component.scss']
 })
 export class MemberCardComponent implements OnInit {
-
-  constructor() { }
+  allBrands!: Brand[];
+  constructor(private myServerHttpService: MyServerHttpService) { }
 
   ngOnInit(): void {
+    this.getAllBrands();
   }
 
+  getAllBrands(){
+    this.myServerHttpService.getAllBrands().subscribe((data)=>{
+      this.allBrands = data as Brand[];
+      return this.allBrands;
+    })
+  }
 }

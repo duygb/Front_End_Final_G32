@@ -7,7 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
-import { TrademarkComponent } from './trademark/trademark.component';
+import { MemberCardComponent } from './member-card/member-card.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'gender', component:GenderComponent },
   { path: 'sale-product', component: ProductSaleComponent },
   { path: 'product-new', component:ProductNewComponent },
-  { path: 'trademark', component:TrademarkComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent},
+  { path: 'member-cart', component: MemberCardComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

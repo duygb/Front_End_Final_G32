@@ -55,6 +55,10 @@ export class MyServerHttpService {
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
 
+  public getAllBrands(): Observable<any>{
+    const url = `${this.REST_API_SERVER}/brands`;
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
+  }
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.

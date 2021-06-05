@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrademarkComponent } from './trademark.component';
+import { MemberCardListComponent } from './member-card-list.component';
 
-describe('TrademarkComponent', () => {
-  let component: TrademarkComponent;
-  let fixture: ComponentFixture<TrademarkComponent>;
+describe('MemberCardListComponent', () => {
+  let component: MemberCardListComponent;
+  let fixture: ComponentFixture<MemberCardListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TrademarkComponent ]
+      declarations: [ MemberCardListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TrademarkComponent);
+    fixture = TestBed.createComponent(MemberCardListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
