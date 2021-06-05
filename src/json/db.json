@@ -179,7 +179,7 @@
         "discountPercent": 40,
         "quantity": 10,
         "basePrice": 1199,
-        "priceToBuy": 0,
+        "priceToBuy": 719,
         "age": "4-6 tuổi",
         "sex": "con trai"
       },
@@ -194,7 +194,7 @@
         "quantity": 10,
         "basePrice": 999,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 500,
         "sex": "con trai"
       },
       { 
@@ -211,7 +211,7 @@
                 {"value": "1-3 tuổi"},
                 {"value": "4-6 tuổi"}
               ],
-        "priceToBuy": 0,
+        "priceToBuy": 1507,
         "sex": "con trai"
       },
       {
@@ -225,7 +225,7 @@
         "quantity": 10,
         "basePrice": 2359,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 1887,
         "sex": "con trai"
       },
       {
@@ -239,7 +239,7 @@
         "quantity": 10,
         "basePrice": 289,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 202,
         "sex": "con gái"
       },
       {
@@ -253,7 +253,7 @@
         "quantity": 10,
         "basePrice": 499,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 349,
         "sex": "con gái"
       },
       {
@@ -267,7 +267,7 @@
         "quantity": 10,
         "basePrice": 299,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 239,
         "sex": "con trai"
       },
       {
@@ -281,7 +281,7 @@
         "quantity": 10,
         "basePrice": 259,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 207,
         "sex": "con trai"
       },
       {
@@ -295,7 +295,7 @@
         "quantity": 10,
         "basePrice": 999,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 699,
         "sex": "unisex"
       },
       {
@@ -309,7 +309,7 @@
         "quantity": 10,
         "basePrice": 499,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 349,
         "sex": "unisex"
       },
       {
@@ -323,7 +323,7 @@
         "quantity": 10,
         "basePrice": 699,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 489,
         "sex": "unisex"
       },
       {
@@ -337,7 +337,7 @@
         "quantity": 10,
         "basePrice": 779,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 545,
         "sex": "unisex"
       },
       {
@@ -351,7 +351,7 @@
         "quantity": 10,
         "basePrice": 499,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 349,
         "sex": "unisex"
       },
       {
@@ -365,7 +365,7 @@
         "quantity": 10,
         "basePrice": 499,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 349,
         "sex": "unisex"
       },
       {
@@ -379,7 +379,7 @@
         "quantity": 10,
         "basePrice": 619,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 464,
         "sex": "unisex"
       },
       {
@@ -393,7 +393,7 @@
         "quantity": 10,
         "basePrice": 499,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy":374,
         "sex": "unisex"
       },
       {
@@ -407,7 +407,7 @@
         "quantity": 10,
         "basePrice": 55,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 50,
         "sex": "unisex"
       },
       {
@@ -421,7 +421,7 @@
         "quantity": 10,
         "basePrice": 55,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 50,
         "sex": "unisex"
       },
       {
@@ -435,7 +435,7 @@
         "quantity": 10,
         "basePrice": 139,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 97,
         "sex": "con trai"
       },
       {
@@ -449,7 +449,7 @@
         "quantity": 10,
         "basePrice": 139,
         "age": "4-6 tuổi",
-        "priceToBuy": 0,
+        "priceToBuy": 97,
         "sex": "con trai"
       }
     ],

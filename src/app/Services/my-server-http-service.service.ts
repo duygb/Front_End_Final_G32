@@ -43,9 +43,18 @@ export class MyServerHttpService {
     return this.httpClient.put(url,item,this.httpOptions).pipe(catchError(this.handleError));
   }
   public getPageItems(page:number,limit:number): Observable<any>{
-    const url = `${this.REST_API_SERVER}/saleProducts?_page=${page}`;
+    const url = `${this.REST_API_SERVER}/saleProducts?_page=${page}&_limit=${limit}`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
+  public setPriceToBuy(data: any){
+    const url = `${this.REST_API_SERVER}/saleProducts`;
+    this.httpClient.put(url,data,this.httpOptions).pipe(catchError(this.handleError));
+  }
+  public getProductsSortBy(sortBy: string, orderBy: string,page:number,limit:number): Observable<any>{
+    const url = `${this.REST_API_SERVER}/saleProducts?_sort=basePrice&_order=desc&_page=2&_limit=6`;
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
