@@ -18,7 +18,7 @@ export class MyServerHttpService {
     const url = `${this.REST_API_SERVER}/products`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getSaleProductList(indexPage: number, limit: number): Observable<any>{
+  public getSaleProductsList(indexPage: number, limit: number): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts?_page=${indexPage}&_limit=${limit}`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
@@ -51,7 +51,7 @@ export class MyServerHttpService {
     this.httpClient.put(url,data,this.httpOptions).pipe(catchError(this.handleError));
   }
   public getProductsSortBy(sortBy: string, orderBy: string,page:number,limit:number): Observable<any>{
-    const url = `${this.REST_API_SERVER}/saleProducts?_sort=basePrice&_order=desc&_page=2&_limit=6`;
+    const url = `${this.REST_API_SERVER}/saleProducts?_sort=${sortBy}&_order=${orderBy}&_page=${page}&_limit=${limit}`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
 

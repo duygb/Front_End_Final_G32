@@ -2,14 +2,9 @@
     <div class="product-item-filter row">
         <div class="col-12 col-sm-12 text-center text-sm-left">
             <div class="toolbar-sorter-right">
-                <form>
-                <select class="selectpicker show-tick form-control">
-                    <option>Option List</option>
-                    <option #hightToLow value="{priceToBuy,esc}"  (click) = "getSaleProductsSorted(hightToLow)" >High Price → Low Price> </option>
-                    <option >OKE</option>
+                <select #select class="selectpicker show-tick form-control" (change) = "changed(select)">
+                    <option *ngFor="let i of sorters">{{i.value}}</option>
                 </select>
-                <button type="submit" >Submit</button>
-                </form>
             </div>
             <p>Tổng cộng có {{allSaleProducts.length}} sản phẩm</p>
         </div>

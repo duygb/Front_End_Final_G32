@@ -11,10 +11,6 @@ import { MyServerHttpService } from '../Services/my-server-http-service.service'
   styleUrls: ['./product-sale.component.scss'],
 })
 export class ProductSaleComponent {
-  public sorter: Sorter = {
-    sortBy: '',
-    orderBy: '',
-  };
   saleProductSorted!: SaleProduct[];
   constructor(private myHttp: MyServerHttpService) {}
   public getSaleProductSorted(hightToLow: HTMLButtonElement) {

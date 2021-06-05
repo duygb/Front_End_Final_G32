@@ -1,4 +1,6 @@
 export class Sorter{
-    sortBy!:string ;
-    orderBy!:string;
+    id!: number;
+    sort!:string ;
+    order!:string ;
+    value!: string;
 }
