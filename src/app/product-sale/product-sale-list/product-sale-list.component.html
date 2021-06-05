@@ -42,6 +42,25 @@
                     </div>
                     <div>
                         <ul class="pagination justify-content-center">
+                        
+                            <span *ngIf="pagination.indexPagination == 1; then trueFirstPage; else falseFirstPage"></span>
+                            <ng-template #trueFirstPage>
+                                <li class="page-item disabled">
+                                    <a class="page-link">Trang đầu</a>
+    
+                                   <!--  <button (click) = "myClick(sorter.sortBy,sorter.orderBy)"></button> -->
+                                   <!--  disabled : init attribute of HTML tag gọi từ controller 
+                                dưới controller sẽ có : disabled = "false": : property;
+                                    <input [disable] = "condition" > -> vào controller lấy disable property set lại bằng controller của product-sale-list(ts)   -->
+                                </li>
+                            </ng-template >
+                            <ng-template #falseFirstPage>
+                            <li class="page-item" (click)="firstPage()">
+                                <a class="page-link">Trang đầu</a>
+                            </li>
+                            </ng-template>
+
+
                         <span *ngIf="pagination.indexPagination == 1; then trueCondition; else falseCondition"></span>
                         <ng-template #trueCondition>
                             <li class="page-item disabled" (click)="previousPage()">
@@ -75,9 +94,28 @@
                         </li>
 
 
+                        
+                        
                         <li class="page-item" (click)= "nextPage()"> 
                             <a class="page-link" style="width: 107.3px; height: 37.6px; text-align: center;" >Trang kế</a>
                         </li>
+                        <span *ngIf="pagination.indexPagination == pagination.visiblePage; then trueLastPage; else falseLastPage"></span>
+                        <ng-template #trueLastPage>
+                            <li class="page-item disabled">
+                                <a class="page-link">Trang cuối</a>
+
+                               <!--  <button (click) = "myClick(sorter.sortBy,sorter.orderBy)"></button> -->
+                               <!--  disabled : init attribute of HTML tag gọi từ controller 
+                            dưới controller sẽ có : disabled = "false": : property;
+                                <input [disable] = "condition" > -> vào controller lấy disable property set lại bằng controller của product-sale-list(ts)   -->
+                            </li>
+                        </ng-template>
+                        <ng-template #falseLastPage>
+                        <li class="page-item" (click)="lastPage()">
+                            <a class="page-link">Trang cuối</a>
+                        </li>
+                        </ng-template>
+
                         </ul>
                     </div>
                     <!-- (onFistPage) = "fistPage()"

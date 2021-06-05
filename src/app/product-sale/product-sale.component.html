@@ -8,9 +8,20 @@
             </div>
             <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
                 <app-product-sale-list  
+                [allSaleProducts] = "allSaleProducts"
+                [saleProducts] = "saleProducts"
+                [pagination] = "pagination"
+                [sorters] = "sorters"
+                [sortCheck] = "sortCheck"
+                [visiblePagesNumber] = "visiblePagesNumber"
+                (onChanged) = "changed($event)"
+                (onFirstPage) = "firstPage()"
+                (onLastPage) = "lastPage()"
+                (onPreviousPage) = "previousPage()"
+                (onNextPage) = "nextPage()"
+                (onIndexPaginationChange) = "indexPaginationChange($event)"
                 >
-              <!--   onProductsSorted) = "getSaleProductSorted($event)"
-                                        [saleProductsSorted] = "saleProductSorted" -->
+
                 </app-product-sale-list>
             </div>
         </div>
