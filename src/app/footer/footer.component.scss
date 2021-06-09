@@ -6,7 +6,8 @@ footer{
         background-color: rgb(65, 59, 55);
     }
     .button-size{
-        height: 30px;
+        height: 34px;
+        
     }
     a{
         text-decoration: none;
@@ -14,5 +15,11 @@ footer{
     }
     .text-uppercase{
         text-decoration:underline;
+    }
+    button::after{
+        position: relative;
+        right: 0px;
+        content: '';
+
     }
 }

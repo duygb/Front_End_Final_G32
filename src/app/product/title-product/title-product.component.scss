@@ -1309,8 +1309,8 @@ ul.cart-list > li.total > .btn:hover{
     -o-background-size: cover;
     background-size: cover;
     text-align: center;
-    background-attachment: fixed;
-    padding: 70px 0px;
+    background-attachment: local;
+    padding: 150px 0px;
     position: relative;
 }
 .all-title-box::before{
@@ -1578,8 +1578,8 @@ ul.cart-list > li.total > .btn:hover{
 }
 .list-group-item {
     border: none;
-    padding: 3px 20px;
-    font-size: 15px;
+    padding: 5px 20px;
+    font-size: 14px;
 }
 .text-muted {
     padding: 10px 0px;
@@ -2360,7 +2360,4 @@ ul.cart-list > li.total > .btn:hover{
 .table-responsive .table td, .table-responsive .table th {
     vertical-align: middle;
     white-space: nowrap;
-}
-button::after{
-    content: '';
 }

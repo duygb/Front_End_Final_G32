@@ -30,6 +30,7 @@ import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { MemberCardListComponent } from './member-card/member-card-list/member-card-list.component';
+import { TitleProductComponent } from './product/title-product/title-product.component';
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { MemberCardListComponent } from './member-card/member-card-list/member-c
     AgeComponent,
     GenderComponent,
     ProductNewComponent,
-    MemberCardListComponent
+    MemberCardListComponent,
+    TitleProductComponent
   ],
   imports: [
     BrowserModule,
