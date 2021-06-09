@@ -12,5 +12,8 @@ export class MemberCardListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  onSubmit(f: string){
+    alert(f);
+  }
 }

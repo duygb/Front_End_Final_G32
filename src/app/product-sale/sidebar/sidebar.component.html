@@ -2,7 +2,7 @@
     <div class="search-product">
         <form action="#">
             <input class="form-control" placeholder="Search here..." type="text">
-            <button type="submit" class="button-search"> <i class="fa fa-search"></i> </button>
+            <button type="submit"> <i class="fa fa-search"></i> </button>
         </form>
     </div>
     <div class="filter-sidebar-left">
@@ -11,10 +11,10 @@
         </div>
         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
             <div class="list-group-collapse sub-men">
-            <a class="list-group-item list-group-item-action" href="/product">Sản phẩm</a>
-            <a class="list-group-item list-group-item-action" href="/product-sale">Sản phẩm khuyến mãi</a>
-            <a class="list-group-item list-group-item-action" href="/product-new">Sản phẩm mới</a>
-            <a class="list-group-item list-group-item-action"  href="/">Các trang thương hiệu</a>
+            <a class="list-group-item list-group-item-action">Sản phẩm</a>
+            <a class="list-group-item list-group-item-action" [routerLink]="['/sale-product']" routerLinkActive="router-link-active" >Sản phẩm khuyến mãi</a>
+            <a class="list-group-item list-group-item-action" >Sản phẩm mới</a>
+            <a class="list-group-item list-group-item-action" [routerLink]="['/member-cart']" routerLinkActive="router-link-active" >Các trang thương hiệu</a>
                 <!-- <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
                     <div class="list-group">
                         <a href="#" class="list-group-item list-group-item-action active">T-Shirts <small class="text-muted">(50)</small></a>
@@ -43,13 +43,13 @@
         <div class="title-left">
             <h3>Độ tuổi</h3>
         </div>
-       
+    
         <div class="form-check" *ngFor="let age of ages">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault" style="font-weight: normal;">
-              {{age.value}}
+            <input #checkAge class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (click) = "clickAge(age.id)">
+            <label #check class="form-check-label" for="flexCheckDefault" style="font-weight: normal;">
+                {{age.value}}
             </label>
-          </div>
+        </div>
     </div>
     <div class="filter-brand-left">
         <div class="title-left">
@@ -57,9 +57,9 @@
         </div>
        
         <div class="form-check" *ngFor="let sex of sexs">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <input #checkSex class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (click) = "clickSex(sex.id)">
             <label class="form-check-label" for="flexRadioDefault1" style="font-weight: normal;">
-              {{sex}}
+              {{sex.value}}
             </label>
         </div>
     </div>
@@ -71,12 +71,13 @@
         <div class="brand-box">
             <ul>
                 <li>
-                    <div class="radio radio-danger" *ngFor="let brand of brands">
-                        <label class="Radio1">{{brand.name}}</label>
+                    <div class="radio radio-danger" *ngFor="let brand of brands" (click) = "clickBrand(brand.id)">
+                        <label class="Radio1" >{{brand.name}}</label>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
 
+    
 </div>

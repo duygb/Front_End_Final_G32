@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Pagination } from 'src/common-module/pagination';
 import { SaleProduct } from 'src/common-module/sale-product';
 import { MyServerHttpService } from '../Services/my-server-http-service.service';
+import { Age } from 'src/common-module/age';
 
 @Component({
   selector: 'app-product-sale',
@@ -11,15 +12,11 @@ import { MyServerHttpService } from '../Services/my-server-http-service.service'
   styleUrls: ['./product-sale.component.scss'],
 })
 export class ProductSaleComponent implements OnInit{
-
+  public serverPath: string = "saleProducts";
   public allSaleProducts!: SaleProduct[];
   public saleProducts!: SaleProduct[];
-  public pagination: Pagination = {
-    indexPagination: 1,
-    totalPagination: 0,
-    limitPagination: 6,
-    visiblePage: 3,
-  };
+  public allAges!: Age[];
+  public paramArray = new Map<Object,Object>();
   public sorters: Sorter[] = [
     { id: 0, sort: '', order: '', value: 'Chọn cách sắp xếp' },
     { id: 1, sort: 'priceToBuy', order: 'desc', value: 'Giá cao đến thấp' },
@@ -27,24 +24,31 @@ export class ProductSaleComponent implements OnInit{
     { id: 3, sort: 'name', order: 'asc', value: 'Sắp xếp theo tên sản phẩm A-Z' },
     { id: 4, sort: 'name', order: 'desc', value: 'Sắp xếp theo tên sản phẩm Z-A' },
   ];
+  public pagination: Pagination = {
+    indexPagination: 1,
+    totalPagination: 0,
+    limitPagination: 6,
+    visiblePage: 3,
+  };
   sortCheck = {
     sort: '',
     order: '',
   };
-  ageCheck = {
-    
-  }
-
   visiblePagesNumber: number[] = [];
-
+  checkAge: number[] = [];
+  checkSex: number = -1;
+  checkBrand: number = -1;
   constructor(
     private myServerHttpService: MyServerHttpService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.setParamArrayInitial();
+
     this.myServerHttpService.getAllSaleProducts().subscribe((data) => {
       this.allSaleProducts = data as SaleProduct[];
+      console.log(this.pagination);
       this.setPrice(this.allSaleProducts);
       if (this.allSaleProducts.length % this.pagination.limitPagination != 0) {
         this.pagination.totalPagination =
@@ -62,100 +66,65 @@ export class ProductSaleComponent implements OnInit{
           this.pagination.indexPagination
         );
       }
+      
     });
-
-    if (this.sortCheck.sort == '' && this.sortCheck.order == '') {
-      this.setSaleProductList();
-    }
+    this.setSaleProductList(this.serverPath,this.paramArray);
   }
 
-  setSortCheck(newSort: string, newOrder: string) {
-    this.sortCheck.sort = newSort;
-    this.sortCheck.order = newOrder;
-  }
+
   setPrice(saleProducts: SaleProduct[]) {
     saleProducts.forEach((saleProduct) => {
       saleProduct.basePrice *= 1000;
       saleProduct.priceToBuy *= 1000;
     });
   }
-
-  setSaleProductList() {
-    this.myServerHttpService
-      .getSaleProductsList(
-        this.pagination.indexPagination,
-        this.pagination.limitPagination
-      )
-      .subscribe((data) => {
-        this.saleProducts = data as SaleProduct[];
-        this.setPrice(this.saleProducts);
-        this.router.navigate(['sale-product']);
-      });
+  setSortCheck(newSort: string, newOrder: string) {
+    this.sortCheck.sort = newSort;
+    this.sortCheck.order = newOrder;
   }
-
-  setSaleProductSorted(
-    sort: string,
-    order: string,
-    indexPagination: number,
-    limit: number
-  ) {
-    this.myServerHttpService
-      .getProductsSortBy(sort, order, indexPagination, limit)
-      .subscribe((data) => {
-        this.saleProducts = data as SaleProduct[];
-        this.setPrice(this.saleProducts);
-        this.router.navigate(['sale-product']);
-      });
-  }
-
   changed(selected: HTMLSelectElement) {
-    alert("Đã sắp xếp");
+    alert("Đã sắp xếp!");
     let indexSelected: number = selected.selectedIndex;
-    this.getSaleProductsSorted(indexSelected);
-  }
-
-  checkSorter(){
-    if (this.sortCheck.sort == '' && this.sortCheck.order == '') {
-      this.setSaleProductList();
-    } else {
-      this.setSaleProductSorted(
-        this.sortCheck.sort,
-        this.sortCheck.order,
-        this.pagination.indexPagination,
-        this.pagination.limitPagination
-      );
-    }
-  }
-
-  getSaleProductsSorted(indexSelected: number) {
+    this.sorters.forEach(element => {
+      if(element.id == indexSelected){
+        this.setSortCheck(element.sort,element.order);
+      }
+    });
     this.pagination.indexPagination = 1;
-    if (indexSelected === 0) {
-      this.setSortCheck('', '');
-      this.setSaleProductList();
-    } else {
-      this.sorters.forEach((sort) => {
-        if (sort.id === indexSelected) {
-          this.setSortCheck(sort.sort, sort.order);
-          this.setSaleProductSorted(
-            this.sortCheck.sort,
-            this.sortCheck.order,
-            this.pagination.indexPagination,
-            this.pagination.limitPagination
-          );
-        }
-      });
-    }
+    this.setParamArray("page",this.pagination.indexPagination);
+    this.setParamArray("sort",this.sortCheck.sort);
+    this.setParamArray("order",this.sortCheck.order);
+    this.setSaleProductList(this.serverPath,this.paramArray);
   }
+  indexPaginationChange(valueChange: number) {
+    this.pagination.indexPagination = valueChange;
+    this.setParamArray("page",this.pagination.indexPagination);
+    this.setSaleProductList(this.serverPath,this.paramArray);
+  }
+  setParamArrayInitial(){
+    this.paramArray.set("page", this.pagination.indexPagination);
+    this.paramArray.set("limit", this.pagination.limitPagination);
+    this.paramArray.set("sort", this.sortCheck.sort);
+    this.paramArray.set("order", this.sortCheck.order);
+  }
+  setParamArray(keyParam: Object, valueParam: Object){
+      this.paramArray.set(keyParam,valueParam);
+  }
+  /* thay đổi danh sách sản phẩm khi có sự thay đổi trên page */
+  setSaleProductList(serverPath: string, paramArray: Map<Object,Object>){
+    this.myServerHttpService.getItem(serverPath,paramArray).subscribe((data) => {
+      this.saleProducts = data as SaleProduct[];
+      this.setPrice(this.saleProducts);
+      this.router.navigate(['sale-product']);
+    });
+  }
+  
 
   addToCart(item: SaleProduct) {
     this.myServerHttpService.addToCart(item);
     this.router.navigate(['shopping-cart']);
   }
 
-  indexPaginationChange(valueChange: number) {
-    this.pagination.indexPagination = valueChange;
-    this.checkSorter();
-  }
   createVisiblePage(valueChange: number): number[] {
     let result = [];
     if (this.pagination.visiblePage / 2 == 0) {
@@ -198,7 +167,8 @@ export class ProductSaleComponent implements OnInit{
   previousPage() {
     if (this.pagination.indexPagination != 1) {
       this.pagination.indexPagination = this.pagination.indexPagination - 1;
-      this.checkSorter();
+      this.setParamArray("page",this.pagination.indexPagination);
+      this.setSaleProductList(this.serverPath,this.paramArray);
     }
   }
   nextPage() {
@@ -207,15 +177,34 @@ export class ProductSaleComponent implements OnInit{
     if (this.pagination.indexPagination > this.pagination.totalPagination) {
       this.pagination.indexPagination = this.pagination.indexPagination - 1;
     }
-    this.checkSorter();
+    this.setParamArray("page",this.pagination.indexPagination);
+    this.setSaleProductList(this.serverPath,this.paramArray);
   }
   firstPage() {
     this.pagination.indexPagination = 1;
-    this.checkSorter();
+    this.setParamArray("page",this.pagination.indexPagination);
+    this.setSaleProductList(this.serverPath,this.paramArray);
   }
   lastPage() {
     this.pagination.indexPagination = this.pagination.totalPagination;
-    this.checkSorter();
+    this.setParamArray("page",this.pagination.indexPagination);
+    this.setSaleProductList(this.serverPath,this.paramArray);
   }
-
+  /* SideBar Event */
+  public clickAge(id: string){
+    let idParse = Number.parseInt(id);
+    if(this.checkAge.includes(idParse)){
+      this.checkAge.splice(idParse);
+    }else{
+      this.checkAge.push(idParse);
+    }
+  }
+  public clickSex(id: string){
+    let idParse = Number.parseInt(id);
+    this.checkSex = idParse;
+  }
+  public clickBrand(id: string){
+    let idParse = Number.parseInt(id);
+    this.checkBrand = idParse;
+  }
 }
