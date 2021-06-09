@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Pagination } from 'src/common-module/pagination';
 import { SaleProduct } from 'src/common-module/sale-product';
 import { MyServerHttpService } from '../Services/my-server-http-service.service';
-import { Age } from 'src/common-module/age';
+import { Age } from './sidebar/common/age';
 
 @Component({
   selector: 'app-product-sale',
