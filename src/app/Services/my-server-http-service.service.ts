@@ -1,3 +1,4 @@
+import { Age } from './../product-sale/sidebar/common/age';
 import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -26,35 +27,35 @@ export class MyServerHttpService {
   public getItem(serverPath: string, paramArray: Map<Object,Object>){
     let  url = `${this.REST_API_SERVER}/${serverPath}?` ;
     paramArray.forEach((value, key) => {
-      if(key === "id"){
+      if (key === 'id') {
         url = url + `id=${value}&`;
-      }else if(key === "page"){
+      } else if (key === 'page') {
         url = url + `_page=${value}&`;
-      }else if(key === "limit"){
+      } else if (key === 'limit') {
         url = url + `_limit=${value}&`;
-      }else if(key === "sort"){
+      } else if (key === 'sort' && value != '') {
         url = url + `_sort=${value}&`;
-      } else if(key === "order"){
+      } else if (key === 'order' && value != '') {
         url = url + `_order=${value}&`;
+      } else if (key === 'checkAgeValue') {
+        let valueArray = value as Age[];
+        if (valueArray.length != 0) {
+          valueArray.forEach((element) => {
+            let stringValue = element.value;
+            url = url + `age.value_like=${stringValue}&`;
+          });
+        }
+      } else if (key === 'checkSex') {
+        url = url + `sex_like=${value}&`;
+      } else if (key === 'checkBrand') {
+        url = url + `brand_like=${value}&`;
       }
     });
-    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
-  }
-  public getProducts(): Observable<any>{
-    const url = `${this.REST_API_SERVER}/products`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
   public getAllSaleProducts(): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
-  }
-  public getBrands(): Observable<any>{
-    const url = `${this.REST_API_SERVER}/brands`;
-    return this.httpClient.get(url, this.httpOptions).pipe(catchError(this.handleError));
-  }
-  public getAges(): Observable<any>{
-    const url = `${this.REST_API_SERVER}/ages`;
-    return this.httpClient.get(url, this.httpOptions).pipe(catchError(this.handleError));
   }
   public getCart(): Observable<any>{
     const url = `${this.REST_API_SERVER}/cart`;
@@ -68,20 +69,8 @@ export class MyServerHttpService {
     const url = `${this.REST_API_SERVER}/saleProducts?_page=${page}&_limit=${limit}`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public setPriceToBuy(data: any){
-    const url = `${this.REST_API_SERVER}/saleProducts`;
-    this.httpClient.put(url,data,this.httpOptions).pipe(catchError(this.handleError));
-  }
-  public getProductsSortBy(sortBy: string, orderBy: string,page:number,limit:number): Observable<any>{
-    const url = `${this.REST_API_SERVER}/saleProducts?_sort=${sortBy}&_order=${orderBy}&_page=${page}&_limit=${limit}`;
-    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
-  }
   public getAllBrands(): Observable<any>{
     const url = `${this.REST_API_SERVER}/brands`;
-    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
-  }
-  public getAllAges(): Observable<any>{
-    const url = `${this.REST_API_SERVER}/ages`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
   private handleError(error: HttpErrorResponse) {

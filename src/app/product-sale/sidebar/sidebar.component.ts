@@ -57,13 +57,13 @@ export class SidebarComponent implements OnInit {
     });
   }
   /* -----Sidebar Event----- */
-  public clickAge(id: number){
-    this.onClickAge.emit(id + '');
+  public clickAge(ageObject: Age){
+    this.onClickAge.emit(ageObject);
   }
-  public clickSex(id: number){
-    this.onClickAge.emit(id + "");
+  public clickSex(sexObject: Sex){
+    this.onClickSex.emit(sexObject);
   }
-  public clickBrand(id: number){
-    this.onClickBrand.emit(id + '');
+  public clickBrand(brandObject: Brand){
+    this.onClickBrand.emit(brandObject);
   }
 }
