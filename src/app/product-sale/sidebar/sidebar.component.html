@@ -1,9 +1,7 @@
 <div class="product-categori">
     <div class="search-product">
-        <form action="#">
-            <input class="form-control" placeholder="Search here..." type="text">
-            <button type="submit"> <i class="fa fa-search"></i> </button>
-        </form>
+            <input class="form-control" placeholder="Search here..." type="text" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}">
+            <button type="button"> <i class="fa fa-search" (click)="clickSearch()"></i> </button>
     </div>
     <div class="filter-sidebar-left">
         <div class="title-left">

@@ -118,13 +118,14 @@ export class ProductSaleComponent implements OnInit {
     this.setSaleProductList(this.serverPath, this.paramArray);
   }
   setParamArrayInitial() {
-    this.paramArray.set('page', this.pagination.indexPagination);
+    this.paramArray.set('page', 1);
     this.paramArray.set('limit', this.pagination.limitPagination);
-    this.paramArray.set('sort', this.sortCheck.sort);
-    this.paramArray.set('order', this.sortCheck.order);
-    this.paramArray.set('checkAgeValue', this.checkAge);
-    this.paramArray.set('checkSex', this.checkSex.value);
-    this.paramArray.set('checkBrand', this.checkBrand.name);
+    this.paramArray.set('sort', '');
+    this.paramArray.set('order', '');
+    this.paramArray.set('checkAgeValue', []);
+    this.paramArray.set('checkSex', '');
+    this.paramArray.set('checkBrand', '');
+    this.paramArray.set('search', '');
   }
   setParamArray(keyParam: Object, valueParam: Object) {
     this.paramArray.set(keyParam, valueParam);
@@ -228,6 +229,11 @@ export class ProductSaleComponent implements OnInit {
   public clickBrand(brandObject: Brand) {
     this.checkBrand = brandObject;
     this.setParamArray('checkBrand', this.checkBrand.name);
+    this.setSaleProductList(this.serverPath, this.paramArray);
+  }
+  public clickSearch(searchValue: string){
+    this.setParamArrayInitial();
+    this.setParamArray('search',searchValue);
     this.setSaleProductList(this.serverPath, this.paramArray);
   }
 }

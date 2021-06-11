@@ -61,7 +61,8 @@ import { MemberCardListComponent } from './member-card/member-card-list/member-c
     AppBootstrapModule,
     TooltipModule,
     ModalModule,
-    CommonModule
+    CommonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

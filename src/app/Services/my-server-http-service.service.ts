@@ -49,6 +49,8 @@ export class MyServerHttpService {
         url = url + `sex_like=${value}&`;
       } else if (key === 'checkBrand') {
         url = url + `brand_like=${value}&`;
+      } else if (key === 'search') {
+        url = url + `name_like=${value}&`;
       }
     });
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));

@@ -15,10 +15,12 @@ export class SidebarComponent implements OnInit {
   sexs: Sex[] = [];
   allElement: string[] = ['brands', 'ages', 'sexs'];
   checkAge: number[] = [];
+  searchValue: string = '';
 
   @Output() onClickAge = new EventEmitter();
   @Output() onClickSex = new EventEmitter();
   @Output() onClickBrand = new EventEmitter();
+  @Output() onClickSearch = new EventEmitter();
 
   constructor(private myHttp: MyServerHttpService) {}
   ngOnInit(): void {
@@ -65,5 +67,9 @@ export class SidebarComponent implements OnInit {
   }
   public clickBrand(brandObject: Brand){
     this.onClickBrand.emit(brandObject);
+  }
+  public clickSearch(){
+    alert(this.searchValue);
+    this.onClickSearch.emit(this.searchValue);
   }
 }
