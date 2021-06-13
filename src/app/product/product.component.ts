@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
+  private productURL = 'http://localhost:3000/product';
   constructor() { }
 
   ngOnInit(): void {

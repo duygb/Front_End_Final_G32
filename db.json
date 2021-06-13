@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "a": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {  "id": "PRODUCT-sku-1",
+        "name":"product 1",
+      "description": "Description 1",
+      "thumbnail": "thumbnail",
+      "price": 20,
+      "quantity": 10
+    },
+    {  "id": "PRODUCT-sku-2",
+      "name":"product 2",
+    "description": "Description 2",
+    "thumbnail": "thumbnail",
+    "price": 25,
+    "quantity": 15
+    },
+    {  "id": 3,
+      "name":"PRODUCT-sku-3",
+    "description": "Description 3",
+    "thumbnail": "thumbnail",
+    "price": 30,
+    "quantity": 20
+    },
+    {  "id": "PRODUCT-sku-4",
+      "name":"product 4",
+    "description": "Description 4",
+    "thumbnail": "thumbnail",
+    "price": 35,
+    "quantity": 25
+  },
+  {  "id": 5,
+    "name":"PRODUCT-sku-5",
+  "description": "Description 5",
+  "thumbnail": "thumbnail",
+  "price": 40,
+  "quantity": 30
+  }
+  ]
+}

@@ -1,3 +1,4 @@
+
 import { Sorter } from './product-sale-list/common-saleProduct/sorter';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -8,9 +9,11 @@ import { Age } from './sidebar/common/age';
 import { Sex } from './sidebar/common/sex';
 import { Brand } from './sidebar/common/brand';
 
+
 @Component({
   selector: 'app-product-sale',
   templateUrl: './product-sale.component.html',
+
   styleUrls: ['./product-sale.component.scss'],
 })
 export class ProductSaleComponent implements OnInit {
@@ -236,4 +239,6 @@ export class ProductSaleComponent implements OnInit {
     this.setParamArray('search',searchValue);
     this.setSaleProductList(this.serverPath, this.paramArray);
   }
+
+
 }

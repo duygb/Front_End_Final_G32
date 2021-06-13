@@ -8,6 +8,9 @@ import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { MemberCardComponent } from './member-card/member-card.component';
+import { LoginComponent } from './login/login.component';
+import { ForgetPassComponent } from './forget-pass/forget-pass.component';
+import { ResetPassComponent } from './reset-pass/reset-pass.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -19,6 +22,9 @@ const routes: Routes = [
   { path: 'product-new', component:ProductNewComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent},
   { path: 'member-cart', component: MemberCardComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'forget-pass', component: ForgetPassComponent},
+  { path: 'reset-pass', component: ResetPassComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
