@@ -3,7 +3,7 @@ import { MyServerHttpService } from 'src/app/Services/my-server-http-service.ser
 import { Age } from './common/age';
 import { Brand } from './common/brand';
 import { Sex } from './common/sex';
-
+import { FormsModule} from '@angular/forms';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

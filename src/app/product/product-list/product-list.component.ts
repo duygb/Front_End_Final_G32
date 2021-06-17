@@ -13,10 +13,10 @@ import { Sorter } from './common-product/sorter';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductSaleListComponent implements OnInit {
-  @Input() public allSaleProducts!: SaleProduct[];
-  @Input() public saleProducts!: SaleProduct[];
-  @Input() public pagination!: Pagination;
-  @Input() public sorters!: Sorter[];
+  @Input() public product!: Product[];
+  // @Input() public saleProducts!: SaleProduct[];
+  // @Input() public pagination!: Pagination;
+  // @Input() public sorters!: Sorter[];
   @Input() public sortCheck!: any;
   @Input() public visiblePagesNumber!: any;
 

@@ -33,6 +33,7 @@ import { MemberCardListComponent } from './member-card/member-card-list/member-c
 import { LoginComponent } from './login/login.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
     MemberCardListComponent,
     LoginComponent,
     ForgetPassComponent,
-    ResetPassComponent
+    ResetPassComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,
