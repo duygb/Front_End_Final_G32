@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule} from '@angular/forms';
 import { CommonModule} from '@angular/common';
+import * as $ from 'jquery';
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { AppBootstrapModule } from './app-bootstrap.module';
 import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
 import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
 import { PaginationComponent } from './pagination/pagination.component';
+
 
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
