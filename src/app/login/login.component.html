@@ -4,10 +4,14 @@
            <h3>Đăng nhập</h3>
          
         </div>
-        <form action="">
-            <input type="text" name="login" id="login" class="fadeIn second" placeholder="Nhập tài khoản">
-            <input type="password" name="login" id="password" class="fadeIn third" placeholder="Nhập mật khẩu">
-            <input type="submit" class="fadeIn fourth" value="Đăng nhập">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input  type="text" name="login" id="username" class="fadeIn second" placeholder="Nhập tài khoản" formControlName="username">
+            </div>
+            <div class="form-group">
+                <input type="password" name="login" id="password" class="fadeIn third" placeholder="Nhập mật khẩu" formControlName="password">
+            </div>
+            <button type="submit" class="fadeIn fourth" value="Đăng nhập">Đăng nhập</button>
         </form>
         <div id="formFooter">
             <a href="/forget-pass" class="underLineHover">Quên mật khẩu ?</a>

@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { CommonModule} from '@angular/common';
+import { StoreModule } from '@ngrx/store';
 import * as $ from 'jquery';
+import { reducer } from './../app/login/reducers';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -24,6 +27,7 @@ import { AppBootstrapModule } from './app-bootstrap.module';
 import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
 import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { LoginComponent } from './login/login.component';
 
 
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -32,11 +36,10 @@ import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { MemberCardListComponent } from './member-card/member-card-list/member-card-list.component';
-import { LoginComponent } from './login/login.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
-@NgModule({ 
+@NgModule({
   declarations: [
     AppComponent,
     ShoppingCartComponent,
@@ -61,7 +64,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     LoginComponent,
     ForgetPassComponent,
     ResetPassComponent,
-    DetailProductComponent
+    DetailProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,9 +75,10 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     TooltipModule,
     ModalModule,
     CommonModule,
-    
+    ReactiveFormsModule,
+    StoreModule.forRoot({})
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
