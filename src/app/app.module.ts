@@ -7,6 +7,7 @@ import { FormsModule} from '@angular/forms';
 import { CommonModule} from '@angular/common';
 import * as $ from 'jquery';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
 =======
 >>>>>>> parent of 2f5711f (handling login)
