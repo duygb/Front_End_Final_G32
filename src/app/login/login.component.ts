@@ -8,50 +8,11 @@ import {UserState, getLogin} from './../../app/login/reducers'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  profileForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl(''),
-  });
-  isCheckLogin:boolean = false;
-  dataLogin = [
-    {
-      "id":1,
-      "name":"NGUYEN THANH HOA",
-      "username":"user",
-      "password":"123",
-      "remember_token":''
-  },
-  {
-      "id":2,
-      "name":"ADMIN",
-      "username":"admin",
-      "password":"123",
-      "remember_token":''
-  }
 
-  ]
-  constructor(private store: Store<User>, private router:Router) {}
-  onSubmit() {
-    this.dataLogin.filter((item) => {
-      if (
-        item.username == this.profileForm.value['username'] &&
-        item.password == this.profileForm.value['password']
-      ) {
-        this.isCheckLogin = true;
-        this.store.dispatch(
-          new userLogins.CheckLoginAction({
-            id: item.id,
-            name: item.name,
-            username: item.username,
-            password: item.password,
-            remember_token: item.remember_token,
-          })
-        );
-      }
-    });
+  constructor() { }
 
     if (this.isCheckLogin) {
       alert("Đăng nhập thành công")
@@ -65,7 +26,4 @@ export class LoginComponent implements OnInit {
     
   }
 
-
-  ngOnInit(): void {}
 }
-
