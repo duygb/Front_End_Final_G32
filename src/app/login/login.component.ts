@@ -3,7 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { User } from './models/User';
-import * as userLogins from './../../app/login/action/userAction';
+import * as userLogins from './action/user.action';
+import {UserState, getLogin} from './../../app/login/reducers'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -59,6 +60,9 @@ export class LoginComponent implements OnInit {
       alert("Đăng nhập thất bại")
       console.log('Fail login');
     }
+
+
+    
   }
 
 

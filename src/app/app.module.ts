@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule} from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import * as $ from 'jquery';
-import { reducer } from './../app/login/reducers';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -76,7 +75,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     ModalModule,
     CommonModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({})
+    StoreModule.forRoot({}),
   ],
   providers: [],
   bootstrap: [AppComponent],
