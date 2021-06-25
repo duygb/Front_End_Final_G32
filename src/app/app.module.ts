@@ -6,7 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule} from '@angular/forms';
 import { CommonModule} from '@angular/common';
 import * as $ from 'jquery';
+<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
+=======
+>>>>>>> parent of 2f5711f (handling login)
 
 
 import { AppComponent } from './app.component';
@@ -74,8 +77,11 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     TooltipModule,
     ModalModule,
     CommonModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     StoreModule.forRoot({}),
+=======
+>>>>>>> parent of 2f5711f (handling login)
     
   ],
   providers: [],
