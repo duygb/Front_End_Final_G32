@@ -10,6 +10,8 @@ import * as $ from 'jquery';
 import { ReactiveFormsModule } from '@angular/forms';
 =======
 >>>>>>> parent of 2f5711f (handling login)
+=======
+>>>>>>> parent of 2f5711f (handling login)
 
 
 import { AppComponent } from './app.component';
@@ -78,8 +80,11 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     ModalModule,
     CommonModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ReactiveFormsModule,
     StoreModule.forRoot({}),
+=======
+>>>>>>> parent of 2f5711f (handling login)
 =======
 >>>>>>> parent of 2f5711f (handling login)
     
