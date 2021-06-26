@@ -26,7 +26,6 @@ import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
 import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
 import { PaginationComponent } from './pagination/pagination.component';
 
-
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgeComponent } from './age/age.component';
