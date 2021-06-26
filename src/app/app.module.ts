@@ -1,4 +1,3 @@
-import { StoreModule } from '@ngrx/store';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -6,13 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule} from '@angular/forms';
 import { CommonModule} from '@angular/common';
 import * as $ from 'jquery';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
-=======
->>>>>>> parent of 2f5711f (handling login)
-=======
->>>>>>> parent of 2f5711f (handling login)
 
 
 import { AppComponent } from './app.component';
@@ -44,7 +37,9 @@ import { LoginComponent } from './login/login.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
-@NgModule({ 
+
+
+@NgModule({
   declarations: [
     AppComponent,
     ShoppingCartComponent,
@@ -69,7 +64,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     LoginComponent,
     ForgetPassComponent,
     ResetPassComponent,
-    DetailProductComponent
+    DetailProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,17 +75,9 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     TooltipModule,
     ModalModule,
     CommonModule,
-<<<<<<< HEAD
-<<<<<<< HEAD
     ReactiveFormsModule,
-    StoreModule.forRoot({}),
-=======
->>>>>>> parent of 2f5711f (handling login)
-=======
->>>>>>> parent of 2f5711f (handling login)
-    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

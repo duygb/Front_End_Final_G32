@@ -9,7 +9,6 @@ import { LoginComponent } from '../login/login.component';
 export class HeaderComponent implements OnInit {
 
   constructor(private login: LoginComponent) { 
-    console.log(login.isCheckLogin);
   }
 
   ngOnInit(): void {
