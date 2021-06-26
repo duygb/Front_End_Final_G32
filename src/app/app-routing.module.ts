@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'product-new', component:ProductNewComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent},
   { path: 'member-cart', component: MemberCardComponent},
- /*  { path: 'login', component: LoginComponent}, */
+  { path: 'login', component: LoginComponent},
   { path: 'forget-pass', component: ForgetPassComponent},
   { path: 'reset-pass', component: ResetPassComponent},
   { path: 'detail-product', component: DetailProductComponent},

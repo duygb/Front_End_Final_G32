@@ -1,3 +1,4 @@
+import { StoreModule } from '@ngrx/store';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -35,6 +36,7 @@ import { MemberCardListComponent } from './member-card/member-card-list/member-c
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -62,6 +64,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     ForgetPassComponent,
     ResetPassComponent,
     DetailProductComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +76,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     ModalModule,
     CommonModule,
     ReactiveFormsModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],
