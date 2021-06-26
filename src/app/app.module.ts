@@ -33,7 +33,6 @@ import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { MemberCardListComponent } from './member-card/member-card-list/member-card-list.component';
-import { LoginComponent } from './login/login.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
@@ -61,7 +60,6 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     GenderComponent,
     ProductNewComponent,
     MemberCardListComponent,
-    LoginComponent,
     ForgetPassComponent,
     ResetPassComponent,
     DetailProductComponent,
