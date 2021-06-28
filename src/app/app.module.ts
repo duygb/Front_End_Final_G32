@@ -37,7 +37,7 @@ import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { LoginComponent } from './login/login.component';
-
+import {SidebarComponent1} from './age/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +65,7 @@ import { LoginComponent } from './login/login.component';
     ResetPassComponent,
     DetailProductComponent,
     LoginComponent,
+    SidebarComponent1,
   ],
   imports: [
     BrowserModule,
