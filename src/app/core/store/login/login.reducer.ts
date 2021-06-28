@@ -6,7 +6,7 @@ const initialState: LoginState = {
     user: null
 }
 
-export function loginReducer(state: LoginState, action: loginActions.LoginActions): LoginState{
+export function loginReducer(state: LoginState = initialState, action: loginActions.LoginActions): LoginState{
     switch (action.type) {
         case loginActions.CHECK_LOGIN:   
             return {...state, status: 'loading'};
