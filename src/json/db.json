@@ -1,4 +1,12 @@
-{
+{   
+    "user" : [
+      {
+        "id": 1,
+        "username": "huynhgiahuy",
+        "password": "123",
+        "fullName": "Huynh Gia Huy"
+      }
+    ],
     "posts": [
       {
         "id": 1,

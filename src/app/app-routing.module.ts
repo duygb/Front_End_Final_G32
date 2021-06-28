@@ -2,7 +2,6 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductSaleComponent } from './product-sale/product-sale.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductComponent } from './product/product.component';
 import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
@@ -21,7 +20,7 @@ const routes: Routes = [
   { path: 'gender', component:GenderComponent },
   { path: 'sale-product', component: ProductSaleComponent },
   { path: 'product-new', component:ProductNewComponent },
-  { path: 'shopping-cart', component: ShoppingCartComponent},
+  /* { path: 'shopping-cart', component: ShoppingCartComponent}, */
   { path: 'member-cart', component: MemberCardComponent},
   { path: 'login', component: LoginComponent},
   { path: 'forget-pass', component: ForgetPassComponent},
