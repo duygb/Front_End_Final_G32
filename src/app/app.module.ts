@@ -37,6 +37,8 @@ import { LoginComponent } from './login/login.component';
 import { CoreModule } from './core/core.module';
 import { EffectsModule } from '@ngrx/effects';
 import { LoginEffects } from './core/store/login/login.effect';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { ListOrderHistoryComponent } from './order-history/list-order-history/list-order-history.component';
 
 
 @NgModule({
@@ -60,6 +62,8 @@ import { LoginEffects } from './core/store/login/login.effect';
     ResetPassComponent,
     DetailProductComponent,
     LoginComponent,
+    OrderHistoryComponent,
+    ListOrderHistoryComponent,
   ],
   imports: [
     BrowserModule,

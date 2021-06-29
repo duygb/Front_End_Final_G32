@@ -1,0 +1,90 @@
+*{
+   overflow: hidden;
+    
+}
+.container-fluid {
+    .content-history {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: rgba(241, 238, 238, 0.959);
+        border-radius: 5px;
+
+        .infor-pro {
+            height: 130px;
+            width: 100%;
+            .img-info{
+                height: 130px;
+                .info{
+                    height: 100px;
+                    margin-left: -40px;
+                    .name{
+                       font-weight: 500;
+                    }
+                }
+                .price{
+                    height: 130px;
+                    display: flex;
+                    align-items: center;
+                   margin-left:132px;
+                }
+            }
+           
+        }
+        .sum-money{
+            height: 50px;
+            border-top: 1px solid gray;
+            .money{
+                height: 50px;
+                display: flex;
+                display: -webkit-flex;
+                align-items: center;
+            }
+        }
+        .manipulation{
+            height: 100px;
+            .status-order{
+                height: 100px;
+                display: -webkit-box; 
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .title-status{
+                   .title{
+                    font-weight: 100;
+                    font-size: 15px;
+                   }
+
+                }
+            }
+            .btn{
+                height: 100px;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                .btn-repurchase{
+                    border-radius: 5px;
+                    height: 40px;
+                    width: 150px;
+                    background-color: #ed143d;
+                    border: none;
+                }
+                .btn-repurchase:hover{
+                    background-color: #e95772;
+                }
+                .btn-repurchase::after{
+                    content: "";
+                    
+                }
+            }
+        }
+    }
+}

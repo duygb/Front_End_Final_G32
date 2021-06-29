@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'forget-pass', component: ForgetPassComponent},
   { path: 'reset-pass', component: ResetPassComponent},
   { path: 'detail-product', component: DetailProductComponent},
+  { path: 'order-history', component: OrderHistoryComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
