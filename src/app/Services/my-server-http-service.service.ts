@@ -24,6 +24,10 @@ export class MyServerHttpService {
     const url = `${this.REST_API_SERVER}/users?username=${username}`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
+  public checkUserInfo(username: string, password: string) : Observable<any>{
+    const url = `${this.REST_API_SERVER}/users?username=${username}&password=${password}`;
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
+  }
   public getSaleProductsList(indexPage: number, limit: number): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts?_page=${indexPage}&_limit=${limit}`;
     console.log(this.httpOptions);

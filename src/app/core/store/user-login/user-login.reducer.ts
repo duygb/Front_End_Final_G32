@@ -7,20 +7,15 @@ const initialState: UserLoginState = {
 }
 export function userLoginReducer(state: UserLoginState = initialState, action: userLoginActions.UserLoginActions): UserLoginState{
     switch (action.type) {
-      case userLoginActions.CHECK_USERNAME:
+      case userLoginActions.CHECK_USER_INFO:
         return {
           ...state,
-          status: 'check username',
-          user: {
-            username: action.username,
-            password: '',
-            thumbnail: '',
-            fullName: '',
-          },
+          status: 'checked',
+          mess: action.mess,
+          user: action.user,
         };
-    case userLoginActions.CHECK_USERNAME_SUCCESS:
-        return { ...state, status: 'check username success', user: action.user};
       default:
         return state;
     }
+    console.log(initialState)
 }

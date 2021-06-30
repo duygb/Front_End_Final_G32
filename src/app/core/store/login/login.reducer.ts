@@ -11,7 +11,7 @@ export function loginReducer(state: LoginState = initialState, action: loginActi
         case loginActions.CHECK_LOGIN:   
             return {...state, status: 'loading'};
         case loginActions.LOGIN_SUCCESS:
-            return { ...state, status: 'idle', user: action.user };
+            return { ...state, status: 'idle' };
         case loginActions.LOGIN_FAILED:
             return {...state, status: 'error', error: action.error}
         default:
