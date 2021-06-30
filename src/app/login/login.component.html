@@ -2,7 +2,6 @@
     <div id="formContent">
         <div class="fadeIn first">
            <h3>Đăng nhập</h3>
-         
         </div>
         <form [formGroup]="profileForm" (ngSubmit) = "onSubmit()">
             <div class="form-group">
@@ -12,6 +11,13 @@
                 <input type="password" name="login" id="password" class="fadeIn third" placeholder="Nhập mật khẩu"
                     formControlName="password">
             </div>
+
+            <div *ngIf="vm.mess != ''">
+                <div class="alert alert-danger" role="alert">
+                    {{vm.mess}}
+                  </div>
+            </div>
+
             <button type="submit" class="fadeIn fourth" value="Đăng nhập">Đăng nhập</button>
         </form>
         <div id="formFooter">

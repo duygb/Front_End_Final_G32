@@ -10,7 +10,7 @@ export const GET_USERNAME_EMPTY = "@GET/UsernameEmpty";
 
 export const CHECK_USER_INFO = "@CHECK/UserInf";
 export const CHECK_USER_INFO_COMPLETE = "@GET/UserInfComplete";
-export const checkUserInf = createAction(CHECK_USER_INFO, props<{user: User, mess: string}>())
+export const checkUserInf = createAction(CHECK_USER_INFO, props<{user: User | null, mess: string}>())
 export const checkUserInfComplete = createAction(CHECK_USER_INFO_COMPLETE)
 
 export const checkUsername = createAction(CHECK_USERNAME, props<{username: string}>());
