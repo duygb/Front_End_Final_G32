@@ -1,6 +1,4 @@
-import { UserLoginState } from './user-login/user-login.state';
-import { LoginState } from './login/login.state';
+import { LoginState } from './auth/login.state';
 export interface AppState {
-  feature_userLogin: UserLoginState;
   feature_login: LoginState;
 }

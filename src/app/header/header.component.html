@@ -1,14 +1,14 @@
 <div class="container-fluid">
-    
+
     <form action="">
         <div class="form-inlinee">
             <div class="text">
-                <a href="/"><img src="assets/img/logoCTS.jpg" alt="logoCTS" style="width:100%;"></a>    
+                <a href="/"><img src="assets/img/logoCTS.jpg" alt="logoCTS" style="width:100%;"></a>
             </div>
             <div class="icon">
                 <div class="form-inline">
-                    
-                    
+
+
                     <div class="search">
                         <input type="text" class="form-control input-sm" maxlength="64" placeholder="  Bạn muốn kiếm gì"  />
                         <a style="background-color: black;" type="submit" class="btn"><i style="margin-top: 8px;" class="fas fa-search"></i></a>
@@ -28,7 +28,7 @@
                         <div class="account-center">
                             <div class="row">
                                 <div class="col-2">
-                                    <a href="/login">
+                                    <a [routerLink]="['/login']">
                                         <i class="fas fa-user-circle"></i>
                                     </a>
                                 </div>
@@ -36,10 +36,10 @@
                                     <div >
                                         <div *ngIf="user != null">
                                             <a style="font-size: 14px; margin-left: 5px;">
-                                                Hi, Huynh Gia Huy
+                                                Hi, {{user.fullName}}
                                             </a>
-                                            <a style="font-size: 14px; margin-left: 5px;">
-                                                Đăng xuất
+                                            <a  (click) = "clickLogout()" style="font-size: 14px; margin-left: 5px;cursor: pointer;">
+                                              Đăng xuất
                                             </a>
                                         </div>
                                     </div>

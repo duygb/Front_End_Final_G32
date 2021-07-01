@@ -1,9 +1,9 @@
 import { AppState } from 'src/app/core/store/app.state';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
-import { userSelector } from '../core/store/login/login.selector';
 import { User } from '../core/models/user.model';
+import { logoutAC } from '../core/store/auth/login.action';
 
 @Component({
   selector: 'app-header',
@@ -13,9 +13,16 @@ import { User } from '../core/models/user.model';
 export class HeaderComponent implements OnInit {
   @Input()
   user!: User | null;
+  /* @Output()
+  onClickLogout = new EventEmitter(); */
+
   ngOnInit(): void {
   }
-  constructor() {}
+  constructor(private store: Store<AppState>, private router: Router) {}
 
+  clickLogout(){
+    this.store.dispatch(logoutAC());
+    this.router.navigate(['/home'])
+  }
 
 }

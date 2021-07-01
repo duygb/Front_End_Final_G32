@@ -1,16 +1,28 @@
-{   
+{
     "users" : [
       {
         "id": 1,
         "username": "huynhgiahuy",
         "password": "123",
-        "fullName": "Huynh Gia Huy"
+        "fullName": "Huynh Gia Huy",
+        "role": [
+        {
+          "name": "user",
+          "code": "USER"
+        }
+        ]
       },
       {
         "id": 2,
         "username": "lamhaison",
         "password": "123",
-        "fullName": "Lam Hai Son"
+        "fullName": "Lam Hai Son",
+        "role": [
+          {
+            "name": "admin",
+            "code": "ADMIN"
+          }
+          ]
       }
     ],
     "posts": [
@@ -87,7 +99,7 @@
         "typecode" : "A",
         "name": "AIRHOG",
         "sku": "AIRHOG"
-        
+
       },
       {
         "id": 2,
@@ -264,7 +276,7 @@
         "priceToBuy": 500,
         "sex": "con trai"
       },
-      { 
+      {
         "id": 3,
         "name": "Xe công trình",
         "brand": "BRUDER",

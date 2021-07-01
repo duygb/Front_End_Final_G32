@@ -1,21 +1,19 @@
-import { checkLoginFailed } from './../core/store/login/login.action';
-import { checkUserInf } from './../core/store/user-login/user-login.action';
 import { forkJoin } from 'rxjs';
 import { Store} from '@ngrx/store';
 import { AppState } from 'src/app/core/store/app.state';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {  messSelection, userSelection } from '../core/store/user-login/user-login.selector';
 import { User } from '../core/models/user.model';
 import { MyServerHttpService } from '../Services/my-server-http-service.service';
-import { checkLoginSuccess } from '../core/store/login/login.action';
 import { dispatch } from 'rxjs/internal/observable/pairs';
-import { statusSelector } from '../core/store/login/login.selector';
+import { checkUserInfoAC } from '../core/store/auth/login.action';
+import { AuthServiceService } from '../Services/UserServices/auth-service.service';
+import { Role } from '../core/models/role.model';
+import { messSelection, userSelection } from '../core/store/auth/login.selector';
 /* import { getLogin } from './../core/store/login/login.selector' */
 interface UserLoginVm{
   user: User | null;
-  status: string;
   mess: string
 }
 @Component({
@@ -30,60 +28,62 @@ export class LoginComponent implements OnInit {
   });
   vm: UserLoginVm = {
     user: null,
-    status: '',
     mess: '',
   };
-  constructor(private store: Store<AppState>, private router: Router, private httpService: MyServerHttpService) {}
+  constructor(
+    private store: Store<AppState>,
+    private router: Router,
+    private httpService: MyServerHttpService,
+    private authService: AuthServiceService
+  ) {}
   ngOnInit(): void {
-    this.store.select(userSelection).subscribe(data => {
+    this.store.select(userSelection).subscribe((data) => {
       this.vm.user = data;
-      this.checkLoginState(data);
+      this.authorize(this.vm.user, this.authService.isAdmin);
     });
-    this.store.select(messSelection).subscribe(data => {
+    this.store.select(messSelection).subscribe((data) => {
       this.vm.mess = data;
     });
-    this.store.select(statusSelector).subscribe(data => {
-      this.vm.status = data
-    })
-    console.log("ngOnInit run")
+
   }
+
+  authorize(user: User | null, isAdmin: boolean) {
+    console.log(user,isAdmin);
+    if (isAdmin === false && user !== null) {
+      this.router.navigate(['/home']);
+    } else if(isAdmin === true && user !== null){
+      this.router.navigate(['/sale-product']);
+    }
+  }
+
   onSubmit() {
-    this.checkUserInfo(this.profileForm.value['username'],this.profileForm.value['password'])
+    this.checkUserInfo(
+      this.profileForm.value['username'],
+      this.profileForm.value['password']
+    );
   }
 
   /* Kiểm tra username & password => dispatch action tương ứng */
-  checkUserInfo(username: string, password: string){
+  checkUserInfo(username: string, password: string) {
     forkJoin([
       this.httpService.checkUsername(username),
       this.httpService.checkUserInfo(username, password),
     ]).subscribe(([data1, data2]) => {
       if (data1.length === 1 && data2.length === 1) {
         return this.store.dispatch(
-          checkUserInf({ user: data2[0], mess: 'Đăng nhập thành công' })
+          checkUserInfoAC({ user: data2[0], mess: 'Đăng nhập thành công' })
         );
       }
       if (data1.length === 0) {
-        console.log(data1);
         return this.store.dispatch(
-          checkUserInf({ user: null, mess: 'Username is not exist' })
+          checkUserInfoAC({ user: null, mess: 'Username is not exist' })
         );
       }
       if (data2.length === 0) {
         return this.store.dispatch(
-          checkUserInf({ user: null, mess: 'Password is incorrect' })
+          checkUserInfoAC({ user: null, mess: 'Password is incorrect' })
         );
       }
     });
-   }
-  /* Kiểm tra trạng thái đăng nhập login hay logout */
-  checkLoginState(user: any){
-    if(user !== null){
-      this.store.dispatch(checkLoginSuccess({user: user}));
-
-      this.router.navigate(['/home'])
-    }else {
-      this.store.dispatch(checkLoginFailed());
-      this.router.navigate(['/login'])
-    }
   }
 }

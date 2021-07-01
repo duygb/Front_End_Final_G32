@@ -5,8 +5,8 @@ import { ProductSaleComponent } from './product-sale/product-sale.component';
 import { User } from './core/models/user.model';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
-import { userSelector } from './core/store/login/login.selector';
 import { AppState } from './core/store/app.state';
+import { userSelection } from './core/store/auth/login.selector';
 
 @Component({
   selector: 'app-root',
@@ -19,14 +19,18 @@ export class AppComponent implements OnInit {
     username: '',
     password: '',
     fullName: '',
+    role: []
   };
   ngOnInit(): void {
-    this.store.select(userSelector).subscribe((data) => {
+    this.store.select(userSelection).subscribe((data) => {
       this.user = data;
     });
   }
+
+
+
   constructor(
     private store: Store<AppState>,
-    private router: Router 
+    private router: Router
   ) {}
 }

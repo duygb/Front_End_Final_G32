@@ -9,7 +9,6 @@ import { FormsModule} from '@angular/forms';
 import { CommonModule} from '@angular/common';
 import * as $ from 'jquery';
 import { ReactiveFormsModule } from '@angular/forms';
-import { StoreRouterConnectingModule } from '@ngrx/router-store'
 
 
 import { AppComponent } from './app.component';
@@ -37,12 +36,10 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
 import { LoginComponent } from './login/login.component';
 import { CoreModule } from './core/core.module';
 import { EffectsModule } from '@ngrx/effects';
-import { LoginEffects } from './core/store/login/login.effect';
+import { LoginEffects } from './core/store/auth/login.effect';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ListOrderHistoryComponent } from './order-history/list-order-history/list-order-history.component';
 
-import { userLoginReducer } from './../app/core/store/user-login/user-login.reducer';
-import { loginReducer } from './../app/core/store/login/login.reducer';
 @NgModule({
   declarations: [
     AppComponent,
