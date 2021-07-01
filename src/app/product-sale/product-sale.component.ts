@@ -17,6 +17,7 @@ import { Brand } from './sidebar/common/brand';
   styleUrls: ['./product-sale.component.scss'],
 })
 export class ProductSaleComponent implements OnInit {
+  public getSizeProds!: number;
   public serverPath: string = 'saleProducts';
   public allSaleProducts!: SaleProduct[];
   public saleProducts!: SaleProduct[];
@@ -66,11 +67,12 @@ export class ProductSaleComponent implements OnInit {
 
   ngOnInit(): void {
     this.setParamArrayInitial();
-
     this.myServerHttpService.getAllSaleProducts().subscribe((data) => {
-      this.allSaleProducts = data as SaleProduct[];
-      console.log(this.pagination);
+      this.allSaleProducts = data;
+      this.getSizeProds = this.allSaleProducts.length;
+      /* Giá x1000 */
       this.setPrice(this.allSaleProducts);
+      /* Config pagination */
       if (this.allSaleProducts.length % this.pagination.limitPagination != 0) {
         this.pagination.totalPagination =
           Math.round(
@@ -88,6 +90,7 @@ export class ProductSaleComponent implements OnInit {
         );
       }
     });
+    /* Get model */
     this.setSaleProductList(this.serverPath, this.paramArray);
   }
 
@@ -182,10 +185,8 @@ export class ProductSaleComponent implements OnInit {
           this.pagination.indexPagination -
           (this.pagination.visiblePage - index) +
           1;
-        console.log(result[index]);
       }
     }
-    console.log(result);
     return result;
   }
   previousPage() {

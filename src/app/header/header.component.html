@@ -11,7 +11,7 @@
                     
                     <div class="search">
                         <input type="text" class="form-control input-sm" maxlength="64" placeholder="  Bạn muốn kiếm gì"  />
-                        <a type="submit" class="btn"><i class="fas fa-search"></i></a>
+                        <a style="background-color: black;" type="submit" class="btn"><i style="margin-top: 8px;" class="fas fa-search"></i></a>
                     </div>
 
                     <div class="cart">
@@ -26,7 +26,25 @@
                     </div>
                     <div class="account">
                         <div class="account-center">
-                           <a href="/login"> <i class="fas fa-user-circle"></i></a>
+                            <div class="row">
+                                <div class="col-2">
+                                    <a href="/login">
+                                        <i class="fas fa-user-circle"></i>
+                                    </a>
+                                </div>
+                                <div class="col-10">
+                                    <div >
+                                        <div *ngIf="user != null">
+                                            <a style="font-size: 14px; margin-left: 5px;">
+                                                Hi, Huynh Gia Huy
+                                            </a>
+                                            <a style="font-size: 14px; margin-left: 5px;">
+                                                Đăng xuất
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -39,12 +57,12 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid nav-custom">
             <ul class="nav navbar effect">
-                <li><a href="/product">SẢN PHẨM</a></li>
-                <li><a href="/age">ĐỘ TUỔI</a></li>
-                <li><a href="/gender">GIỚI TÍNH</a></li>
-                <li><a href="/sale-product">KHUYẾN MÃI</a></li>
-                <li><a href="/product-new">HÀNG MỚI</a></li>
-                <li><a href="/member-cart">THƯƠNG HIỆU</a></li>
+                <li><a [routerLink]="['/product']">SẢN PHẨM</a></li>
+                <li><a [routerLink]="['/age']">ĐỘ TUỔI</a></li>
+                <li><a [routerLink]="['/gender']">GIỚI TÍNH</a></li>
+                <li><a [routerLink]="['/sale-product']" routerLinkActive="router-link-active" >KHUYẾN MÃI</a></li>
+                <li><a [routerLink]="['/product-new']">HÀNG MỚI</a></li>
+                <li><a [routerLink]="['/member-cart']">THƯƠNG HIỆU</a></li>
             </ul>
         </div>
     </nav>

@@ -12,6 +12,7 @@ import { Sorter } from './common-saleProduct/sorter';
   styleUrls: ['./product-sale-list.component.scss'],
 })
 export class ProductSaleListComponent implements OnInit {
+  @Input() getSizeProds!: number 
   @Input() public allSaleProducts!: SaleProduct[];
   @Input() public saleProducts!: SaleProduct[];
   @Input() public pagination!: Pagination;
@@ -26,11 +27,10 @@ export class ProductSaleListComponent implements OnInit {
   @Output() onNextPage = new EventEmitter();
   @Output() onIndexPaginationChange = new EventEmitter();
   constructor(
-    private myServerHttpService: MyServerHttpService,
-    private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
   indexPaginationChange(valueChange: number) {
     this.onIndexPaginationChange.emit(valueChange);
   }
