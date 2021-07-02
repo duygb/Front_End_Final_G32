@@ -12,7 +12,6 @@ import { Sorter } from './common-saleProduct/sorter';
   styleUrls: ['./product-sale-list.component.scss'],
 })
 export class ProductSaleListComponent implements OnInit {
-  @Input() getSizeProds!: number 
   @Input() public allSaleProducts!: SaleProduct[];
   @Input() public saleProducts!: SaleProduct[];
   @Input() public pagination!: Pagination;

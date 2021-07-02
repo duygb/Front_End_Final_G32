@@ -16,7 +16,7 @@
 
                     <div class="cart">
                         <div class="cart-center">
-                            <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a [routerLink]="['/shopping-cart']"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                     <div class="email">
@@ -36,6 +36,9 @@
                                     <div >
                                         <div *ngIf="user != null">
                                             <a style="font-size: 14px; margin-left: 5px;">
+                                              <!-- string interpolation way {{string}}-->
+                                              <!-- property binding []=""-->
+                                              <!-- event binding ()="handler()"-->
                                                 Hi, {{user.fullName}}
                                             </a>
                                             <a  (click) = "clickLogout()" style="font-size: 14px; margin-left: 5px;cursor: pointer;">

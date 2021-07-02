@@ -12,6 +12,7 @@ import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'gender', component:GenderComponent },
   { path: 'sale-product', component: ProductSaleComponent },
   { path: 'product-new', component:ProductNewComponent },
-  /* { path: 'shopping-cart', component: ShoppingCartComponent}, */
+  { path: 'shopping-cart', component: ShoppingCartComponent},
   { path: 'member-cart', component: MemberCardComponent},
   { path: 'login', component: LoginComponent},
   { path: 'forget-pass', component: ForgetPassComponent},
