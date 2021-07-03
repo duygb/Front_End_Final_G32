@@ -8,7 +8,7 @@ import { logoutAC } from '../core/store/auth/login.action';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   @Input()
@@ -16,13 +16,13 @@ export class HeaderComponent implements OnInit {
   /* @Output()
   onClickLogout = new EventEmitter(); */
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   constructor(private store: Store<AppState>, private router: Router) {}
 
-  clickLogout(){
+  clickLogout() {
     this.store.dispatch(logoutAC());
-    this.router.navigate(['/home'])
+    localStorage.removeItem('userId');
+    this.user = null;
+    this.router.navigate(['/home']);
   }
-
 }

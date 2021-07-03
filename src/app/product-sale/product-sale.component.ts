@@ -66,6 +66,16 @@ export class ProductSaleComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (typeof Storage !== 'undefined') {
+      localStorage.setItem('name', "thanh");
+      // Code for localStorage/sessionStorage.
+      var name = localStorage.getItem('name');
+      console.log(name)
+      console.log("a");
+    } else {
+      console.log("b");
+      // Sorry! No Web Storage support..
+    }
     this.setParamArrayInitial();
     this.myServerHttpService.getAllSaleProducts().subscribe((data) => {
       this.allSaleProducts = data;

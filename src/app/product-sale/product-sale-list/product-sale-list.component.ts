@@ -48,4 +48,7 @@ export class ProductSaleListComponent implements OnInit {
   lastPage() {
     this.onLastPage.emit();
   }
+  addToCart(item: number){
+    localStorage.setItem('order'+item, item + '');
+  }
 }

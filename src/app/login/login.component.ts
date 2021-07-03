@@ -56,11 +56,15 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onSubmit() {
-    this.checkUserInfo(
-      this.profileForm.value['username'],
-      this.profileForm.value['password']
-    );
+  //Login
+  checkUser() {
+    let userId = localStorage.getItem("userId");
+    if(userId === null){
+      this.checkUserInfo(
+        this.profileForm.value['username'],
+        this.profileForm.value['password']
+      );
+    }
   }
 
   /* Kiểm tra username & password => dispatch action tương ứng */
@@ -70,6 +74,8 @@ export class LoginComponent implements OnInit {
       this.httpService.checkUserInfo(username, password),
     ]).subscribe(([data1, data2]) => {
       if (data1.length === 1 && data2.length === 1) {
+        let user: User = data2[0];
+        localStorage.setItem('userId', user.id);
         return this.store.dispatch(
           checkUserInfoAC({ user: data2[0], mess: 'Đăng nhập thành công' })
         );

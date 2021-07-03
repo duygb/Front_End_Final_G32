@@ -1,16 +1,13 @@
-<tr>
   <td class="thumbnail-img">
       <a href="#">
-<img class="img-fluid" src="images/img-pro-01.jpg" alt="" />
+<img class="img-fluid" src="../../../assets/Image/SaleProduct-Image/{{order?.thumbnail}}" alt="" />
 </a>
   </td>
   <td class="name-pr">
-      <a href="#">
-Lorem ipsum dolor sit amet
-</a>
+      <a href="#">{{order?.name}}</a>
   </td>
   <td class="price-pr">
-      <p>$ 80.0</p>
+      <p>{{order?.priceToBuy}}</p>
   </td>
   <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
   <td class="total-pr">
@@ -21,4 +18,3 @@ Lorem ipsum dolor sit amet
 <i class="fas fa-times"></i>
 </a>
   </td>
-</tr>

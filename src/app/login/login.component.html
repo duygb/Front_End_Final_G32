@@ -3,7 +3,7 @@
         <div class="fadeIn first">
            <h3>Đăng nhập</h3>
         </div>
-        <form [formGroup]="profileForm" (ngSubmit) = "onSubmit()">
+        <form [formGroup]="profileForm" (ngSubmit) = "checkUser()">
             <div class="form-group">
                 <input type="text" name="login" id="login" class="fadeIn second" placeholder="Nhập tài khoản" formControlName="username">
             </div>

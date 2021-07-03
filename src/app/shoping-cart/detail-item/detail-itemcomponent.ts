@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Order } from './../../core/models/order/order.model';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-detail-item',
@@ -11,7 +12,9 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class DetailItemComponent implements OnInit {
-  constructor() {}
+  @Input()
+  order: Order | null = null;
 
+  constructor() {}
   ngOnInit(): void {}
 }

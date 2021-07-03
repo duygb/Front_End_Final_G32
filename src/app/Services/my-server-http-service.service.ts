@@ -8,7 +8,7 @@ import { Observable, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class MyServerHttpService {
-  
+
   private httpOptions = {
     headers:  new HttpHeaders({
       'Content-Type' : 'application/json'
@@ -20,6 +20,18 @@ export class MyServerHttpService {
     const url = `${this.REST_API_SERVER}/${serverPath}`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
+  public getById(serverPath: string, id: string):Observable<any>{
+    const url = `${this.REST_API_SERVER}/${serverPath}?id=${id}`;
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
+  }
+  public getByIds(serverPath: string, ids: string[]):Observable<any>{
+    let url = `${this.REST_API_SERVER}/${serverPath}?`;
+    ids.forEach(id => {
+      url = url + `id=${id}&`
+    });
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
+  }
+
   public checkUsername(username: string) : Observable<any>{
     const url = `${this.REST_API_SERVER}/users?username=${username}`;
     return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));

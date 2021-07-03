@@ -16,7 +16,11 @@
                           </tr>
                       </thead>
                       <tbody>
-                        <app-detail-item> </app-detail-item>
+                        <ng-container *ngIf="orders.length != 0">
+                          <tr *ngFor="let order of orders">
+                            <app-detail-item [order]="order"> </app-detail-item>
+                          </tr>
+                        </ng-container>
                       </tbody>
                   </table>
               </div>

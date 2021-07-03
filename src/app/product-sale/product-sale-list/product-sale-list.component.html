@@ -6,7 +6,7 @@
                     <option *ngFor="let i of sorters">{{i.value}}</option>
                 </select>
             </div>
-              <p>Tổng cộng có {{allSaleProducts}.length} sản phẩm</p>
+              <p>Tổng cộng có {{allSaleProducts.length}} sản phẩm</p>
         </div>
    <!--      <button #hightToLow value="{priceToBuy,esc}" (click) = "getSaleProductsSorted(hightToLow)">High Price → Low Price> </button> -->
     </div>
@@ -27,7 +27,7 @@
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                     </ul>
-                                    <a class="cart" href="#">Add to Cart</a>
+                                    <a class="cart" (click) = "addToCart(saleProduct.id)">Add to Cart</a>
                                 </div>
                             </div>
                             <div class="why-text">
