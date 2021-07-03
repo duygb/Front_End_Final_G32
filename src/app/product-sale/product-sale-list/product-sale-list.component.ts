@@ -1,7 +1,7 @@
-import { Product } from './../../../common-module/product';
-import { Pagination } from './../../../common-module/pagination';
+import { Product } from '../../core/models/common-models/product';
+import { Pagination } from '../../core/models/common-models/pagination';
 import { Component, OnInit, Input, Output, EventEmitter, DoCheck } from '@angular/core';
-import { SaleProduct } from 'src/common-module/sale-product';
+import { SaleProduct } from 'src/app/core/models/common-models/sale-product';
 import { MyServerHttpService } from 'src/app/Services/my-server-http-service.service';
 import { Router } from '@angular/router';
 import { Sorter } from './common-saleProduct/sorter';

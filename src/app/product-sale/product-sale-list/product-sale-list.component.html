@@ -27,7 +27,7 @@
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                     </ul>
-                                    <a class="cart" (click) = "addToCart(saleProduct.id)">Add to Cart</a>
+                                    <a class="cart" (click) = "addToCart(1)">Add to Cart</a>
                                 </div>
                             </div>
                             <div class="why-text">
@@ -35,7 +35,7 @@
                                 <h5>SKU: {{saleProduct.SKU}}</h5>
                                 <div class="price-box">
                                     <span class="priceToBuy">{{saleProduct.priceToBuy | currency: "VND"}}</span>
-                                    <span class="basePrice">{{saleProduct.basePrice | currency: "VND"}}</span>
+                                    <span class="basePrice">{{saleProduct.priceUnit | currency: "VND"}}</span>
                                 </div>
                             </div>
                         </div>

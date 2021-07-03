@@ -2,8 +2,8 @@
 import { Sorter } from './product-sale-list/common-saleProduct/sorter';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pagination } from 'src/common-module/pagination';
-import { SaleProduct } from 'src/common-module/sale-product';
+import { Pagination } from 'src/app/core/models/common-models/pagination';
+import { SaleProduct } from 'src/app/core/models/common-models/sale-product';
 import { MyServerHttpService } from '../Services/my-server-http-service.service';
 import { Age } from './sidebar/common/age';
 import { Sex } from './sidebar/common/sex';
@@ -106,7 +106,7 @@ export class ProductSaleComponent implements OnInit {
 
   setPrice(saleProducts: SaleProduct[]) {
     saleProducts.forEach((saleProduct) => {
-      saleProduct.basePrice *= 1000;
+      saleProduct.priceUnit *= 1000;
       saleProduct.priceToBuy *= 1000;
     });
   }

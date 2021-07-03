@@ -2,7 +2,6 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductSaleComponent } from './product-sale/product-sale.component';
-import { ProductComponent } from './product/product.component';
 import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
@@ -17,7 +16,7 @@ import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   { path: 'home', component: HomeComponent },
-  { path: 'product', component:ProductComponent },
+  /* { path: 'product', component:ProductComponent }, */
   { path: 'age', component:AgeComponent },
   { path: 'gender', component:GenderComponent },
   { path: 'sale-product', component: ProductSaleComponent },
