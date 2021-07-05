@@ -10,11 +10,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.scss']
+  styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent implements OnInit {
+  title: string = 'PAYMENT';
+  backgroundImage: string = 'payment-bg-title.jpg';
+
   orders$!: Observable<PendingOrderItem[]>;
-  constructor(private store: Store, private router: Router) { }
+  constructor(private store: Store, private router: Router) {}
 
   ngOnInit(): void {
     /*  Khi người dùng click thanh toán, redirec -> payment. Nên sẽ kiểm tra đã login chưa. */
@@ -22,13 +25,11 @@ export class PaymentComponent implements OnInit {
     this.orders$ = this.store.select(pendingOrdersSelection);
   }
 
-  checkLogin(){
-    this.store.select(userSelection).subscribe(user => {
-      if(user !== null){
-        this.router.navigate(['/payment'])
+  checkLogin() {
+    this.store.select(userSelection).subscribe((user) => {
+      if (user !== null) {
+        this.router.navigate(['/payment']);
       }
     }).unsubscribe;
-
   }
-
 }

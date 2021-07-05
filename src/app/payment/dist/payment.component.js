@@ -14,6 +14,8 @@ var PaymentComponent = /** @class */ (function () {
     function PaymentComponent(store, router) {
         this.store = store;
         this.router = router;
+        this.title = 'PAYMENT';
+        this.backgroundImage = 'payment-bg-title.jpg';
     }
     PaymentComponent.prototype.ngOnInit = function () {
         /*  Khi người dùng click thanh toán, redirec -> payment. Nên sẽ kiểm tra đã login chưa. */

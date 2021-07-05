@@ -27,12 +27,19 @@ export class MyServerHttpService {
       .get(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+  public searchByName(serverPath: string, searchValue: string): Observable<any> {
+    const url = `${this.REST_API_SERVER}/${serverPath}?name_like=${searchValue}`;
+    return this.httpClient
+      .get(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
   public getCouponByCode(code: string): Observable<any> {
     const url = `${this.REST_API_SERVER}/coupon?code=${code}`;
     return this.httpClient
       .get(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public getByIds(serverPath: string, ids: string[]): Observable<any> {
     let url = `${this.REST_API_SERVER}/${serverPath}?`;
     ids.forEach((id) => {

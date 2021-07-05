@@ -17,6 +17,7 @@ export class SidebarComponent implements OnInit {
   checkAge: number[] = [];
   searchValue: string = '';
 
+
   @Output() onClickAge = new EventEmitter();
   @Output() onClickSex = new EventEmitter();
   @Output() onClickBrand = new EventEmitter();
@@ -66,7 +67,6 @@ export class SidebarComponent implements OnInit {
     this.onClickBrand.emit(brandObject);
   }
   public clickSearch(){
-    alert(this.searchValue);
     this.onClickSearch.emit(this.searchValue);
   }
 }
