@@ -2,9 +2,9 @@ import { data } from 'jquery';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Injectable } from '@angular/core';
-import { User } from 'src/app/core/models/user.model';
+import { User } from '../../../app/core/models/user/user.model';
 import { AppState } from 'src/app/core/store/app.state';
-import { Role } from 'src/app/core/models/role.model';
+import { Role } from 'src/app/core/models/user/role.model';
 import { userSelection } from 'src/app/core/store/auth/login.selector';
 
 @Injectable({

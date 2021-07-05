@@ -38,10 +38,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { LoginEffects } from './core/store/auth/login.effect';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ListOrderHistoryComponent } from './order-history/list-order-history/list-order-history.component';
-import { CouponCodeComponent } from './shoping-cart/coupon-code/coupon-code.component';
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { SummaryBoxComponent } from './shoping-cart/summary-box/summary-box.component';
-import { DetailItemComponent } from './shoping-cart/detail-item/detail-itemcomponent';
+import { DetailItemComponent } from './shoping-cart/detail-item/detail-item.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +64,6 @@ import { DetailItemComponent } from './shoping-cart/detail-item/detail-itemcompo
     LoginComponent,
     OrderHistoryComponent,
     ListOrderHistoryComponent,
-    CouponCodeComponent,
     TitleBoxComponent,
     ShoppingCartComponent,
     SummaryBoxComponent,

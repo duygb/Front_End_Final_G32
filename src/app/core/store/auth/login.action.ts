@@ -1,5 +1,5 @@
 import { createAction, ActionType, props } from '@ngrx/store';
-import { User } from '../../models/user.model';
+import { User } from '../../models/user/user.model';
 /* Login */
 
 export const CHECK_USER_INF = "[CHECK] User Info"

@@ -1,29 +1,30 @@
-import { OrdersState } from './orders.state';
-import * as ordersActions from './orders.actions';
-import { MyServerHttpService } from 'src/app/Services/my-server-http-service.service';
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { PendingOrderItem } from 'src/app/core/models/common-models/pendingOrderItem';
+import { OrdersState } from "./orders.state";
+import * as ordersActions from './orders.actions'
+/* Cơ chế: Khi addToCart() được gọi. Update local storage -> update state (init = những gì có trong storage) */
+
+/* getPendingOrders từ local storage */
+function getPendingOrders(): PendingOrderItem[]{
+  if(localStorage.getItem('pendingOrders') == null){
+    return [];
+  }else {
+    return JSON.parse(localStorage.getItem('pendingOrders') || '');
+  }
+}
 export const initialState: OrdersState = {
-  orders: null,
+  pendingOrders: getPendingOrders(),
+  couponValue: '',
   error: '',
 };
 
-function getOrders(){
-  let ordersId: string[] = [];
-  for (let index = 0; index < localStorage.length; index++) {
-    let key = localStorage.key(index);
-    if (key?.slice(0, 5) == 'order') {
-      let orderId = key?.slice(5);
-      ordersId.push(orderId);
-    }
-  }
-
-}
 
 export function ordersReducer(state = initialState, action: ordersActions.OrdersActions): OrdersState{
   switch (action.type) {
-    case action.ADD_ORDER:
-      return {...state, orders: }
-
+    /* khi action dispatch. Vẫn lấy trong localStorage */
+    case ordersActions.ADD_PRODUCT_INTO_ORDER:
+      return { ...state, pendingOrders: getPendingOrders() };
+    case ordersActions.UPDATE_QUANTITY:
+      return { ...state, pendingOrders: getPendingOrders() };
     default:
       return state;
   }

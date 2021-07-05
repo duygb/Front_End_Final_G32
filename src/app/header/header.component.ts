@@ -2,7 +2,7 @@ import { AppState } from 'src/app/core/store/app.state';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
-import { User } from '../core/models/user.model';
+import { User } from '../core/models/user/user.model';
 import { logoutAC } from '../core/store/auth/login.action';
 
 @Component({

@@ -1,4 +1,4 @@
-import { Order } from './../../core/models/order/order.model';
+import { PendingOrderItem } from './../../core/models/common-models/pendingOrderItem';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -13,8 +13,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DetailItemComponent implements OnInit {
   @Input()
-  order: Order | null = null;
-
+  pendingOrder: PendingOrderItem | null = null;
+  totalPrice!: number;
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(this.pendingOrder !== null){
+      const {priceUnit, discountPercent, quantity} = this.pendingOrder;
+      this.totalPrice = Math.round((discountPercent * priceUnit * quantity) / 100 / 1000) * 1000;
+    }
+  }
 }

@@ -81,9 +81,9 @@
 
 .form-inlinee .icon {
   height: 50px;
-  width: 50%;
+  width: 60%;
   position: relative;
-  left: 500px;
+  left: 400px;
 }
 
 .form-inlinee .icon a {
@@ -155,12 +155,15 @@
 
 .form-inlinee .icon .account {
   height: 50px;
-  width: 10%;
+  width: 30%;
 }
 
 .form-inlinee .icon .account .account-center {
+  height: 80%;
+  width: 100%;
   font-size: 20px;
   position: relative;
   top: 10px;
+  left: 10px;
 }
 /*# sourceMappingURL=header.component.css.map */

@@ -4,12 +4,12 @@ import { AppState } from 'src/app/core/store/app.state';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../core/models/user.model';
+import { User } from '../core/models/user/user.model';
 import { MyServerHttpService } from '../Services/my-server-http-service.service';
 import { dispatch } from 'rxjs/internal/observable/pairs';
 import { checkUserInfoAC } from '../core/store/auth/login.action';
 import { AuthServiceService } from '../Services/UserServices/auth-service.service';
-import { Role } from '../core/models/role.model';
+import { Role } from '../core/models/user/role.model';
 import { messSelection, userSelection } from '../core/store/auth/login.selector';
 /* import { getLogin } from './../core/store/login/login.selector' */
 interface UserLoginVm{

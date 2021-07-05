@@ -1,6 +1,7 @@
-import { Order } from "../../models/order/order.model";
+import { PendingOrderItem } from 'src/app/core/models/common-models/pendingOrderItem';
 
 export interface OrdersState {
-  orders: Order[] | null;
+  pendingOrders: PendingOrderItem[];
+  couponValue: string;
   error: string;
 }

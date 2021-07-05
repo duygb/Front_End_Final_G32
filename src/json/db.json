@@ -247,7 +247,7 @@
         "thumbnail": "AIRHOG6044137.jpg",
         "discountPercent": 40,
         "quantity": 10,
-        "basePrice": 1199,
+        "priceUnit": 1199,
         "priceToBuy": 719,
         "age":  {
           "value": [
@@ -266,7 +266,7 @@
         "thumbnail": "AIRHOG6041531.jpg",
         "discountPercent": 50,
         "quantity": 10,
-        "basePrice": 999,
+        "priceUnit": 999,
         "age":  {
           "value": [
             "6-11 tuổi",
@@ -285,7 +285,7 @@
         "thumbnail": "BRU03651_1.jpg",
         "discountPercent": 33,
         "quantity": 10,
-        "basePrice": 2249,
+        "priceUnit": 2249,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -304,7 +304,7 @@
         "thumbnail": "BRU03780.jpg",
         "discountPercent": 20,
         "quantity": 10,
-        "basePrice": 2359,
+        "priceUnit": 2359,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -323,7 +323,7 @@
         "thumbnail": "CL6052311A.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 289,
+        "priceUnit": 289,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -343,7 +343,7 @@
         "thumbnail": "CL6052312.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -363,7 +363,7 @@
         "thumbnail": "DC6060069.jpg",
         "discountPercent": 20,
         "quantity": 10,
-        "basePrice": 299,
+        "priceUnit": 299,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -383,7 +383,7 @@
         "thumbnail": "DC6056331.jpg",
         "discountPercent": 20,
         "quantity": 10,
-        "basePrice": 259,
+        "priceUnit": 259,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -403,7 +403,7 @@
         "thumbnail": "EFF003026.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 999,
+        "priceUnit": 999,
         "age":  {
           "value": [
             "6-11 tuổi",
@@ -422,7 +422,7 @@
         "thumbnail": "EFF003045.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "6-11 tuổi",
@@ -441,7 +441,7 @@
         "thumbnail": "FP19-GJW15.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 699,
+        "priceUnit": 699,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -462,7 +462,7 @@
         "thumbnail": "FP19-FYK56.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 779,
+        "priceUnit": 779,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -484,7 +484,7 @@
         "thumbnail": "GGB-YS3037C.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -505,7 +505,7 @@
         "thumbnail": "GGB-YS3037B.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -526,7 +526,7 @@
         "thumbnail": "HP1905.jpg",
         "discountPercent": 25,
         "quantity": 10,
-        "basePrice": 619,
+        "priceUnit": 619,
         "age":  {
           "value": [
             "4-6 tuổi",
@@ -546,7 +546,7 @@
         "thumbnail": "HP1908.jpg",
         "discountPercent": 25,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "4-6 tuổi",
@@ -566,7 +566,7 @@
         "thumbnail": "IW-OMO015.jpg",
         "discountPercent": 10,
         "quantity": 10,
-        "basePrice": 55,
+        "priceUnit": 55,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -585,7 +585,7 @@
         "thumbnail": "IW-OMO014.jpg",
         "discountPercent": 10,
         "quantity": 10,
-        "basePrice": 55,
+        "priceUnit": 55,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -604,7 +604,7 @@
         "thumbnail": "JWM-GWT53.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 139,
+        "priceUnit": 139,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -625,7 +625,7 @@
         "thumbnail": "JWM-GNL07.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 139,
+        "priceUnit": 139,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -684,6 +684,18 @@
       {
         "id": 1,
         "value": "unisex"
+      }
+    ],
+    "coupon": [
+      {
+        "id": 1,
+        "code": "COUPON1",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "code": "COUPON2",
+        "value": "10"
       }
     ]
 }
