@@ -10,6 +10,7 @@ exports.HeaderComponent = void 0;
 var orders_selector_1 = require("./../core/store/orders/orders.selector");
 var core_1 = require("@angular/core");
 var login_action_1 = require("../core/store/auth/login.action");
+var login_selector_1 = require("../core/store/auth/login.selector");
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent(store, router) {
         this.store = store;
@@ -20,13 +21,16 @@ var HeaderComponent = /** @class */ (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.store.select(login_selector_1.userSelection).subscribe(function (user) {
+            _this.user = user;
+        });
         this.store.select(orders_selector_1.pendingOrdersSelection).subscribe(function (orders) {
             _this.totalProduct = orders.length;
         });
     };
     HeaderComponent.prototype.clickLogout = function () {
-        this.store.dispatch(login_action_1.logoutAC());
         localStorage.removeItem('userId');
+        this.store.dispatch(login_action_1.logoutAC());
         this.user = null;
         this.router.navigate(['/home']);
     };

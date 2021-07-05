@@ -16,6 +16,7 @@ var PaymentComponent = /** @class */ (function () {
         this.router = router;
     }
     PaymentComponent.prototype.ngOnInit = function () {
+        /*  Khi người dùng click thanh toán, redirec -> payment. Nên sẽ kiểm tra đã login chưa. */
         this.checkLogin();
         this.orders$ = this.store.select(orders_selector_1.pendingOrdersSelection);
     };
@@ -23,11 +24,7 @@ var PaymentComponent = /** @class */ (function () {
         var _this = this;
         this.store.select(login_selector_1.userSelection).subscribe(function (user) {
             if (user !== null) {
-                _this.router.navigate(['/sale-product']);
-            }
-            else {
-                alert("Vui lòng đăng nhập trước khi thanh toán");
-                _this.router.navigate(['/login']);
+                _this.router.navigate(['/payment']);
             }
         }).unsubscribe;
     };

@@ -17,6 +17,7 @@ export class PaymentComponent implements OnInit {
   constructor(private store: Store, private router: Router) { }
 
   ngOnInit(): void {
+    /*  Khi người dùng click thanh toán, redirec -> payment. Nên sẽ kiểm tra đã login chưa. */
     this.checkLogin();
     this.orders$ = this.store.select(pendingOrdersSelection);
   }
@@ -24,10 +25,7 @@ export class PaymentComponent implements OnInit {
   checkLogin(){
     this.store.select(userSelection).subscribe(user => {
       if(user !== null){
-        this.router.navigate(['/sale-product'])
-      }else {
-        alert("Vui lòng đăng nhập trước khi thanh toán");
-        this.router.navigate(['/login'])
+        this.router.navigate(['/payment'])
       }
     }).unsubscribe;
 
