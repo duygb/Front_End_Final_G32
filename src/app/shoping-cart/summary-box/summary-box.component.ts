@@ -9,6 +9,7 @@ import { Coupon } from 'src/app/core/models/coupon/coupon';
 import { SummaryCart } from 'src/app/core/models/common-models/summaryCart';
 import { User } from 'src/app/core/models/user/user.model';
 import { userSelection } from 'src/app/core/store/auth/login.selector';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-summary-box',
@@ -37,7 +38,7 @@ export class SummaryBoxComponent implements OnInit {
     },
   };
 
-  constructor(private httpService: MyServerHttpService, private store: Store) {}
+  constructor(private httpService: MyServerHttpService, private store: Store,private router: Router) {}
   ngOnInit(): void {
     /* Refactor */
     this.store.select(pendingOrdersSelection).subscribe((orders) => {
@@ -86,5 +87,13 @@ export class SummaryBoxComponent implements OnInit {
     });
   }
 
-  
+  goPayment(){
+    this.store.select(userSelection).subscribe(user => {
+      if(user !== null){
+        this.router.navigate(['/payment']);
+      }else {
+        this.router.navigate(['/login']);
+      }
+    }).unsubscribe();
+  }
 }

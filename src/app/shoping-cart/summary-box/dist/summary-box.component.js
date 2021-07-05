@@ -9,10 +9,12 @@ exports.__esModule = true;
 exports.SummaryBoxComponent = void 0;
 var orders_selector_1 = require("./../../core/store/orders/orders.selector");
 var core_1 = require("@angular/core");
+var login_selector_1 = require("src/app/core/store/auth/login.selector");
 var SummaryBoxComponent = /** @class */ (function () {
-    function SummaryBoxComponent(httpService, store) {
+    function SummaryBoxComponent(httpService, store, router) {
         this.httpService = httpService;
         this.store = store;
+        this.router = router;
         /* Refactor
         @Input()
         orders: PendingOrderItem[] | null = []; */
@@ -74,6 +76,17 @@ var SummaryBoxComponent = /** @class */ (function () {
                 _this.getGrandTotal();
             }
         });
+    };
+    SummaryBoxComponent.prototype.goPayment = function () {
+        var _this = this;
+        this.store.select(login_selector_1.userSelection).subscribe(function (user) {
+            if (user !== null) {
+                _this.router.navigate(['/payment']);
+            }
+            else {
+                _this.router.navigate(['/login']);
+            }
+        }).unsubscribe();
     };
     SummaryBoxComponent = __decorate([
         core_1.Component({
