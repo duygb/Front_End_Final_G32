@@ -25,6 +25,8 @@ export function ordersReducer(state = initialState, action: ordersActions.Orders
       return { ...state, pendingOrders: getPendingOrders() };
     case ordersActions.UPDATE_QUANTITY:
       return { ...state, pendingOrders: getPendingOrders() };
+    case ordersActions.REMOVE_ORDER:
+      return { ...state, pendingOrders: getPendingOrders() };
     default:
       return state;
   }

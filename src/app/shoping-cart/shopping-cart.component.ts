@@ -1,4 +1,4 @@
-import { addProductIntoOrder, updateQuantity } from './../core/store/orders/orders.actions';
+import { addProductIntoOrder, removeOrder, updateQuantity } from './../core/store/orders/orders.actions';
 import { PendingOrderItem } from './../core/models/common-models/pendingOrderItem';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
@@ -17,37 +17,51 @@ import { pendingOrdersSelection } from '../core/store/orders/orders.selector';
   ],
 })
 export class ShoppingCartComponent implements OnInit {
-  orders$!: Observable<PendingOrderItem[]>;
+  title: string = 'SHOPPING CART';
+  backgroundImage: string = "cart-bg-title.jpeg";
   pendingOrders!: PendingOrderItem[];
   constructor(private store: Store) {}
   ngOnInit(): void {
-    this.orders$ = this.store.select(pendingOrdersSelection);
+    /* this.orders$ = this.store.select(pendingOrdersSelection); */
     /* Lấy pendingOrders từ state (initital state này lấy từ storage)*/
-    this.store.select(pendingOrdersSelection).subscribe((data) => {
-      this.pendingOrders = data.map((item) => ({
-        ...item,
-        totalPrice:
-          Math.round(
-            (item.discountPercent * item.priceUnit * item.quantity) / 100 / 1000
-          ) * 1000,
-      }));
-
-      /* this.pendingOrders = data;
-      this.setTotalPrice(this.pendingOrders); */
+    /* Tính lại totalPrice khi có sự thay đổi quantity */
+    this.store.select(pendingOrdersSelection).subscribe((orders) => {
+      this.updateTotalPrice(orders);
     });
+    /* end */
   }
-  change(pendingOrderItem: PendingOrderItem, value: string){
-    const pendingOrders = JSON.parse(localStorage.getItem("pendingOrders") || "") as PendingOrderItem[];
-    const foundOrder = this.pendingOrders.find(item => item.id === pendingOrderItem.id);
-    if(foundOrder){
+
+  updateTotalPrice(orders: PendingOrderItem[]){
+    this.pendingOrders = orders.map((item) => ({
+      ...item,
+      totalPrice:
+        Math.round(
+          (item.discountPercent * item.priceUnit * item.quantity) / 100 / 1000
+        ) * 1000,
+    }));
+  }
+
+
+  changeQuantity(pendingOrderItem: PendingOrderItem, value: string){
+    let pendingOrders = JSON.parse(
+      localStorage.getItem('pendingOrders') || ''
+    ) as PendingOrderItem[];
+    const foundOrder = pendingOrders.find((order) => order.id === pendingOrderItem.id);
+    if (foundOrder) {
       foundOrder.quantity = Number.parseInt(value);
-      console.log(foundOrder.quantity);
-      console.log(pendingOrders);
-
+      console.log(pendingOrders)
     }
-
-   /*  console.log(JSON.stringify(pendingOrders));
     localStorage.setItem('pendingOrders', JSON.stringify(pendingOrders));
-    this.store.dispatch(addProductIntoOrder()); */
+    this.store.dispatch(addProductIntoOrder());
+  }
+  removePendingOrder(id: string){
+    let pendingOrders = JSON.parse(
+      localStorage.getItem('pendingOrders') || ''
+    ) as PendingOrderItem[];
+    /* lọc ra sản phẩm có Id được xoá */
+    pendingOrders = pendingOrders.filter(item => item.id !== id)
+    console.log(pendingOrders);
+    localStorage.setItem('pendingOrders', JSON.stringify(pendingOrders));
+    this.store.dispatch(removeOrder());
   }
 }

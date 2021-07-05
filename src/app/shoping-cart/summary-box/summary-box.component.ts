@@ -1,3 +1,6 @@
+import { data } from 'jquery';
+import { pendingOrdersSelection } from './../../core/store/orders/orders.selector';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
 import { PendingOrderItem } from 'src/app/core/models/common-models/pendingOrderItem';
@@ -16,7 +19,9 @@ import { SummaryCart } from 'src/app/core/models/common-models/summaryCart';
   ],
 })
 export class SummaryBoxComponent implements OnInit {
+  /* Refactor
   @Input()
+  orders: PendingOrderItem[] | null = []; */
   orders: PendingOrderItem[] | null = [];
   couponInput: string = '';
   summaryCart: SummaryCart = {
@@ -30,9 +35,18 @@ export class SummaryBoxComponent implements OnInit {
     },
   };
 
-  constructor(private httpService: MyServerHttpService) {}
+  constructor(private httpService: MyServerHttpService, private store: Store) {}
   ngOnInit(): void {
-    this.orders?.forEach((order) => {
+    /* Refactor */
+    this.store.select(pendingOrdersSelection).subscribe((orders) => {
+      this.orders = orders;
+      this.getSummaryCart(this.orders);
+    });
+  }
+
+  getSummaryCart(orders: PendingOrderItem[]) {
+    this.summaryCart.subTotal = 0;
+    orders?.forEach((order) => {
       const { priceUnit, discountPercent, quantity } = order;
       this.summaryCart.subTotal +=
         Math.round((discountPercent * priceUnit * quantity) / 100 / 1000) *
@@ -54,7 +68,7 @@ export class SummaryBoxComponent implements OnInit {
       this.getCouponInSubTotal(this.summaryCart.subTotal);
   }
 
-  getCouponInSubTotal(subTotal: number): number{
+  getCouponInSubTotal(subTotal: number): number {
     return (subTotal * this.summaryCart.coupon.value) / 100;
   }
 

@@ -17,6 +17,10 @@ import { Brand } from './sidebar/common/brand';
   styleUrls: ['./product-sale.component.scss'],
 })
 export class ProductSaleComponent implements OnInit {
+  title: string = 'SALE PRODUCT';
+  backgroundImage: string = "saleProduct-bg-title.jpg";
+
+
   public getSizeProds!: number;
   public serverPath: string = 'saleProducts';
   public allSaleProducts!: SaleProduct[];

@@ -20,7 +20,6 @@ import { MemberCardComponent } from './member-card/member-card.component';
 import { ProductSaleListComponent } from './product-sale/product-sale-list/product-sale-list.component';
 import { AppBootstrapModule } from './app-bootstrap.module';
 import { SidebarComponent } from './product-sale/sidebar/sidebar.component';
-import { TitleBoxComponent } from './product-sale/title-box/title-box.component';
 import { PaginationComponent } from './pagination/pagination.component';
 
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -40,8 +39,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ListOrderHistoryComponent } from './order-history/list-order-history/list-order-history.component';
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { SummaryBoxComponent } from './shoping-cart/summary-box/summary-box.component';
-import { DetailItemComponent } from './shoping-cart/detail-item/detail-item.component';
-
+import { TitleBoxComponent } from './tittle-box/title-box.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +50,6 @@ import { DetailItemComponent } from './shoping-cart/detail-item/detail-item.comp
     MemberCardComponent,
     ProductSaleListComponent,
     SidebarComponent,
-    TitleBoxComponent,
     PaginationComponent,
     AgeComponent,
     GenderComponent,
@@ -64,10 +61,9 @@ import { DetailItemComponent } from './shoping-cart/detail-item/detail-item.comp
     LoginComponent,
     OrderHistoryComponent,
     ListOrderHistoryComponent,
-    TitleBoxComponent,
     ShoppingCartComponent,
     SummaryBoxComponent,
-    DetailItemComponent,
+    TitleBoxComponent
   ],
   imports: [
     BrowserModule,

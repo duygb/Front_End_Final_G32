@@ -26,7 +26,6 @@ var member_card_component_1 = require("./member-card/member-card.component");
 var product_sale_list_component_1 = require("./product-sale/product-sale-list/product-sale-list.component");
 var app_bootstrap_module_1 = require("./app-bootstrap.module");
 var sidebar_component_1 = require("./product-sale/sidebar/sidebar.component");
-var title_box_component_1 = require("./product-sale/title-box/title-box.component");
 var pagination_component_1 = require("./pagination/pagination.component");
 var tooltip_1 = require("ngx-bootstrap/tooltip");
 var modal_1 = require("ngx-bootstrap/modal");
@@ -45,7 +44,7 @@ var order_history_component_1 = require("./order-history/order-history.component
 var list_order_history_component_1 = require("./order-history/list-order-history/list-order-history.component");
 var shopping_cart_component_1 = require("./shoping-cart/shopping-cart.component");
 var summary_box_component_1 = require("./shoping-cart/summary-box/summary-box.component");
-var detail_item_component_1 = require("./shoping-cart/detail-item/detail-item.component");
+var title_box_component_1 = require("./tittle-box/title-box.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -60,7 +59,6 @@ var AppModule = /** @class */ (function () {
                 member_card_component_1.MemberCardComponent,
                 product_sale_list_component_1.ProductSaleListComponent,
                 sidebar_component_1.SidebarComponent,
-                title_box_component_1.TitleBoxComponent,
                 pagination_component_1.PaginationComponent,
                 age_component_1.AgeComponent,
                 gender_component_1.GenderComponent,
@@ -72,10 +70,9 @@ var AppModule = /** @class */ (function () {
                 login_component_1.LoginComponent,
                 order_history_component_1.OrderHistoryComponent,
                 list_order_history_component_1.ListOrderHistoryComponent,
-                title_box_component_1.TitleBoxComponent,
                 shopping_cart_component_1.ShoppingCartComponent,
                 summary_box_component_1.SummaryBoxComponent,
-                detail_item_component_1.DetailItemComponent,
+                title_box_component_1.TitleBoxComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,

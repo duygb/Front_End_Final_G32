@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-title-box',
   templateUrl: './title-box.component.html',
-  styleUrls: ['./title-box.component.scss']
+  styleUrls: ['./title-box.component.scss'],
 })
 export class TitleBoxComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Input()
+  title!: string;
+  @Input()
+  thumbnail!: string;
+  constructor() {}
+  ngOnInit(): void {}
 }

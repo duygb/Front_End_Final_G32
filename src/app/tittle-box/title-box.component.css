@@ -1457,7 +1457,7 @@ ul.cart-list > li.total > .btn:hover {
 
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
 .all-title-box {
-  background: url("../images/all-bg-title.jpg") no-repeat center center;
+  /* background: url("../images/all-bg-title.jpg") no-repeat center center; */
   -ms-background-size: cover;
   background-size: cover;
   text-align: center;

@@ -36,6 +36,8 @@ function ordersReducer(state, action) {
             return __assign(__assign({}, state), { pendingOrders: getPendingOrders() });
         case ordersActions.UPDATE_QUANTITY:
             return __assign(__assign({}, state), { pendingOrders: getPendingOrders() });
+        case ordersActions.REMOVE_ORDER:
+            return __assign(__assign({}, state), { pendingOrders: getPendingOrders() });
         default:
             return state;
     }

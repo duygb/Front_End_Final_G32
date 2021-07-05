@@ -1858,10 +1858,14 @@
 .table-main table tr{
   text-align: center;
 }
- .table-main table td{
+ .table-main table td {
     text-align: center;
      vertical-align: middle;
      font-size: 16px;
+}
+.table-main table p {
+    height: 100px;
+   font-size: 16px;
 }
 .quantity-box input{
      width: 20px;

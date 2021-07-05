@@ -1,3 +1,4 @@
+import { pendingOrdersSelection } from './../core/store/orders/orders.selector';
 import { AppState } from 'src/app/core/store/app.state';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
@@ -15,9 +16,13 @@ export class HeaderComponent implements OnInit {
   user!: User | null;
   /* @Output()
   onClickLogout = new EventEmitter(); */
-
-  ngOnInit(): void {}
+  totalProduct: number = 0;
   constructor(private store: Store<AppState>, private router: Router) {}
+  ngOnInit(): void {
+    this.store.select(pendingOrdersSelection).subscribe(orders => {
+      this.totalProduct = orders.length;
+    })
+  }
 
   clickLogout() {
     this.store.dispatch(logoutAC());

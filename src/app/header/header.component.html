@@ -1,11 +1,13 @@
-<div class="container-fluid">
-
+<div class="container-fluid" style="height: 72px;">
     <form action="">
         <div class="form-inlinee">
-            <div class="text">
-                <a href="/"><img src="assets/img/logoCTS.jpg" alt="logoCTS" style="width:100%;"></a>
+            <div class="text" style="left: 0px;">
+                <a href="/" style="margin-right: 20px;"><img src="assets/img/logoCTS.jpg" alt="logoCTS" style="width:100%; "></a>
             </div>
-            <div class="icon">
+
+
+
+            <div class="icon" style="left: 357px; top: 20px;">
                 <div class="form-inline">
 
 
@@ -16,7 +18,7 @@
 
                     <div class="cart">
                         <div class="cart-center">
-                            <a [routerLink]="['/shopping-cart']"><i class="fas fa-shopping-cart"></i></a>
+                            <a [routerLink]="['/shopping-cart']"><i class="fas fa-shopping-cart"></i></a>[{{totalProduct}}]
                         </div>
                     </div>
                     <div class="email">

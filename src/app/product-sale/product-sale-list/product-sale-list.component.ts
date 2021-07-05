@@ -81,5 +81,6 @@ export class ProductSaleListComponent implements OnInit {
     }
     /* CHANGE STATE */
     this.store.dispatch(addProductIntoOrder());
+    alert("Đã thêm vào giỏ hàng")
   }
 }
