@@ -973,6 +973,22 @@ ul.cart-list > li.total > .btn:hover {
   padding: 2px 10px;
   font-weight: 700;
   text-transform: uppercase;
+  border-bottom-left-radius: 15px;
+}
+
+.type-lb-discountPercent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 11;
+}
+
+.type-lb-discountPercent .discountPercent {
+  color: red;
+  padding: 2px 10px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /* border-bottom-left-radius: 15px; */
 }
 
 .type-lb .new {
@@ -989,16 +1005,36 @@ ul.cart-list > li.total > .btn:hover {
 }
 
 .why-text h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   padding-bottom: 15px;
+  height: 80px;
 }
 
 .why-text h5 {
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Montserrat", sans-serif;
   padding: 0px;
+  font-weight: 500;
+}
+
+.why-text .price-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-text .price-box .basePrice {
+  font-size: 16px;
+  color: #444;
   font-weight: 600;
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+}
+
+.why-text .price-box .priceToBuy {
+  color: #df494a;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .mask-icon {
@@ -1213,7 +1249,7 @@ ul.cart-list > li.total > .btn:hover {
 /*------------------------------------------------------------------ Instagram Feed -------------------------------------------------------------------*/
 .instagram-box {
   padding: 70px 0px;
-  /*  background: url(../images/ins-bg.jpg) no-repeat center center; */
+  background: url(../images/ins-bg.jpg) no-repeat center center;
   background-size: auto auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1517,15 +1553,15 @@ ul.cart-list > li.total > .btn:hover {
 
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
 .all-title-box {
-  background: "" no-repeat center center;
+  background: url("../images/all-bg-title.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
-  background-attachment: local;
-  padding: 150px 0px;
+  background-attachment: fixed;
+  padding: 70px 0px;
   position: relative;
 }
 
@@ -1548,10 +1584,10 @@ ul.cart-list > li.total > .btn:hover {
 }
 
 .all-title-box .breadcrumb {
-  background: crimson;
+  background: #d33b33;
   margin: 0px;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .all-title-box .breadcrumb li {
@@ -1961,6 +1997,7 @@ ul.cart-list > li.total > .btn:hover {
   -webkit-justify-content: space-between;
   justify-content: space-between;
   padding: 5px 0;
+  margin-top: 28px 0;
 }
 
 .nice-select.wide {

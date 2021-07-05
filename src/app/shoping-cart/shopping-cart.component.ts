@@ -36,7 +36,7 @@ export class ShoppingCartComponent implements OnInit {
       ...item,
       totalPrice:
         Math.round(
-          (item.discountPercent * item.priceUnit * item.quantity) / 100 / 1000
+          ((100-item.discountPercent) * item.priceUnit * item.quantity) / 100 / 1000
         ) * 1000,
     }));
   }

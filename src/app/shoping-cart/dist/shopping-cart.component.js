@@ -38,7 +38,7 @@ var ShoppingCartComponent = /** @class */ (function () {
         /* end */
     };
     ShoppingCartComponent.prototype.updateTotalPrice = function (orders) {
-        this.pendingOrders = orders.map(function (item) { return (__assign(__assign({}, item), { totalPrice: Math.round((item.discountPercent * item.priceUnit * item.quantity) / 100 / 1000) * 1000 })); });
+        this.pendingOrders = orders.map(function (item) { return (__assign(__assign({}, item), { totalPrice: Math.round(((100 - item.discountPercent) * item.priceUnit * item.quantity) / 100 / 1000) * 1000 })); });
     };
     ShoppingCartComponent.prototype.changeQuantity = function (pendingOrderItem, value) {
         var pendingOrders = JSON.parse(localStorage.getItem('pendingOrders') || '');

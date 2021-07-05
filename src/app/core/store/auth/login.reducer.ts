@@ -11,7 +11,7 @@ export function loginReducer(state: LoginState = initialState, action: loginActi
       case loginActions.CHECK_USER_INF:
         return { ...state, user: action.user, mess: action.mess};
       case loginActions.LOGOUT:
-        return { ...state, user: null };
+        return { ...state, user: null, mess: '' };
       default:
         return state;
     }

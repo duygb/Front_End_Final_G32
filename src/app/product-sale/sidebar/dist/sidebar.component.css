@@ -651,7 +651,7 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
 }
 
 .cart-list h6 a:hover {
-  color: #d33b33;
+  color: crimson;
 }
 
 ul.cart-list p .price {
@@ -671,7 +671,7 @@ ul.cart-list p .price {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  background: #d33b33;
+  background: crimson;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -1213,7 +1213,7 @@ ul.cart-list > li.total > .btn:hover {
 /*------------------------------------------------------------------ Instagram Feed -------------------------------------------------------------------*/
 .instagram-box {
   padding: 70px 0px;
-  /*  background: url(../images/ins-bg.jpg) no-repeat center center; */
+  background: url(../images/ins-bg.jpg) no-repeat center center;
   background-size: auto auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1517,15 +1517,15 @@ ul.cart-list > li.total > .btn:hover {
 
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
 .all-title-box {
-  background: "" no-repeat center center;
+  background: url("../images/all-bg-title.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
-  background-attachment: local;
-  padding: 150px 0px;
+  background-attachment: fixed;
+  padding: 70px 0px;
   position: relative;
 }
 
@@ -1548,10 +1548,10 @@ ul.cart-list > li.total > .btn:hover {
 }
 
 .all-title-box .breadcrumb {
-  background: crimson;
+  background: #d33b33;
   margin: 0px;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .all-title-box .breadcrumb li {
@@ -1843,8 +1843,8 @@ ul.cart-list > li.total > .btn:hover {
 
 .list-group-item {
   border: none;
-  padding: 5px 20px;
-  font-size: 14px;
+  padding: 3px 20px;
+  font-size: 15px;
 }
 
 .text-muted {

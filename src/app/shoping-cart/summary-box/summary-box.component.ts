@@ -7,6 +7,8 @@ import { PendingOrderItem } from 'src/app/core/models/common-models/pendingOrder
 import { MyServerHttpService } from 'src/app/Services/my-server-http-service.service';
 import { Coupon } from 'src/app/core/models/coupon/coupon';
 import { SummaryCart } from 'src/app/core/models/common-models/summaryCart';
+import { User } from 'src/app/core/models/user/user.model';
+import { userSelection } from 'src/app/core/store/auth/login.selector';
 
 @Component({
   selector: 'app-summary-box',
@@ -49,7 +51,7 @@ export class SummaryBoxComponent implements OnInit {
     orders?.forEach((order) => {
       const { priceUnit, discountPercent, quantity } = order;
       this.summaryCart.subTotal +=
-        Math.round((discountPercent * priceUnit * quantity) / 100 / 1000) *
+        Math.round(((100-discountPercent) * priceUnit * quantity) / 100 / 1000) *
         1000;
     });
     this.getTax(this.summaryCart.subTotal);
@@ -83,4 +85,5 @@ export class SummaryBoxComponent implements OnInit {
       }
     });
   }
+
 }

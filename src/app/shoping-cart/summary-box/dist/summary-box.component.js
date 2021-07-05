@@ -43,7 +43,7 @@ var SummaryBoxComponent = /** @class */ (function () {
         orders === null || orders === void 0 ? void 0 : orders.forEach(function (order) {
             var priceUnit = order.priceUnit, discountPercent = order.discountPercent, quantity = order.quantity;
             _this.summaryCart.subTotal +=
-                Math.round((discountPercent * priceUnit * quantity) / 100 / 1000) *
+                Math.round(((100 - discountPercent) * priceUnit * quantity) / 100 / 1000) *
                     1000;
         });
         this.getTax(this.summaryCart.subTotal);
