@@ -12,6 +12,7 @@ import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'reset-pass', component: ResetPassComponent},
   { path: 'detail-product', component: DetailProductComponent},
   { path: 'order-history', component: OrderHistoryComponent},
+  { path: 'payment', component: PaymentComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

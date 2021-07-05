@@ -72,7 +72,7 @@ var AppModule = /** @class */ (function () {
                 list_order_history_component_1.ListOrderHistoryComponent,
                 shopping_cart_component_1.ShoppingCartComponent,
                 summary_box_component_1.SummaryBoxComponent,
-                title_box_component_1.TitleBoxComponent
+                title_box_component_1.TitleBoxComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

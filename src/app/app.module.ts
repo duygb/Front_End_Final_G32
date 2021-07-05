@@ -40,6 +40,7 @@ import { ListOrderHistoryComponent } from './order-history/list-order-history/li
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { SummaryBoxComponent } from './shoping-cart/summary-box/summary-box.component';
 import { TitleBoxComponent } from './tittle-box/title-box.component';
+import { PaymentComponent } from './payment/payment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,8 @@ import { TitleBoxComponent } from './tittle-box/title-box.component';
     ListOrderHistoryComponent,
     ShoppingCartComponent,
     SummaryBoxComponent,
-    TitleBoxComponent
+    TitleBoxComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
