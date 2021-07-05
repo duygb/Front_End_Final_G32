@@ -1842,7 +1842,7 @@
      animation: bounceY 0.9s linear;
 }
  .cart-box-main{
-     padding: 70px 0px;
+     padding: 0px 0px;
 }
  .table-main table thead{
      background: #d33b33;
@@ -1963,7 +1963,7 @@
      font-size: 18px;
      color: #ffffff;
      border: none;
-     padding: 10px 20px;
+     padding: 10px 95px;
 }
  .payment-icon {
      display: inline-block;
