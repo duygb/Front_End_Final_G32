@@ -434,6 +434,649 @@
         },
         "priceToBuy": 599,
         "sex": "con trai"
+      },
+      { "id": 21,
+        "name": "Mô hình Black Panther dòng Mech Strike 6 inch",
+        "brand": "AVENGERS",
+        "SKU": "AVG1667",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1667_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 549,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 22,
+        "name": "Nhún nhảy cùng bé Lila",
+        "brand": "AIRHOG",
+        "SKU": "GJM76",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/e/9/e9427_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 995,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con gái"
+      },
+      { "id": 23,
+        "name": "Tiệc trà với bé Nia",
+        "brand": "AIRHOG",
+        "SKU": "F0031",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/0/f0031_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 999,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con gái"
+      },
+      { "id": 24,
+        "name": "Mô hình Bumblebee dòng Studio Deluxe TF6",
+        "brand": "AIRHOG",
+        "SKU": " F0784",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/0/f0784_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 969,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 25,
+        "name": "Slimy kem ốc quế ngọt ngào_trái tim",
+        "brand": "AIRHOG",
+        "SKU": "HEART/33919",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/h/e/heart-33919_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 199,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con gái"
+      },
+      { "id": 26,
+        "name": "Slimy kem ốc quế ngọt ngào_cầu vồng",
+        "brand": "AIRHOG",
+        "SKU": "RAINBOW/33919",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/r/a/rainbow-33919_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 169,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con gái"
+      },
+      { "id": 27,
+        "name": "Mô hình Captain dòng Mech Strike tối thượng giáp 8 inch",
+        "brand": "AIRHOG",
+        "SKU": "F1669",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1669_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1099,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 28,
+        "name": "Mô hình Iron Man dòng Mech Strike tối thượng giáp 8 inch",
+        "brand": "AIRHOG",
+        "SKU": " F1668",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1668_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1099,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 29,
+        "name": "Quà tặng Slimy Nàng tiên cá huyền bí",
+        "brand": "AIRHOG",
+        "SKU": " 33485",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/3/3/33485-mykingdom.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 269,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 30,
+        "name": "Slimy kem ốc quế ngọt ngào_kỳ lân",
+        "brand": "AIRHOG",
+        "SKU": " UNICORN/33919",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/u/n/unicorn-33919_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 199,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 31,
+        "name": "Combo bột nặn mini 4 màu + bộ PD đầu đời",
+        "brand": "AIRHOG",
+        "SKU": "CB23241-E0801",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/c/b/cb23241-e0801-1.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 99,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "unisex"
+      },
+      { "id": 32,
+        "name": "Combo Bột nặn 4 màu và bột nặn 4 màu mini",
+        "brand": "AIRHOG",
+        "SKU": " CBB5517-23241-25",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/c/b/cbb5517-23241-1.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 119,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "unisex"
+      },
+      { "id": 33,
+        "name": "Combo Bột nặn 4 màu và 2 hũ B5517A",
+        "brand": "AIRHOG",
+        "SKU": "CBB5517-2B5517A-20",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/c/b/cbb5517-2b5517a-1.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 119,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "unisex"
+      },
+      { "id": 34,
+        "name": "Combo Bộ khuôn thú cưng đáng yêu và bột nặn 6 màu lấp lánh",
+        "brand": "AIRHOG",
+        "SKU": "CBE2124-A5417",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/c/b/cbe2124-a5417-1.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 119,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "unisex"
+      },
+      { "id": 35,
+        "name": "Siêu Xe Đua Ford GT Heritage Edition & Bronco R",
+        "brand": "AIRHOG",
+        "SKU": " 76905",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76905_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1599,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 36,
+        "name": "Siêu Xe Đua Dodge Top Fuel Dragster & Dodge 1970 Challenger",
+        "brand": "AIRHOG",
+        "SKU": " 76904",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76904_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 2099,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 37,
+        "name": "Siêu Xe Đua Chevrolet Corvette C8.R & 1968 Chevrolet Corvett",
+        "brand": "AIRHOG",
+        "SKU": "76903",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76903_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1299,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 38,
+        "name": "Siêu Xe Mclaren Elva",
+        "brand": "AIRHOG",
+        "SKU": "76902",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76902_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 699,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 39,
+        "name": "Siêu Xe Toyota GR Supra",
+        "brand": "AIRHOG",
+        "SKU": "76901",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76901_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 699,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 40,
+        "name": "Siêu Xe Koenigsegg Jesko",
+        "brand": "AIRHOG",
+        "SKU": "76900",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76900_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 699,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 41,
+        "name": "Lớp Học Môn Bùa Chú",
+        "brand": "AIRHOG",
+        "SKU": "76385",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76385_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 899,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "sex": "con gái"
+      },
+      { "id": 42,
+        "name": "Găng Tay Vô Cực",
+        "brand": "AIRHOG",
+        "SKU": "76191",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76191_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 2299,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 43,
+        "name": "Đội Trưởng Mỹ Đối Đầu Tổ Chức Hydra",
+        "brand": "AIRHOG",
+        "SKU": "76189",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76189_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 319,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "sex": "unisex"
+      },
+      { "id": 44,
+        "name": "Phi cơ của chiến binh Báo đen",
+        "brand": "AIRHOG",
+        "SKU": "76186",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/6/76186_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 699,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 45,
+        "name": "Ngôi đền rồng dưới đại dương",
+        "brand": "AIRHOG",
+        "SKU": "71755",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71755_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 3599,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 46,
+        "name": "Chiến hạm dũng mãnh  Hydro Bounty",
+        "brand": "AIRHOG",
+        "SKU": "71756",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71756_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 4799,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 47,
+        "name": "Rồng biển quyền năng",
+        "brand": "AIRHOG",
+        "SKU": "71754",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71754_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 2299,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 48,
+        "name": "Rồng phun lửa của Kai",
+        "brand": "AIRHOG",
+        "SKU": "71753",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71753_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1599,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 49,
+        "name": "Siêu xe đại dương",
+        "brand": "AIRHOG",
+        "SKU": "71752",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71752_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1299,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 50,
+        "name": "Chiến giáp Hydro của Lloyd",
+        "brand": "AIRHOG",
+        "SKU": " 71750",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71750_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 699,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 51,
+        "name": "Trạm cảnh sát tuần tra  & cứu hỏa biển",
+        "brand": "AIRHOG",
+        "SKU": "60308",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/6/0/60308_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1399,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "unisex"
+      },
+      { "id": 52,
+        "name": "Chiến xe địa hình của Kai",
+        "brand": "AIRHOG",
+        "SKU": "71734",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71734_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 319,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 53,
+        "name": "Xe đua địa hình sóng âm",
+        "brand": "AIRHOG",
+        "SKU": "71739",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71739_2_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 2999,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "sex": "con trai"
+      },
+      { "id": 54,
+        "name": "Tàu chiến hạm bay  Bounty",
+        "brand": "AIRHOG",
+        "SKU": " 71749",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/7/1/71749_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1299,
+        "age":  {
+          "value": [
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "unisex"
+      },
+      { "id": 55,
+        "name": "Khu vui chơi và vòng đu quay ảo thuật",
+        "brand": "AIRHOG",
+        "SKU": "41689",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/4/1/41689_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1699,
+        "age":  {
+          "value": [
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "unisex"
       }
     ],
 
