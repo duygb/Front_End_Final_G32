@@ -2,8 +2,6 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductSaleComponent } from './product-sale/product-sale.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { ProductComponent } from './product/product.component';
 import { AgeComponent } from './age/age.component';
 import { GenderComponent } from './gender/gender.component';
 import { ProductNewComponent } from './product-new/product-new.component';
@@ -12,11 +10,16 @@ import { LoginComponent } from './login/login.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ProductComponent } from './product/product.component';
+
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  { path: 'home', component: HomeComponent },
-  { path: 'product', component:ProductComponent },
+  { path: 'home', component: HomeComponent},
+  { path: 'product', component: ProductComponent},
   { path: 'age', component:AgeComponent },
   { path: 'gender', component:GenderComponent },
   { path: 'sale-product', component: ProductSaleComponent },
@@ -27,6 +30,8 @@ const routes: Routes = [
   { path: 'forget-pass', component: ForgetPassComponent},
   { path: 'reset-pass', component: ResetPassComponent},
   { path: 'detail-product', component: DetailProductComponent},
+  { path: 'order-history', component: OrderHistoryComponent},
+  { path: 'payment', component: PaymentComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

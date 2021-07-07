@@ -1,4 +1,30 @@
 {
+    "users" : [
+      {
+        "id": 1,
+        "username": "huynhgiahuy",
+        "password": "123",
+        "fullName": "Huynh Gia Huy",
+        "role": [
+        {
+          "name": "user",
+          "code": "USER"
+        }
+        ]
+      },
+      {
+        "id": 2,
+        "username": "lamhaison",
+        "password": "123",
+        "fullName": "Lam Hai Son",
+        "role": [
+          {
+            "name": "admin",
+            "code": "ADMIN"
+          }
+          ]
+      }
+    ],
     "posts": [
       {
         "id": 1,
@@ -29,43 +55,391 @@
       { "id": 1,"name": "typisku" },
       { "id": 2,"name": "typisku" }
     ],
+
+
     "products": [
-      {  "id": "PRODUCT-sku-1",
-          "name":"product 1",
-        "description": "Description 1",
-        "thumbnail": "thumbnail",
-        "price": 20,
-        "quantity": 10
+      { "id": 1,
+        "name": "Bộ thử thách Hot Wheels Tòa Tháp Trọc Trời Lượn Vòng",
+        "brand": "AIRHOG",
+        "SKU": "GJM76",
+        "description": "Dòng sản phẩm Supernova của Airhogs mở ra một kỷ nguyên máy bay điều khiển mới thông qua tương tác. Khám phá sức mạnh của tân binh mới này với chính đôi tay bạn, kích hoạt khả năng hoạt động chỉ cần quăng sản phẩm vào không khi. Biến hóa khôn lường với hơn 30 cách di chuyển khác nhau và 9 thủ thuật đầy bí ẩn",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/j/gjm76_1_.jpg",
+        "discountPercent": 40,
+        "quantity": 10,
+        "priceToBuy": 1199,
+        "age":  {
+          "value": [
+            "6-11 tuổi",
+            "trên 12 tuổi"
+          ]
+        },
+        "sex": "con trai"
       },
-      {  "id": "PRODUCT-sku-2",
-        "name":"product 2",
-      "description": "Description 2",
-      "thumbnail": "thumbnail",
-      "price": 25,
-      "quantity": 15
+      {
+        "id": 2,
+        "name": "Siêu xe quái vật Mega-Beast Buggy (có tiếng đèn động cơ)",
+        "brand": "BRUDER",
+        "SKU": "20111/20110",
+        "description": "Được thiết kế tỉ mỉ đến từng chị tiết, chiếc xe chở rác này sẽ mang đến cho các bé nhiều điều bổ ích và thú vị",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/2/0/20111_4.jpg",
+        "discountPercent": 20,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi"
+          ]
+        },
+        "priceToBuy": 499,
+        "sex": "con trai"
       },
-      {  "id": 3,
-        "name":"PRODUCT-sku-3",
-      "description": "Description 3",
-      "thumbnail": "thumbnail",
-      "price": 30,
-      "quantity": 20
+      {
+        "id": 3,
+        "name": "Đồ chơi lắp ráp Road Rippers-Khủng long và xe chiến đấu",
+        "brand": "CANDYLOCK",
+        "SKU": "20070",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/2/0/20070_01.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 99,
+        "sex": "con trai"
       },
-      {  "id": "PRODUCT-sku-4",
-        "name":"product 4",
-      "description": "Description 4",
-      "thumbnail": "thumbnail",
-      "price": 35,
-      "quantity": 25
-    },
-    {  "id": 5,
-      "name":"PRODUCT-sku-5",
-    "description": "Description 5",
-    "thumbnail": "thumbnail",
-    "price": 40,
-    "quantity": 30
-    }
+      {
+        "id": 4,
+        "name": "Làm tóc cùng công chúa Cadance",
+        "brand": "BARBIE",
+        "SKU": "BBIE1287",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1287_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 729,
+        "sex": "con gái"
+      },
+      {
+        "id": 5,
+        "name": "Cầu vượt Thanh Xà độc dược Hot Wheels",
+        "brand": "CANDYLOCK",
+        "SKU": "GTT70/FNB05",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/t/gtt70_fnb05_2_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 579,
+        "sex": "unisex"
+      },
+      {
+        "id": 6,
+        "name": "Cặp đôi Equestria Girl thời trang",
+        "brand": "ECOIFFIER",
+        "SKU": " EFF1587",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1587_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 999,
+        "sex": "con gái"
+      },
+      {
+        "id": 7,
+        "name": "Bé Winnie và trái tim phát sáng",
+        "brand": "BARBIE",
+        "SKU": "BBIE6946",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/e/6/e6946_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 499,
+        "sex": "con gái"
+      },
+      {
+        "id": 8,
+        "name": "Bộ đường đua Hot Wheels Lượn Vòng Siêu Cấp",
+        "brand": "DONI DINO",
+        "SKU": "DD97",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/l/glc97_pip_c_20_090.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 2299,
+        "sex": "con trai"
+      },
+      {
+        "id": 9,
+        "name": "Siêu xe Hot Wheels sang trọng 69 NISSAN SKYLINE VAN",
+        "brand": "DONI DINO",
+        "SKU": "DD68",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/r/grj68-fpy86_2_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 219,
+        "sex": "con gái"
+      },
+      {
+        "id": 10,
+        "name": "Secret Style Công chúa Cinderella và chiếc váy diệu kỳ",
+        "brand": "DISNEY PRINCES",
+        "SKU": " DP386",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1386_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 999,
+        "sex": "con gái"
+      },
+      {
+        "id": 11,
+        "name": "Mô hình Captain dòng Mech Strike 6 inch",
+        "brand": "AVENGERS",
+        "SKU": "AVG143",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1664_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 599,
+        "sex": "con gái"
+      },
+      {
+        "id": 12,
+        "name": "Cá xấu độc dược Hot Wheels",
+        "brand": "CANDYLOCK",
+        "SKU": "GTT69/FNB05",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/t/gtt69-fnb05_2_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 579,
+        "sex": "con trai"
+      },
+      {
+        "id": 13,
+        "name": "Thùng phụ kiện phức hợp Hot Wheels xanh đại dương",
+        "brand": "LEGO",
+        "SKU": "LG",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/l/flk90_00.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 899,
+        "sex": "con trai"
+      },
+      {
+        "id": 14,
+        "name": "Siêu xe Hot Wheels sang trọng VOLVO P220 AMAZON ESTATE",
+        "brand": "DONI DINO",
+        "SKU": " DD64",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/r/grj64-fpy86_1__1.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 299,
+        "sex": "con trai"
+      },
+      {
+        "id": 15,
+        "name": "Siêu xe Hot Wheels sang trọng 17 AUDI RS6 AVANT",
+        "brand": "DONI DINO",
+        "SKU": "DD65",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/r/grj65-fpy86_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 399,
+        "sex": "con trai"
+      },
+      {
+        "id": 16,
+        "name": "Siêu xe Hot Wheels sang trọng '64 CHEVY NOVA PANEL",
+        "brand": "DONI DINO",
+        "SKU": "DD66",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/r/grj66-fpy86_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 299,
+        "sex": "con trai"
+      },
+      {
+        "id": 17,
+        "name": "Siêu xe Hot Wheels sang trọng VOLVO 850 ESTATE",
+        "brand": "DONI DINO",
+        "SKU": "DD67",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/g/r/grj67-fpy86_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 299,
+        "sex": "con trai"
+      },
+      {
+        "id": 18,
+        "name": "Mô hình Hulk dòng Mech Strike 6 inch",
+        "brand": "AVENGERS",
+        "SKU": "AVG2159",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/2/f2159_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 549,
+        "sex": "con trai"
+      },
+      {
+        "id": 19,
+        "name": "Mô hình Black Panther dòng Mech Strike 6 inch",
+        "brand": "FISHER PRICE 19",
+        "SKU": " FP191667",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1667_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 549,
+        "sex": "unisex"
+      },
+      {
+        "id": 20,
+        "name": "Mô hình Iron Man dòng Mech Strike 6 inch",
+        "brand": "AVENGERS",
+        "SKU": "AVG1665",
+        "description": "Phong cách mùa hè nhiệt đới hoàn toàn mới với màu sắc nổi bật và bắt mắt Sản phẩm bao gồm 1 búp bê tóc mây xinh xắn, giấu gương mặt mình phía sau mái tóc mây bồng bềnh mềm mại, mùi hương trái cây nhiệt đới ngọt ngào quyến rũ. Thêm vào đó, cô bạn búp bê còn đi kèm theo 1 phụ kiện trang trí tóc cực cool. Có tổng cộng 16 bạn búp bê xinh xắn cho bé sưu tập",
+        "thumbnail": "https://www.mykingdom.com.vn/media/catalog/product/cache/7c9924b6276ad76a951c1e786fcf2062/f/1/f1665_1_.jpg",
+        "discountPercent": 30,
+        "quantity": 10,
+        "age":  {
+          "value": [
+            "1-3 tuổi",
+            "4-6 tuổi",
+            "6-11 tuổi"
+          ]
+        },
+        "priceToBuy": 599,
+        "sex": "con trai"
+      }
     ],
+
+
+
+
     "brands": [
       {
         "id": 1,
@@ -73,7 +447,7 @@
         "typecode" : "A",
         "name": "AIRHOG",
         "sku": "AIRHOG"
-        
+
       },
       {
         "id": 2,
@@ -221,7 +595,7 @@
         "thumbnail": "AIRHOG6044137.jpg",
         "discountPercent": 40,
         "quantity": 10,
-        "basePrice": 1199,
+        "priceUnit": 1199,
         "priceToBuy": 719,
         "age":  {
           "value": [
@@ -240,7 +614,7 @@
         "thumbnail": "AIRHOG6041531.jpg",
         "discountPercent": 50,
         "quantity": 10,
-        "basePrice": 999,
+        "priceUnit": 999,
         "age":  {
           "value": [
             "6-11 tuổi",
@@ -250,7 +624,7 @@
         "priceToBuy": 500,
         "sex": "con trai"
       },
-      { 
+      {
         "id": 3,
         "name": "Xe công trình",
         "brand": "BRUDER",
@@ -259,7 +633,7 @@
         "thumbnail": "BRU03651_1.jpg",
         "discountPercent": 33,
         "quantity": 10,
-        "basePrice": 2249,
+        "priceUnit": 2249,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -278,7 +652,7 @@
         "thumbnail": "BRU03780.jpg",
         "discountPercent": 20,
         "quantity": 10,
-        "basePrice": 2359,
+        "priceUnit": 2359,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -297,7 +671,7 @@
         "thumbnail": "CL6052311A.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 289,
+        "priceUnit": 289,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -317,7 +691,7 @@
         "thumbnail": "CL6052312.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -337,7 +711,7 @@
         "thumbnail": "DC6060069.jpg",
         "discountPercent": 20,
         "quantity": 10,
-        "basePrice": 299,
+        "priceUnit": 299,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -357,7 +731,7 @@
         "thumbnail": "DC6056331.jpg",
         "discountPercent": 20,
         "quantity": 10,
-        "basePrice": 259,
+        "priceUnit": 259,
         "age":  {
           "value": [
             "1-3 tuổi",
@@ -377,7 +751,7 @@
         "thumbnail": "EFF003026.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 999,
+        "priceUnit": 999,
         "age":  {
           "value": [
             "6-11 tuổi",
@@ -396,7 +770,7 @@
         "thumbnail": "EFF003045.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "6-11 tuổi",
@@ -415,7 +789,7 @@
         "thumbnail": "FP19-GJW15.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 699,
+        "priceUnit": 699,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -436,7 +810,7 @@
         "thumbnail": "FP19-FYK56.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 779,
+        "priceUnit": 779,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -458,7 +832,7 @@
         "thumbnail": "GGB-YS3037C.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -479,7 +853,7 @@
         "thumbnail": "GGB-YS3037B.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -500,7 +874,7 @@
         "thumbnail": "HP1905.jpg",
         "discountPercent": 25,
         "quantity": 10,
-        "basePrice": 619,
+        "priceUnit": 619,
         "age":  {
           "value": [
             "4-6 tuổi",
@@ -520,7 +894,7 @@
         "thumbnail": "HP1908.jpg",
         "discountPercent": 25,
         "quantity": 10,
-        "basePrice": 499,
+        "priceUnit": 499,
         "age":  {
           "value": [
             "4-6 tuổi",
@@ -540,7 +914,7 @@
         "thumbnail": "IW-OMO015.jpg",
         "discountPercent": 10,
         "quantity": 10,
-        "basePrice": 55,
+        "priceUnit": 55,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -559,7 +933,7 @@
         "thumbnail": "IW-OMO014.jpg",
         "discountPercent": 10,
         "quantity": 10,
-        "basePrice": 55,
+        "priceUnit": 55,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -578,7 +952,7 @@
         "thumbnail": "JWM-GWT53.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 139,
+        "priceUnit": 139,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -599,7 +973,7 @@
         "thumbnail": "JWM-GNL07.jpg",
         "discountPercent": 30,
         "quantity": 10,
-        "basePrice": 139,
+        "priceUnit": 139,
         "age":  {
           "value": [
             "0-12 tháng",
@@ -658,6 +1032,18 @@
       {
         "id": 1,
         "value": "unisex"
+      }
+    ],
+    "coupon": [
+      {
+        "id": 1,
+        "code": "COUPON1",
+        "value": "5"
+      },
+      {
+        "id": 2,
+        "code": "COUPON2",
+        "value": "10"
       }
     ]
 }

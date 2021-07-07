@@ -1,13 +1,12 @@
-
-import { Sorter } from './product-list/common-product/sorter';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pagination } from 'src/common-module/pagination';
-import { SaleProduct } from 'src/common-module/sale-product';
+import { Pagination } from '../core/models/common-models/pagination';
+import { Product } from '../core/models/common-models/product';
 import { MyServerHttpService } from '../Services/my-server-http-service.service';
+import { Sorter } from './product-list/common-saleProduct/sorter';
 import { Age } from './sidebar/common/age';
-import { Sex } from './sidebar/common/sex';
 import { Brand } from './sidebar/common/brand';
+import { Sex } from './sidebar/common/sex';
 
 @Component({
   selector: 'app-product',
@@ -15,9 +14,14 @@ import { Brand } from './sidebar/common/brand';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  public serverPath: string = 'saleProducts';
-  public allSaleProducts!: SaleProduct[];
-  public saleProducts!: SaleProduct[];
+  title: string = 'KHUYẾN MÃI';
+  backgroundImage: string = "saleProduct-bg-title.jpg";
+
+
+  public getSizeProds!: number;
+  public serverPath: string = 'Products';
+  public allProducts!: Product[];
+  public products!: Product[];
   public paramArray = new Map<Object, Object>();
   public sorters: Sorter[] = [
     { id: 0, sort: '', order: '', value: 'Chọn cách sắp xếp' },
@@ -63,36 +67,48 @@ export class ProductComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (typeof Storage !== 'undefined') {
+      localStorage.setItem('name', "thanh");
+      // Code for localStorage/sessionStorage.
+      var name = localStorage.getItem('name');
+      console.log(name)
+      console.log("a");
+    } else {
+      console.log("b");
+      // Sorry! No Web Storage support..
+    }
     this.setParamArrayInitial();
-
     this.myServerHttpService.getAllSaleProducts().subscribe((data) => {
-      this.allSaleProducts = data as SaleProduct[];
-      console.log(this.pagination);
-      this.setPrice(this.allSaleProducts);
-      if (this.allSaleProducts.length % this.pagination.limitPagination != 0) {
+      this.allProducts = data;
+      this.getSizeProds = this.allProducts.length;
+      /* Giá x1000 */
+      this.setPrice(this.allProducts);
+      /* Config pagination */
+      if (this.allProducts.length % this.pagination.limitPagination != 0) {
         this.pagination.totalPagination =
           Math.round(
-            this.allSaleProducts.length / this.pagination.limitPagination
+            this.allProducts.length / this.pagination.limitPagination
           ) + 1;
         this.visiblePagesNumber = this.createVisiblePage(
           this.pagination.indexPagination
         );
       } else {
         this.pagination.totalPagination = Math.round(
-          this.allSaleProducts.length / this.pagination.limitPagination
+          this.allProducts.length / this.pagination.limitPagination
         );
         this.visiblePagesNumber = this.createVisiblePage(
           this.pagination.indexPagination
         );
       }
     });
+    /* Get model */
     this.setSaleProductList(this.serverPath, this.paramArray);
   }
 
-  setPrice(saleProducts: SaleProduct[]) {
-    saleProducts.forEach((saleProduct) => {
-      saleProduct.basePrice *= 1000;
-      saleProduct.priceToBuy *= 1000;
+  setPrice(products: Product[]) {
+    products.forEach((product) => {
+      product.priceUnit *= 1000;
+      product.priceToBuy *= 1000;
     });
   }
   setSortCheck(newSort: string, newOrder: string) {
@@ -136,13 +152,13 @@ export class ProductComponent implements OnInit {
     this.myServerHttpService
       .getItem(serverPath, paramArray)
       .subscribe((data) => {
-        this.saleProducts = data as SaleProduct[];
-        this.setPrice(this.saleProducts);
+        this.products = data as Product[];
+        this.setPrice(this.products);
         this.router.navigate(['sale-product']);
       });
   }
 
-  addToCart(item: SaleProduct) {
+  addToCart(item: Product) {
     this.myServerHttpService.addToCart(item);
     this.router.navigate(['shopping-cart']);
   }
@@ -180,10 +196,8 @@ export class ProductComponent implements OnInit {
           this.pagination.indexPagination -
           (this.pagination.visiblePage - index) +
           1;
-        console.log(result[index]);
       }
     }
-    console.log(result);
     return result;
   }
   previousPage() {
@@ -238,6 +252,4 @@ export class ProductComponent implements OnInit {
     this.setSaleProductList(this.serverPath, this.paramArray);
   }
 
-
 }
-
