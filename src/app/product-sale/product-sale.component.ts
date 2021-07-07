@@ -2,8 +2,8 @@
 import { Sorter } from './product-sale-list/common-saleProduct/sorter';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pagination } from 'src/common-module/pagination';
-import { SaleProduct } from 'src/common-module/sale-product';
+import { Pagination } from 'src/app/core/models/common-models/pagination';
+import { SaleProduct } from 'src/app/core/models/common-models/sale-product';
 import { MyServerHttpService } from '../Services/my-server-http-service.service';
 import { Age } from './sidebar/common/age';
 import { Sex } from './sidebar/common/sex';
@@ -13,10 +13,14 @@ import { Brand } from './sidebar/common/brand';
 @Component({
   selector: 'app-product-sale',
   templateUrl: './product-sale.component.html',
-
   styleUrls: ['./product-sale.component.scss'],
 })
 export class ProductSaleComponent implements OnInit {
+  title: string = 'KHUYẾN MÃI';
+  backgroundImage: string = "saleProduct-bg-title.jpg";
+
+
+  public getSizeProds!: number;
   public serverPath: string = 'saleProducts';
   public allSaleProducts!: SaleProduct[];
   public saleProducts!: SaleProduct[];
@@ -65,12 +69,23 @@ export class ProductSaleComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (typeof Storage !== 'undefined') {
+      localStorage.setItem('name', "thanh");
+      // Code for localStorage/sessionStorage.
+      var name = localStorage.getItem('name');
+      console.log(name)
+      console.log("a");
+    } else {
+      console.log("b");
+      // Sorry! No Web Storage support..
+    }
     this.setParamArrayInitial();
-
     this.myServerHttpService.getAllSaleProducts().subscribe((data) => {
-      this.allSaleProducts = data as SaleProduct[];
-      console.log(this.pagination);
+      this.allSaleProducts = data;
+      this.getSizeProds = this.allSaleProducts.length;
+      /* Giá x1000 */
       this.setPrice(this.allSaleProducts);
+      /* Config pagination */
       if (this.allSaleProducts.length % this.pagination.limitPagination != 0) {
         this.pagination.totalPagination =
           Math.round(
@@ -88,12 +103,13 @@ export class ProductSaleComponent implements OnInit {
         );
       }
     });
+    /* Get model */
     this.setSaleProductList(this.serverPath, this.paramArray);
   }
 
   setPrice(saleProducts: SaleProduct[]) {
     saleProducts.forEach((saleProduct) => {
-      saleProduct.basePrice *= 1000;
+      saleProduct.priceUnit *= 1000;
       saleProduct.priceToBuy *= 1000;
     });
   }
@@ -182,10 +198,8 @@ export class ProductSaleComponent implements OnInit {
           this.pagination.indexPagination -
           (this.pagination.visiblePage - index) +
           1;
-        console.log(result[index]);
       }
     }
-    console.log(result);
     return result;
   }
   previousPage() {

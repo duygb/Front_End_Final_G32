@@ -17,6 +17,7 @@ export class SidebarComponent implements OnInit {
   checkAge: number[] = [];
   searchValue: string = '';
 
+
   @Output() onClickAge = new EventEmitter();
   @Output() onClickSex = new EventEmitter();
   @Output() onClickBrand = new EventEmitter();
@@ -43,17 +44,14 @@ export class SidebarComponent implements OnInit {
       if (element === 'brands') {
         this.myHttp.getAll(element).subscribe((data) => {
           this.brands = data as Brand[];
-          console.log(this.brands);
         });
       } else if (element === 'ages') {
         this.myHttp.getAll(element).subscribe((data) => {
           this.ages = data as Age[];
-          console.log(this.ages);
         });
       } else if (element === 'sexs') {
         this.myHttp.getAll(element).subscribe((data) => {
           this.sexs = data as Sex[];
-          console.log(this.sexs);
         });
       }
     });
@@ -69,7 +67,6 @@ export class SidebarComponent implements OnInit {
     this.onClickBrand.emit(brandObject);
   }
   public clickSearch(){
-    alert(this.searchValue);
     this.onClickSearch.emit(this.searchValue);
   }
 }

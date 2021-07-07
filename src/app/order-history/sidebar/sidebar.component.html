@@ -1,0 +1,79 @@
+<div class="product-categori">
+    <div class="search-product">
+            <input class="form-control" placeholder="Search here..." type="text" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}">
+            <button type="button"> <i class="fa fa-search" (click)="clickSearch()"></i> </button>
+    </div>
+    <div class="filter-sidebar-left">
+        <div class="title-left">
+            <h3>Danh mục</h3>
+        </div>
+        <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
+            <div class="list-group-collapse sub-men">
+            <a class="list-group-item list-group-item-action">Sản phẩm</a>
+            <a class="list-group-item list-group-item-action" href="/sale-product" routerLinkActive="router-link-active" >Sản phẩm khuyến mãi</a>
+            <a class="list-group-item list-group-item-action" >Sản phẩm mới</a>
+            <a class="list-group-item list-group-item-action" href="/member-cart" routerLinkActive="router-link-active" >Các trang thương hiệu</a>
+                <!-- <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">T-Shirts <small class="text-muted">(50)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">Polo T-Shirts <small class="text-muted">(10)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">Round Neck T-Shirts <small class="text-muted">(10)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">V Neck T-Shirts <small class="text-muted">(10)</small></a>
+                        <a href="#" class="list-group-item list-group-item-action">Hooded T-Shirts <small class="text-muted">(20)</small></a>
+                    </div>
+                </div> -->
+            </div>
+    </div>
+    <div class="filter-price-left">
+        <div class="title-left">
+            <h3>Giá</h3>
+        </div>
+        <div class="price-box-slider">
+            <div id="slider-range"></div>
+            <p>
+                <input type="text" id="amount" readonly style="border:0; color:#fbb714; font-weight:bold;">
+                <button class="btn hvr-hover" type="submit">Filter</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="filter-brand-left">
+        <div class="title-left">
+            <h3>Độ tuổi</h3>
+        </div>
+    
+        <div class="form-check" *ngFor="let age of ages">
+            <input #checkAge class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (click) = "clickAge(age)" (checked)=true>
+            <label #check class="form-check-label" for="flexCheckDefault" style="font-weight: normal;">
+                {{age.value}}
+            </label>
+        </div>
+    </div>
+    <div class="filter-brand-left">
+        <div class="title-left">
+            <h3>Giới tính</h3>
+        </div>
+        <div class="form-check" *ngFor="let sex of sexs">
+            <input #checkSex class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (change) = "clickSex(sex)">
+            <label class="form-check-label" for="flexRadioDefault1" style="font-weight: normal;">
+              {{sex.value}}
+            </label>
+        </div>
+    </div>
+
+    <div class="filter-brand-left">
+        <div class="title-left">
+            <h3>Thương hiệu</h3>
+        </div>
+        <div class="brand-box">
+            <div class="form-check" *ngFor="let brand of brands">
+                <input #checkSex class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1" (click) = "clickBrand(brand)">
+                <label class="form-check-label" for="flexRadioDefault1" style="font-weight: normal;">
+                  {{brand.name}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
