@@ -1,21 +1,22 @@
-<div class="container-fluid" style="height: 72px;">
+<div class="container-fluid">
+    
     <form action="">
         <div class="form-inlinee">
-            <div class="text" style="left: 0px;">
-                <a href="/" style="margin-right: 20px;"><img src="assets/img/logoCTS.jpg" alt="logoCTS" style="width:100%; "></a>
+            <div class="text">
+                <a href="/"><img src="assets/img/logoCTS.jpg" alt="logoCTS" style="width:100%;"></a>    
             </div>
-
-            <div class="icon" style="left: 357px; top: 20px;">
+            <div class="icon">
                 <div class="form-inline">
-
+                    
+                    
                     <div class="search">
                         <input type="text" class="form-control input-sm" maxlength="64" placeholder="  Bạn muốn kiếm gì"  />
-                        <a style="background-color: black;" type="submit" class="btn"><i style="margin-top: 8px;" class="fas fa-search"></i></a>
+                        <a type="submit" class="btn"><i class="fas fa-search"></i></a>
                     </div>
 
                     <div class="cart">
                         <div class="cart-center">
-                            <a [routerLink]="['/shopping-cart']"><i class="fas fa-shopping-cart"></i></a>({{totalProduct}})
+                            <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                     <div class="email">
@@ -25,28 +26,7 @@
                     </div>
                     <div class="account">
                         <div class="account-center">
-                            <div class="row">
-                                <div class="col-2">
-                                    <a [routerLink]="['/login']">
-                                        <i class="fas fa-user-circle"></i>
-                                    </a>
-                                </div>
-                                <div class="col-10">
-                                    <div >
-                                        <div *ngIf="user != null">
-                                            <a style="font-size: 14px; margin-left: 5px;">
-                                              <!-- string interpolation way {{string}}-->
-                                              <!-- property binding []=""-->
-                                              <!-- event binding ()="handler()"-->
-                                                Hi, {{user.fullName}}
-                                            </a>
-                                            <a  (click) = "clickLogout()" style="font-size: 14px; margin-left: 5px;cursor: pointer;">
-                                              Đăng xuất
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
+                           <a href="/login"> <i class="fas fa-user-circle"></i></a>
                         </div>
                     </div>
                 </div>
@@ -59,12 +39,12 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid nav-custom">
             <ul class="nav navbar effect">
-                <li><a [routerLink]="['/product']" >SẢN PHẨM</a></li>
-                <li><a [routerLink]="['/age']">ĐỘ TUỔI</a></li>
-                <li><a [routerLink]="['/gender']">GIỚI TÍNH</a></li>
-                <li><a [routerLink]="['/sale-product']"  >KHUYẾN MÃI</a></li>
-                <li><a [routerLink]="['/product-new']">HÀNG MỚI</a></li>
-                <li><a [routerLink]="['/member-cart']">THƯƠNG HIỆU</a></li>
+                <li><a href="/product">SẢN PHẨM</a></li>
+                <li><a href="/age">ĐỘ TUỔI</a></li>
+                <li><a href="/gender">GIỚI TÍNH</a></li>
+                <li><a href="/sale-product">KHUYẾN MÃI</a></li>
+                <li><a href="/product-new">HÀNG MỚI</a></li>
+                <li><a href="/member-cart">THƯƠNG HIỆU</a></li>
             </ul>
         </div>
     </nav>

@@ -1,4 +1,4 @@
-
+<app-title-box></app-title-box>
 
 <div class="shop-box-inner">
     <div class="container">
@@ -10,12 +10,13 @@
                 (onClickBrand) = "clickBrand($event)"
                 (onClickSearch) = "clickSearch($event)"
                 >
+
                 </app-sidebar>
             </div>
             <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
-                <app-product-list
-                [allProducts] = "allProducts"
-                [products] = "products"
+                <app-product-sale-list  
+                [allSaleProducts] = "allSaleProducts"
+                [saleProducts] = "saleProducts"
                 [pagination] = "pagination"
                 [sorters] = "sorters"
                 [sortCheck] = "sortCheck"
@@ -27,10 +28,10 @@
                 (onNextPage) = "nextPage()"
                 (onIndexPaginationChange) = "indexPaginationChange($event)"
                 >
-                </app-product-list>
+
+                </app-product-sale-list>
             </div>
         </div>
     </div>
 </div>
-
 

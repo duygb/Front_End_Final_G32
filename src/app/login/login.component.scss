@@ -124,12 +124,3 @@ input[type="password"]::placeholder {
 a{
     text-decoration: none;
 }
-button{
-    border-radius: 5px;
-    height: 30px;
-    width: 100px;
-    
-}
-button::after{
-    content: "";
-}

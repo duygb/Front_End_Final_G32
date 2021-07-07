@@ -71,9 +71,9 @@
     }
     .icon {
         height: 50px;
-        width: 60%;
+        width: 50%;
         position: relative;
-        left: 400px;
+        left: 500px;
         a {
             color: rgb(33, 36, 33);
         }
@@ -141,14 +141,11 @@
         }
         .account {
             height: 50px;
-            width: 30%;
+            width: 10%;
             .account-center {
-                height: 80%;
-                width: 100%;
                 font-size: 20px;
                 position: relative;
                 top: 10px;
-                left: 10px
             }
         }
     }
