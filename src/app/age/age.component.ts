@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {SidebarComponent1} from './sidebar/sidebar.component';
-import {SaleProduct} from "../../common-module/sale-product";
+import {SaleProduct} from "../core/models/common-models/sale-product";
 import {Sorter} from "../product-sale/product-sale-list/common-saleProduct/sorter";
-import {Pagination} from "../../common-module/pagination";
+import {Pagination} from "../core/models/common-models/pagination";
 import {Age} from "../product-sale/sidebar/common/age";
 import {Sex} from "../product-sale/sidebar/common/sex";
 import {Brand} from "../product-sale/sidebar/common/brand";
@@ -91,7 +91,7 @@ export class AgeComponent implements OnInit {
 
   setPrice(saleProducts: SaleProduct[]) {
     saleProducts.forEach((saleProduct) => {
-      saleProduct.basePrice *= 1000;
+      saleProduct.priceUnit *= 1000;
       saleProduct.priceToBuy *= 1000;
     });
   }

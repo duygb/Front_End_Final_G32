@@ -45,6 +45,9 @@ var list_order_history_component_1 = require("./order-history/list-order-history
 var shopping_cart_component_1 = require("./shoping-cart/shopping-cart.component");
 var summary_box_component_1 = require("./shoping-cart/summary-box/summary-box.component");
 var title_box_component_1 = require("./tittle-box/title-box.component");
+var payment_component_1 = require("./payment/payment.component");
+var product_component_1 = require("./product/product.component");
+var product_list_component_1 = require("./product/product-list/product-list.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -73,6 +76,9 @@ var AppModule = /** @class */ (function () {
                 shopping_cart_component_1.ShoppingCartComponent,
                 summary_box_component_1.SummaryBoxComponent,
                 title_box_component_1.TitleBoxComponent,
+                payment_component_1.PaymentComponent,
+                product_component_1.ProductComponent,
+                product_list_component_1.ProductListComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,
