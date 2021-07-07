@@ -1,6 +1,6 @@
 import { pendingOrdersSelection } from './../core/store/orders/orders.selector';
 import { AppState } from 'src/app/core/store/app.state';
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { User } from '../core/models/user/user.model';
@@ -15,6 +15,9 @@ import { userSelection } from '../core/store/auth/login.selector';
 export class HeaderComponent implements OnInit {
   @Input()
   user!: User | null;
+  searchValue: string = '';
+
+  @Output() onClickSearch = new EventEmitter();
   /* @Output()
   onClickLogout = new EventEmitter(); */
   totalProduct: number = 0;
@@ -33,5 +36,8 @@ export class HeaderComponent implements OnInit {
     this.store.dispatch(logoutAC());
     this.user = null;
     this.router.navigate(['/home']);
+  }
+  public clickSearch(){
+    this.onClickSearch.emit(this.searchValue);
   }
 }

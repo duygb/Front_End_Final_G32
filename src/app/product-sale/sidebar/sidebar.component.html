@@ -1,6 +1,6 @@
 <div class="product-categori">
     <div class="search-product">
-            <input class="form-control" placeholder="Search here..." type="text" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}">
+            <input class="form-control" placeholder="Tìm kiếm ..." type="text" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}">
             <button type="button"> <i class="fa fa-search" (click)="clickSearch()"></i> </button>
     </div>
     <div class="filter-sidebar-left">
@@ -9,10 +9,10 @@
         </div>
         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
             <div class="list-group-collapse sub-men">
-            <a class="list-group-item list-group-item-action">Sản phẩm</a>
-            <a class="list-group-item list-group-item-action" [routerLink]="['/sale-product']" routerLinkActive="router-link-active" >Sản phẩm khuyến mãi</a>
-            <a class="list-group-item list-group-item-action" >Sản phẩm mới</a>
-            <a class="list-group-item list-group-item-action" [routerLink]="['/member-cart']" routerLinkActive="router-link-active" >Các trang thương hiệu</a>
+            <a class="list-group-item list-group-item-action" [routerLink]="['/products']">Sản phẩm</a>
+            <a class="list-group-item list-group-item-action" [routerLink]="['/sale-product']"  >Sản phẩm khuyến mãi</a>
+            <a class="list-group-item list-group-item-action" [routerLink]="['/product-new']">Sản phẩm mới</a>
+            <a class="list-group-item list-group-item-action" [routerLink]="['/member-cart']"  >Các trang thương hiệu</a>
                 <!-- <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
                     <div class="list-group">
                         <a href="#" class="list-group-item list-group-item-action active">T-Shirts <small class="text-muted">(50)</small></a>

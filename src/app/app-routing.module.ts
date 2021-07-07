@@ -13,13 +13,14 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { PaymentComponent } from './payment/payment.component';
-import { ProductComponent } from './product/product.component';
+import { ProductsComponent } from './products/products.component';
+
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'product', component: ProductComponent},
+  { path: 'products', component: ProductsComponent},
   { path: 'age', component:AgeComponent },
   { path: 'gender', component:GenderComponent },
   { path: 'sale-product', component: ProductSaleComponent },

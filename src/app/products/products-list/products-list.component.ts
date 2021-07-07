@@ -1,22 +1,21 @@
-import { Products } from '../../core/models/common-models/product';
-import { Pagination } from '../../core/models/common-models/pagination';
-import { Component, OnInit, Input, Output, EventEmitter, DoCheck } from '@angular/core';
-import { SaleProduct } from 'src/app/core/models/common-models/sale-product';
-import { MyServerHttpService } from 'src/app/Services/my-server-http-service.service';
-import { Router } from '@angular/router';
-import { Sorter } from './common-saleProduct/sorter';
-import { PendingOrderItem } from 'src/app/core/models/common-models/pendingOrderItem';
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Pagination } from 'src/app/core/models/common-models/pagination';
+import { PendingOrderItem } from 'src/app/core/models/common-models/pendingOrderItem';
+import { Products } from 'src/app/core/models/common-models/product';
 import { addProductIntoOrder } from 'src/app/core/store/orders/orders.actions';
 
+import { Sorter } from './common-products/sorter';
+
+
 @Component({
-  selector: 'app-product-sale-list',
-  templateUrl: './product-sale-list.component.html',
-  styleUrls: ['./product-sale-list.component.scss'],
+  selector: 'app-products-list',
+  templateUrl: './products-list.component.html',
+  styleUrls: ['./products-list.component.scss']
 })
-export class ProductSaleListComponent implements OnInit {
-  @Input() public allSaleProducts!: SaleProduct[];
-  @Input() public saleProducts!: SaleProduct[];
+export class ProductsListComponent implements OnInit {
+  @Input() public allProducts!: Products[];
+  @Input() public products!: Products[];
   @Input() public pagination!: Pagination;
   @Input() public sorters!: Sorter[];
   @Input() public sortCheck!: any;
@@ -49,7 +48,7 @@ export class ProductSaleListComponent implements OnInit {
   lastPage() {
     this.onLastPage.emit();
   }
-  addToCart(product: SaleProduct) {
+  addToCart(product: Products) {
     // deconstructing object: TODO <= need to read :))
     /* --> SET pendingOrder INTO LOCAL STORAGE */
     const { id, name, priceUnit, discountPercent, thumbnail } = product;
@@ -83,4 +82,7 @@ export class ProductSaleListComponent implements OnInit {
     this.store.dispatch(addProductIntoOrder());
     alert("Đã thêm vào giỏ hàng")
   }
+
+
+
 }

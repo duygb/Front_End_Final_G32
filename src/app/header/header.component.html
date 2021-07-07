@@ -8,10 +8,12 @@
             <div class="icon" style="left: 357px; top: 20px;">
                 <div class="form-inline">
 
-                    <div class="search">
-                        <input type="text" class="form-control input-sm" maxlength="64" placeholder="  Bạn muốn kiếm gì"  />
-                        <a style="background-color: black;" type="submit" class="btn"><i style="margin-top: 8px;" class="fas fa-search"></i></a>
-                    </div>
+                    <!-- <div class="search">
+                        <input type="text" class="form-control input-sm" maxlength="64" placeholder="  Tìm kiếm..."
+                        [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" />
+                        <button type="button" style="background-color: black;" class="btn"><i style="margin-top: 8px;" class="fas fa-search"
+                         (click)="clickSearch()" ></i></button>
+                    </div> -->
 
                     <div class="cart">
                         <div class="cart-center">
@@ -59,7 +61,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid nav-custom">
             <ul class="nav navbar effect">
-                <li><a [routerLink]="['/product']" >SẢN PHẨM</a></li>
+                <li><a [routerLink]="['/products']" >SẢN PHẨM</a></li>
                 <li><a [routerLink]="['/age']">ĐỘ TUỔI</a></li>
                 <li><a [routerLink]="['/gender']">GIỚI TÍNH</a></li>
                 <li><a [routerLink]="['/sale-product']"  >KHUYẾN MÃI</a></li>

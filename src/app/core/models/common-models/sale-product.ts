@@ -1,5 +1,5 @@
-import { Product } from "./product";
+import { Products } from "./product";
 
-export class SaleProduct extends Product {
+export class SaleProduct extends Products {
   discountPercent!: number;
 }

@@ -41,8 +41,10 @@ import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { SummaryBoxComponent } from './shoping-cart/summary-box/summary-box.component';
 import { TitleBoxComponent } from './tittle-box/title-box.component';
 import { PaymentComponent } from './payment/payment.component';
-import { ProductComponent } from './product/product.component';
-import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductsListComponent } from './products/products-list/products-list.component';
+import { TitleProductComponent } from './products/title-product/title-product.component';
+
 
 
 
@@ -72,8 +74,10 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     SummaryBoxComponent,
     TitleBoxComponent,
     PaymentComponent,
-    ProductComponent,
-    ProductListComponent,
+    ProductsComponent,
+    ProductsListComponent,
+    TitleProductComponent,
+
 
 
 

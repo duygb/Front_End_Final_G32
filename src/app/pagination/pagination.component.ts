@@ -1,4 +1,4 @@
-import { Product } from '../core/models/common-models/product';
+import { Products } from '../core/models/common-models/product';
 import { Pagination } from 'src/app/core/models/common-models/pagination';
 import { SaleProduct } from '../core/models/common-models/sale-product';
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
