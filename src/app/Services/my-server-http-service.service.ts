@@ -14,6 +14,7 @@ export class MyServerHttpService {
     }),
   };
   private REST_API_SERVER = 'http://localhost:3000';
+
   constructor(private httpClient: HttpClient) {}
   public getAll(serverPath: string): Observable<Object> {
     const url = `${this.REST_API_SERVER}/${serverPath}`;
@@ -105,6 +106,12 @@ export class MyServerHttpService {
       .get(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+  public getAllProducts(): Observable<any> {
+    const url = `${this.REST_API_SERVER}/products`;
+    return this.httpClient
+      .get(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
   public getAllSaleProducts(): Observable<any> {
     const url = `${this.REST_API_SERVER}/saleProducts`;
     return this.httpClient
@@ -135,6 +142,7 @@ export class MyServerHttpService {
       .get(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
