@@ -5,76 +5,29 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class MyServerHttpService {
+  
   private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
+    headers:  new HttpHeaders({
+      'Content-Type' : 'application/json'
+    })
   };
   private REST_API_SERVER = 'http://localhost:3000';
-
   constructor(private httpClient: HttpClient) {}
-  public getAll(serverPath: string): Observable<Object> {
+  public getAll(serverPath: string): Observable<Object>{
     const url = `${this.REST_API_SERVER}/${serverPath}`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getById(serverPath: string, id: string): Observable<any> {
-    const url = `${this.REST_API_SERVER}/${serverPath}?id=${id}`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-  public searchByName(serverPath: string, searchValue: string): Observable<any> {
-    const url = `${this.REST_API_SERVER}/${serverPath}?name_like=${searchValue}`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-  public getCouponByCode(code: string): Observable<any> {
-    const url = `${this.REST_API_SERVER}/coupon?code=${code}`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-
-  public getByIds(serverPath: string, ids: string[]): Observable<any> {
-    let url = `${this.REST_API_SERVER}/${serverPath}?`;
-    ids.forEach((id) => {
-      url = url + `id=${id}&`;
-    });
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-
-  public checkUsername(username: string): Observable<any> {
-    const url = `${this.REST_API_SERVER}/users?username=${username}`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-  public checkUserInfo(username: string, password: string): Observable<any> {
-    const url = `${this.REST_API_SERVER}/users?username=${username}&password=${password}`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-  public getSaleProductsList(
-    indexPage: number,
-    limit: number
-  ): Observable<any> {
+  
+  public getSaleProductsList(indexPage: number, limit: number): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts?_page=${indexPage}&_limit=${limit}`;
     console.log(this.httpOptions);
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getItem(serverPath: string, paramArray: Map<Object, Object>) {
-    let url = `${this.REST_API_SERVER}/${serverPath}?`;
+  public getItem(serverPath: string, paramArray: Map<Object,Object>){
+    let  url = `${this.REST_API_SERVER}/${serverPath}?` ;
     paramArray.forEach((value, key) => {
       if (key === 'id') {
         url = url + `id=${value}&`;
@@ -102,47 +55,28 @@ export class MyServerHttpService {
         url = url + `name_like=${value}&`;
       }
     });
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getAllProducts(): Observable<any> {
-    const url = `${this.REST_API_SERVER}/products`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-  public getAllSaleProducts(): Observable<any> {
+  public getAllSaleProducts(): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getCart(): Observable<any> {
+  public getCart(): Observable<any>{
     const url = `${this.REST_API_SERVER}/cart`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.get(url, this.httpOptions).pipe(catchError(this.handleError));
   }
-  public addToCart(item: any): Observable<any> {
+  public addToCart(item: any): Observable<any>{
     const url = `${this.REST_API_SERVER}/cart`;
-    return this.httpClient
-      .put(url, item, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.put(url,item,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getPageItems(page: number, limit: number): Observable<any> {
+  public getPageItems(page:number,limit:number): Observable<any>{
     const url = `${this.REST_API_SERVER}/saleProducts?_page=${page}&_limit=${limit}`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-  public getAllBrands(): Observable<any> {
+  public getAllBrands(): Observable<any>{
     const url = `${this.REST_API_SERVER}/brands`;
-    return this.httpClient
-      .get(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.httpClient.get(url,this.httpOptions).pipe(catchError(this.handleError));
   }
-
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
@@ -151,10 +85,12 @@ export class MyServerHttpService {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong.
       console.error(
-        `Backend returned code ${error.status}, ` + `body was: ${error.error}`
-      );
+        `Backend returned code ${error.status}, ` +
+        `body was: ${error.error}`);
     }
     // Return an observable with a user-facing error message.
-    return throwError('Something bad happened; please try again later.');
+    return throwError(
+      'Something bad happened; please try again later.');
   }
+
 }

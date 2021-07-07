@@ -1,6 +1,6 @@
-import { Product } from '../core/models/common-models/product';
-import { Pagination } from 'src/app/core/models/common-models/pagination';
-import { SaleProduct } from '../core/models/common-models/sale-product';
+import { Product } from './../../common-module/product';
+import { Pagination } from 'src/common-module/pagination';
+import { SaleProduct } from './../../common-module/sale-product';
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -17,13 +17,13 @@ export class PaginationComponent implements OnInit {
   @Input() pagination!: Pagination;
   constructor() {
     for (let index = 1; index <= this.pagination.visiblePage; index++) {
-    console.log(index);
+    console.log(index); 
   }
-  console.log(this.pagination.totalPagination);
+  console.log(this.pagination.totalPagination); 
 }
   ngOnInit(): void {
    /*  for (let index = 1; index <= this.pagination.visiblePage; index++) {
-      console.log(index);
+      console.log(index); 
     }
     console.log(this.pagination.totalPagination); */
   }

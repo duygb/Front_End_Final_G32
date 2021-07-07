@@ -1,4 +1,3 @@
-
 <div class="right-product-box" style="margin-top: 10px">
     <div class="product-item-filter row">
         <div class="col-12 col-sm-12 text-center text-sm-left">
@@ -7,7 +6,7 @@
                     <option *ngFor="let i of sorters">{{i.value}}</option>
                 </select>
             </div>
-              <p>Tổng cộng có {{allSaleProducts.length}} sản phẩm</p>
+            <p>Tổng cộng có {{allSaleProducts.length}} sản phẩm</p>
         </div>
    <!--      <button #hightToLow value="{priceToBuy,esc}" (click) = "getSaleProductsSorted(hightToLow)">High Price → Low Price> </button> -->
     </div>
@@ -18,9 +17,6 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let saleProduct of saleProducts">
                         <div class="products-single fix">
                             <div class="box-img-hover">
-                              <div class="type-lb-discountPercent">
-                                <p class="discountPercent">{{saleProduct.discountPercent}}%</p>
-                            </div>
                                 <div class="type-lb">
                                     <p class="sale">Sale</p>
                                 </div>
@@ -31,8 +27,7 @@
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                     </ul>
-                                    <a class="cart" (click) = "addToCart(saleProduct)">Add to Cart</a>
-
+                                    <a class="cart" href="#">Add to Cart</a>
                                 </div>
                             </div>
                             <div class="why-text">
@@ -40,21 +35,21 @@
                                 <h5>SKU: {{saleProduct.SKU}}</h5>
                                 <div class="price-box">
                                     <span class="priceToBuy">{{saleProduct.priceToBuy | currency: "VND"}}</span>
-                                    <span class="basePrice">{{saleProduct.priceUnit | currency: "VND"}}</span>
+                                    <span class="basePrice">{{saleProduct.basePrice | currency: "VND"}}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
                         <ul class="pagination justify-content-center">
-
+                        
                             <span *ngIf="pagination.indexPagination == 1; then trueFirstPage; else falseFirstPage"></span>
                             <ng-template #trueFirstPage>
                                 <li class="page-item disabled">
                                     <a class="page-link">Trang đầu</a>
-
+    
                                    <!--  <button (click) = "myClick(sorter.sortBy,sorter.orderBy)"></button> -->
-                                   <!--  disabled : init attribute of HTML tag gọi từ controller
+                                   <!--  disabled : init attribute of HTML tag gọi từ controller 
                                 dưới controller sẽ có : disabled = "false": : property;
                                     <input [disable] = "condition" > -> vào controller lấy disable property set lại bằng controller của product-sale-list(ts)   -->
                                 </li>
@@ -72,7 +67,7 @@
                                 <a class="page-link">Trang trước</a>
 
                                <!--  <button (click) = "myClick(sorter.sortBy,sorter.orderBy)"></button> -->
-                               <!--  disabled : init attribute of HTML tag gọi từ controller
+                               <!--  disabled : init attribute of HTML tag gọi từ controller 
                             dưới controller sẽ có : disabled = "false": : property;
                                 <input [disable] = "condition" > -> vào controller lấy disable property set lại bằng controller của product-sale-list(ts)   -->
                             </li>
@@ -99,9 +94,9 @@
                         </li>
 
 
-
-
-                        <li class="page-item" (click)= "nextPage()">
+                        
+                        
+                        <li class="page-item" (click)= "nextPage()"> 
                             <a class="page-link" style="width: 107.3px; height: 37.6px; text-align: center;" >Trang kế</a>
                         </li>
                         <span *ngIf="pagination.indexPagination == pagination.visiblePage; then trueLastPage; else falseLastPage"></span>
@@ -110,7 +105,7 @@
                                 <a class="page-link">Trang cuối</a>
 
                                <!--  <button (click) = "myClick(sorter.sortBy,sorter.orderBy)"></button> -->
-                               <!--  disabled : init attribute of HTML tag gọi từ controller
+                               <!--  disabled : init attribute of HTML tag gọi từ controller 
                             dưới controller sẽ có : disabled = "false": : property;
                                 <input [disable] = "condition" > -> vào controller lấy disable property set lại bằng controller của product-sale-list(ts)   -->
                             </li>
