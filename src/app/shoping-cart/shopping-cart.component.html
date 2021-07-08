@@ -1,5 +1,5 @@
 <app-title-box [title]="title" [thumbnail]="backgroundImage"> </app-title-box>
-<div class="cart-box-main"> 
+<div class="cart-box-main">
   <div class="container" style="max-width: 1400px;">
       <div class="row">
           <div class="col-lg-12">
@@ -7,13 +7,13 @@
                   <table class="table">
                       <thead>
                           <tr class="row" style="margin-left: -1px;">
-                            <th class="col-2">Image</th>
-                            <th class="col-2">Name</th>
-                            <th class="col-2">Price Unit</th>
-                            <th class="col-1">Discount</th>
-                            <th class="col-2">Quantity</th>
-                            <th class="col-2">Total</th>
-                            <th class="col-1">Remove</th>
+                            <th class="col-2">Ảnh</th>
+                            <th class="col-2">Tên sp</th>
+                            <th class="col-2">Đơn giá</th>
+                            <th class="col-1">Khuyến mãi</th>
+                            <th class="col-2">Sổ lượng</th>
+                            <th class="col-2">Tổng cộng</th>
+                            <th class="col-1">Xóa</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -21,6 +21,7 @@
                               <th class="col-2">
                                 <a href="#">
                                   <img class="img-fluid" src="../../../assets/Image/SaleProduct-Image/{{pendingOrder?.thumbnail}}" alt="" />
+                                  
                                 </a>
                               </th>
                               <th class="col-2">

@@ -17,7 +17,7 @@ import { pendingOrdersSelection } from '../core/store/orders/orders.selector';
   ],
 })
 export class ShoppingCartComponent implements OnInit {
-  title: string = 'SHOPPING CART';
+  title: string = 'GIỎ HÀNG';
   backgroundImage: string = "cart-bg-title.jpeg";
   pendingOrders!: PendingOrderItem[];
   constructor(private store: Store) {}
