@@ -138,7 +138,7 @@ export class AgeComponent implements OnInit {
       .subscribe((data) => {
         this.saleProducts = data as SaleProduct[];
         this.setPrice(this.saleProducts);
-        this.router.navigate(['sale-product']);
+        this.router.navigate(['age']);
       });
   }
 

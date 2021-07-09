@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent implements OnInit {
-  title: string = 'PAYMENT';
+  title: string = 'THANH TOÁN';
   backgroundImage: string = 'payment-bg-title.jpg';
 
   orders$!: Observable<PendingOrderItem[]>;

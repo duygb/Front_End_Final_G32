@@ -108,7 +108,7 @@ img {
 }
 
 .checked,
-.price span {
+.detail span {
     color: #ff9f1a;
 }
 
@@ -215,5 +215,19 @@ img {
 }
 button::after {
     content: "";
+}
+.discount{
+  text-decoration: line-through;
+}
+.count-adj{
+  display: flex;
+  flex-direction: row;
+  .count{
+    margin: 0px 10px;
+  }
+  .btn-adj{
+    height: 30px;
+    width: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,11 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { DetailProduct } from 'src/app/core/models/common-models/detail-product';
 import { Pagination } from 'src/app/core/models/common-models/pagination';
 import { PendingOrderItem } from 'src/app/core/models/common-models/pendingOrderItem';
 import { Products } from 'src/app/core/models/common-models/product';
+import { SaleProduct } from 'src/app/core/models/common-models/sale-product';
+import { addProductIntoDetail } from 'src/app/core/store/add-detail/add-detail.action';
 import { addProductIntoOrder } from 'src/app/core/store/orders/orders.actions';
 
 import { Sorter } from './common-products/sorter';
@@ -48,7 +51,7 @@ export class ProductsListComponent implements OnInit {
   lastPage() {
     this.onLastPage.emit();
   }
-  addToCart(product: Products) {
+  addToCart(product:Products) {
     // deconstructing object: TODO <= need to read :))
     /* --> SET pendingOrder INTO LOCAL STORAGE */
     const { id, name, priceToBuy, discountPercent, thumbnail } = product;
@@ -58,7 +61,7 @@ export class ProductsListComponent implements OnInit {
       thumbnail: thumbnail,
       discountPercent: discountPercent,
       priceUnit: priceToBuy,
-      totalPrice: priceToBuy,
+      totalPrice: 0,
       quantity: 1,
     };
     if (localStorage.getItem('pendingOrders') !== null) {
@@ -81,6 +84,38 @@ export class ProductsListComponent implements OnInit {
     /* CHANGE STATE */
     this.store.dispatch(addProductIntoOrder());
     alert("Đã thêm vào giỏ hàng")
+  }
+  addToDetail(product: Products){
+    const {id,name,description,priceUnit,priceToBuy,SKU,brand,discountPercent,
+      thumbnailDetailOne,thumbnailDetailTwo,thumbnailDetailThree} = product;
+      const value: DetailProduct = {
+          id: id,
+          nameProduct:name,
+          description:description,
+          priceToBuy:priceToBuy,
+          priceUnit:priceUnit,
+          discountPercent:discountPercent,
+          SKU:SKU,
+          brand:brand,
+          thumbnailDetailOne:thumbnailDetailOne,
+          thumbnailDetailTwo:thumbnailDetailTwo,
+          thumbnailDetailThree:thumbnailDetailThree,
+          quantity:1,
+      };
+      if (localStorage.getItem('detail') !== null) {
+        const detail = JSON.parse(
+          localStorage.getItem('detail') || ''
+        ) as DetailProduct[];
+
+        localStorage.setItem('detail', JSON.stringify(detail));
+        /*  end <-- */
+      } else {
+        const detail: DetailProduct[] = [];
+        detail.push(value);
+        localStorage.setItem('detail', JSON.stringify(detail));
+      }
+      this.store.dispatch(addProductIntoDetail());
+
   }
 
 
