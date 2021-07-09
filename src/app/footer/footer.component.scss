@@ -3,10 +3,10 @@ footer{
    height: 100%;
     font-size: 20px;
     .p-4{
-        
+
         background-color: rgb(65, 59, 55);
     }
-   
+
     .button-size{
         height: 30px;
     }
@@ -22,4 +22,13 @@ footer{
         content: "";
     }
 
+}
+.list-unstyled{
+  height: auto;
+  width: auto;
+  text-align: left;
+  margin-left: 146px;
+}
+.img{
+height: 177px;
 }
