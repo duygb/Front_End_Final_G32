@@ -55,7 +55,7 @@ export class ShoppingCartComponent implements OnInit {
     localStorage.setItem('pendingOrders', JSON.stringify(pendingOrders));
     this.store.dispatch(addProductIntoOrder());
   }
-  removePendingOrder(id: string){
+  removePendingOrder(id: number){
     let pendingOrders = JSON.parse(
       localStorage.getItem('pendingOrders') || ''
     ) as PendingOrderItem[];

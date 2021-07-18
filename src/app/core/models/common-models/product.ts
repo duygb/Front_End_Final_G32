@@ -1,7 +1,7 @@
-import { DetailProduct } from "./detail-product";
+
 
 export class Products{
-  id!: string;
+  id!: number;
   name!: string;
   description!: string;
   discountPercent!: number;

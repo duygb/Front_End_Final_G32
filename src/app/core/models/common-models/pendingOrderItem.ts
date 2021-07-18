@@ -1,5 +1,5 @@
 export interface PendingOrderItem {
-  id: string;
+  id: number;
   productName: string;
   thumbnail: string;
   discountPercent: number;

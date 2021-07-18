@@ -1,47 +1,47 @@
-<div class="container-fluid">
+<ng-template #noProductDetail>
+<h2>Not Found 404</h2>
+</ng-template>
+<div class="container-fluid" >
   <div class="card">
     <div class="container-fliud">
-      <div class="wrapper row" *ngFor="let detail of detailProduct">
+      <div class="wrapper row" >
         <div class="preview col-md-6" >
           <div class="preview-pic tab-content" >
-            <div class="tab-pane active" id="pic-1"><img src="./../../../assets/Image/SaleProduct-Image/{{detail.thumbnailDetailOne}}" /></div>
-            <div class="tab-pane" id="pic-2"><img src="./../../../assets/Image/SaleProduct-Image/{{detail.thumbnailDetailTwo}}" /></div>
-            <div class="tab-pane" id="pic-3"><img src="./../../../assets/Image/SaleProduct-Image/{{detail.thumbnailDetailThree}}" /></div>
-
+            <div class="tab-pane active" id="pic-1"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailOne}}" /></div>
+            <div class="tab-pane" id="pic-2"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailTwo}}" /></div>
+            <div class="tab-pane" id="pic-3"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailThree}}" /></div>
           </div>
           <ul class="preview-thumbnail nav nav-tabs">
-            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{detail.thumbnailDetailOne}}" /></a></li>
-            <li><a data-target="#pic-2" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{detail.thumbnailDetailTwo}}" /></a></li>
-            <li><a data-target="#pic-3" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{detail.thumbnailDetailThree}}" /></a></li>
+            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailOne}}" /></a></li>
+            <li><a data-target="#pic-2" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailTwo}}" /></a></li>
+            <li><a data-target="#pic-3" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailThree}}" /></a></li>
           </ul>
         </div>
 
         <div class="details col-md-6">
-          <h3 class="product-title">{{detail.nameProduct}}</h3>
+          <h3 class="product-title">{{productDetail.name}}</h3>
           <div class="rating">
-            <div class="stars">
+            <!-- <div class="stars">
               <span class="fa fa-star "></span>
               <span class="fa fa-star "></span>
               <span class="fa fa-star "></span>
               <span class="fa fa-star"></span>
               <span class="fa fa-star"></span>
-
-              <!-- <span class="fa fa-star checked"></span> -->
-            </div>
+            </div> -->
             <!-- <span class="review-no">41 đánh giá</span> -->
           </div>
-          <p class="product-description">{{detail.description}}</p>
-          <h6 class="detail">Thương hiệu: <span>{{detail.brand}}</span></h6>
-          <h6 class="detail">SKU: <span></span>{{detail.SKU}}</h6>
-          <h6 class="detail">So luong:</h6>
+          <p class="product-description">{{productDetail.description}}</p>
+          <h6 class="detail">Thương hiệu: <span>{{productDetail.brand}}</span></h6>
+          <h6 class="detail">SKU: <span></span>{{productDetail.SKU}}</h6>
+          <h6 class="detail">Số lượng:</h6>
           <div class="count-adj detail">
             <button class="btn-adj">-</button>
-            <h6 class="count">{{detail.quantity}}</h6>
+            <h6 class="count">1</h6>
             <button class="btn-adj">+</button>
           </div>
-          <h4 class="detail"><span>{{detail.priceToBuy}}</span></h4>
+          <h4 class="detail"><span>{{productDetail.priceToBuy}}</span></h4>
 
-          <div class="action">
+           <div class="action">
             <button class="add-to-cart btn btn-default" type="button">thêm vào giỏ hàng</button>
             <button class="like btn btn-default ml-2" type="button"><span class="fa fa-heart"></span></button>
           </div>
@@ -50,3 +50,4 @@
     </div>
   </div>
 </div>
+

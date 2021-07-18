@@ -18,7 +18,6 @@ import { ProductsComponent } from './products/products.component';
 
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'products', component: ProductsComponent},
   { path: 'age', component:AgeComponent },
@@ -30,10 +29,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'forget-pass', component: ForgetPassComponent},
   { path: 'reset-pass', component: ResetPassComponent},
-  { path: 'detail-product', component: DetailProductComponent},
+  { path: 'product-detail/:id', component: DetailProductComponent},
   { path: 'order-history', component: OrderHistoryComponent},
   { path: 'payment', component: PaymentComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 
 export class DetailProduct {
   id!: string;
-  nameProduct!: string;
+  name!: string;
   description!:string;
   priceToBuy!:number;
   priceUnit!:number;

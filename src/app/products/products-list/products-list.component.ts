@@ -7,8 +7,9 @@ import { Products } from 'src/app/core/models/common-models/product';
 import { SaleProduct } from 'src/app/core/models/common-models/sale-product';
 import { addProductIntoDetail } from 'src/app/core/store/add-detail/add-detail.action';
 import { addProductIntoOrder } from 'src/app/core/store/orders/orders.actions';
-
+import { Router } from '@angular/router';
 import { Sorter } from './common-products/sorter';
+import { MyServerHttpService } from 'src/app/Services/my-server-http-service.service';
 
 
 @Component({
@@ -24,13 +25,20 @@ export class ProductsListComponent implements OnInit {
   @Input() public sortCheck!: any;
   @Input() public visiblePagesNumber!: any;
 
+   selectedProduct! : Products;
+   dataDetail: any[]=[];
+
+
   @Output() onChanged = new EventEmitter();
   @Output() onFirstPage = new EventEmitter();
   @Output() onLastPage = new EventEmitter();
   @Output() onPreviousPage = new EventEmitter();
   @Output() onNextPage = new EventEmitter();
   @Output() onIndexPaginationChange = new EventEmitter();
-  constructor(private store: Store) {}
+
+  constructor(private store: Store,
+    private router : Router,
+    private service : MyServerHttpService) {}
 
   ngOnInit(): void {}
   indexPaginationChange(valueChange: number) {
@@ -85,38 +93,48 @@ export class ProductsListComponent implements OnInit {
     this.store.dispatch(addProductIntoOrder());
     alert("Đã thêm vào giỏ hàng")
   }
-  addToDetail(product: Products){
-    const {id,name,description,priceUnit,priceToBuy,SKU,brand,discountPercent,
-      thumbnailDetailOne,thumbnailDetailTwo,thumbnailDetailThree} = product;
-      const value: DetailProduct = {
-          id: id,
-          nameProduct:name,
-          description:description,
-          priceToBuy:priceToBuy,
-          priceUnit:priceUnit,
-          discountPercent:discountPercent,
-          SKU:SKU,
-          brand:brand,
-          thumbnailDetailOne:thumbnailDetailOne,
-          thumbnailDetailTwo:thumbnailDetailTwo,
-          thumbnailDetailThree:thumbnailDetailThree,
-          quantity:1,
-      };
-      if (localStorage.getItem('detail') !== null) {
-        const detail = JSON.parse(
-          localStorage.getItem('detail') || ''
-        ) as DetailProduct[];
-
-        localStorage.setItem('detail', JSON.stringify(detail));
-        /*  end <-- */
-      } else {
-        const detail: DetailProduct[] = [];
-        detail.push(value);
-        localStorage.setItem('detail', JSON.stringify(detail));
-      }
-      this.store.dispatch(addProductIntoDetail());
-
+  onSelect(product: Products) : void{
+    this.selectedProduct = product;
+    this.router.navigateByUrl("/product-detail/" + product.id)
   }
+
+  // onSelect(id:any){
+  //   this.router.navigate(['/product-detail'+ id]);
+  //   console.log('dataDetail',id);
+  // }
+
+  // addToDetail(product: Products){
+  //   const {id,name,description,priceUnit,priceToBuy,SKU,brand,discountPercent,
+  //     thumbnailDetailOne,thumbnailDetailTwo,thumbnailDetailThree} = product;
+  //     const value: DetailProduct = {
+  //         id: id,
+  //         nameProduct:name,
+  //         description:description,
+  //         priceToBuy:priceToBuy,
+  //         priceUnit:priceUnit,
+  //         discountPercent:discountPercent,
+  //         SKU:SKU,
+  //         brand:brand,
+  //         thumbnailDetailOne:thumbnailDetailOne,
+  //         thumbnailDetailTwo:thumbnailDetailTwo,
+  //         thumbnailDetailThree:thumbnailDetailThree,
+  //         quantity:1,
+  //     };
+  //     if (localStorage.getItem('detail') !== null) {
+  //       const detail = JSON.parse(
+  //         localStorage.getItem('detail') || ''
+  //       ) as DetailProduct[];
+
+  //       localStorage.setItem('detail', JSON.stringify(detail));
+  //       /*  end <-- */
+  //     } else {
+  //       const detail: DetailProduct[] = [];
+  //       detail.push(value);
+  //       localStorage.setItem('detail', JSON.stringify(detail));
+  //     }
+  //     this.store.dispatch(addProductIntoDetail());
+
+  // }
 
 
 
