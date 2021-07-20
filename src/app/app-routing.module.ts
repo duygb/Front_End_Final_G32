@@ -14,6 +14,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ProductsComponent } from './products/products.component';
+import { FavoriteProductComponent } from './favorite-product/favorite-product.component';
 
 
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'product-detail/:id', component: DetailProductComponent},
   { path: 'order-history', component: OrderHistoryComponent},
   { path: 'payment', component: PaymentComponent},
+  { path: 'favorite-product', component: FavoriteProductComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
 ];

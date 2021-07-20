@@ -44,6 +44,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { TitleProductComponent } from './products/title-product/title-product.component';
+import { FavoriteProductComponent } from './favorite-product/favorite-product.component';
 
 
 
@@ -77,6 +78,7 @@ import { TitleProductComponent } from './products/title-product/title-product.co
     ProductsComponent,
     ProductsListComponent,
     TitleProductComponent,
+    FavoriteProductComponent,
 
 
 

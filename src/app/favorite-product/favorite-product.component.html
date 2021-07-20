@@ -1,0 +1,47 @@
+<app-title-box [title]="title" [thumbnail]="backgroundImage"></app-title-box>
+<div class="shop-box-inner">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="mt-4 content-history" *ngFor="let favorite of favoriteProduct">
+            <div class="infor-pro">
+                <div class="img-info d-flex justify-content-start">
+                    <div class="col-md-2"><a href="#">
+                        <img src="./../../../assets/Image/SaleProduct-Image/{{favorite.thumbnail}}" height="110px" width="100px"
+                                alt="" class="mt-2"></a></div>
+                    <div class="info col-lg-6 col-md-8 mt-2">
+                        <div class="name">{{favorite.productName}}</div>
+                        <div class="classify"><span>Thương hiệu:</span> {{favorite.brand}}</div>
+                        <div class="amount"><span>Số lượng :</span> {{favorite.quantity}}</div>
+                        <div class="sku"><span>SKU:</span> {{favorite.SKU}} </div>
+                        <div class="discount"><span>Giảm giá:</span> {{favorite.discountPercent}}%</div>
+                    </div>
+                    <div class="col-md-4 price">
+                        <h6><span style="color: rgb(209, 204, 204); text-decoration: line-through; "
+                                class="mr-1"></span></h6>
+                        <h6><span style="color: red; ">{{favorite.priceUnit | currency: "VND"}}</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="sum-money">
+                <div class="d-flex justify-content-end mr-3 mt-3 money">
+                    <h6 class="title-money">Tổng số tiền:<span class="ml-2" style="color: red;">{{favorite.totalPrice | currency: "VND"}}</span></h6>
+                </div>
+            </div>
+            <div class=" manipulation ">
+                <div class="d-flex justify-content-start col-md-6 col-lg-6 status-order">
+                    <div class="title-status">
+                        <!-- <h6 class="title">Còn {{favorite.again}} sản phẩm</h6> -->
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end col-md-6 col-lg-6  btn">
+                  <button type="submit" value="Xóa" class="btn-remove" (click)="removePendingFavorite(favorite.id)">Xóa</button>
+                    <button type="submit" value="Mua Lại" class="btn-repurchase">Đặt hàng</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+

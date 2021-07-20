@@ -1,4 +1,5 @@
-export interface PendingOrderItem {
+export interface FavoriteProduct {
+  [x: string]: any;
   id: number;
   productName: string;
   thumbnail: string;
@@ -7,5 +8,7 @@ export interface PendingOrderItem {
   totalPrice: number;
   quantity: number;
   brand:string;
-  
+  SKU:string;
+  again:number;
+
 }

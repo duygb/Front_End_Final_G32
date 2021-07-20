@@ -52,13 +52,14 @@ export class ProductSaleListComponent implements OnInit {
   addToCart(product: SaleProduct) {
     // deconstructing object: TODO <= need to read :))
     /* --> SET pendingOrder INTO LOCAL STORAGE */
-    const { id, name, priceUnit, discountPercent, thumbnail } = product;
+    const { id, name, priceUnit, discountPercent, thumbnail, brand } = product;
     const value: PendingOrderItem = {
       id: id,
       productName: name,
       thumbnail: thumbnail,
       discountPercent: discountPercent,
       priceUnit: priceUnit,
+      brand:brand,
       totalPrice: 0,
       quantity: 1,
     };

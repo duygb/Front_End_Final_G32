@@ -1,7 +1,7 @@
 import { SaleProduct } from './sale-product';
-import { Product } from './product';
+import { Products } from './product';
 export class Cart{
-    products!: Product[];
+    products!: Products[];
     saleProducts!: SaleProduct[];
-    
+
 }

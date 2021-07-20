@@ -10,6 +10,9 @@ import { addProductIntoOrder } from 'src/app/core/store/orders/orders.actions';
 import { Router } from '@angular/router';
 import { Sorter } from './common-products/sorter';
 import { MyServerHttpService } from 'src/app/Services/my-server-http-service.service';
+import { Brand } from 'src/app/product-sale/sidebar/common/brand';
+import { FavoriteProduct } from 'src/app/core/models/common-models/favorite';
+import { addProductIntoFavorite } from 'src/app/core/store/favorite/favorite.actions';
 
 
 @Component({
@@ -62,7 +65,7 @@ export class ProductsListComponent implements OnInit {
   addToCart(product:Products) {
     // deconstructing object: TODO <= need to read :))
     /* --> SET pendingOrder INTO LOCAL STORAGE */
-    const { id, name, priceToBuy, discountPercent, thumbnail } = product;
+    const { id, name, priceToBuy, discountPercent, thumbnail,brand} = product;
     const value: PendingOrderItem = {
       id: id,
       productName: name,
@@ -70,6 +73,7 @@ export class ProductsListComponent implements OnInit {
       discountPercent: discountPercent,
       priceUnit: priceToBuy,
       totalPrice: 0,
+      brand:brand,
       quantity: 1,
     };
     if (localStorage.getItem('pendingOrders') !== null) {
@@ -95,47 +99,44 @@ export class ProductsListComponent implements OnInit {
   }
   onSelect(product: Products) : void{
     this.selectedProduct = product;
-    this.router.navigateByUrl("/product-detail/" + product.id)
+    this.router.navigateByUrl("/product-detail/" + product.id);
   }
+  addToFavorite(product:Products) {
+    // deconstructing object: TODO <= need to read :))
+    /* --> SET pendingOrder INTO LOCAL STORAGE */
+    const { id, name, priceToBuy, discountPercent, thumbnail,brand,SKU,quantity} = product;
+    const value: FavoriteProduct = {
+      id: id,
+      productName: name,
+      thumbnail: thumbnail,
+      discountPercent: discountPercent,
+      priceUnit: priceToBuy,
+      totalPrice: 0,
+      brand:brand,
+      quantity: 1,
+      SKU:SKU,
+      again:quantity,
 
-  // onSelect(id:any){
-  //   this.router.navigate(['/product-detail'+ id]);
-  //   console.log('dataDetail',id);
-  // }
-
-  // addToDetail(product: Products){
-  //   const {id,name,description,priceUnit,priceToBuy,SKU,brand,discountPercent,
-  //     thumbnailDetailOne,thumbnailDetailTwo,thumbnailDetailThree} = product;
-  //     const value: DetailProduct = {
-  //         id: id,
-  //         nameProduct:name,
-  //         description:description,
-  //         priceToBuy:priceToBuy,
-  //         priceUnit:priceUnit,
-  //         discountPercent:discountPercent,
-  //         SKU:SKU,
-  //         brand:brand,
-  //         thumbnailDetailOne:thumbnailDetailOne,
-  //         thumbnailDetailTwo:thumbnailDetailTwo,
-  //         thumbnailDetailThree:thumbnailDetailThree,
-  //         quantity:1,
-  //     };
-  //     if (localStorage.getItem('detail') !== null) {
-  //       const detail = JSON.parse(
-  //         localStorage.getItem('detail') || ''
-  //       ) as DetailProduct[];
-
-  //       localStorage.setItem('detail', JSON.stringify(detail));
-  //       /*  end <-- */
-  //     } else {
-  //       const detail: DetailProduct[] = [];
-  //       detail.push(value);
-  //       localStorage.setItem('detail', JSON.stringify(detail));
-  //     }
-  //     this.store.dispatch(addProductIntoDetail());
-
-  // }
-
-
-
+    };
+    if (localStorage.getItem('pendingFavorite') !== null) {
+      const pendingFavorite = JSON.parse(
+        localStorage.getItem('pendingFavorite') || ''
+      ) as FavoriteProduct[];
+      const foundFavorite = pendingFavorite.find((order) => order.id === id);
+      if (foundFavorite) {
+        foundFavorite.quantity = foundFavorite.quantity + 1;
+      } else {
+        pendingFavorite.push(value);
+      }
+      localStorage.setItem('pendingFavorite', JSON.stringify(pendingFavorite));
+      /*  end <-- */
+    } else {
+      const pendingFavorite: FavoriteProduct[] = [];
+      pendingFavorite.push(value);
+      localStorage.setItem('pendingFavorite', JSON.stringify(pendingFavorite));
+    }
+    /* CHANGE STATE */
+    this.store.dispatch(addProductIntoFavorite());
+    alert("Đã thêm vào sản phẩm yêu thích")
+  }
 }

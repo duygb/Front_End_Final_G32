@@ -162,10 +162,10 @@ export class ProductsComponent implements OnInit {
     this.myServerHttpService.addToCart(item);
     this.router.navigate(['shopping-cart']);
   }
-  // addToDetail(item:Products){
-  //   this.myServerHttpService.addToDetail(item);
-  //   this.router.navigate(['detail-product']);
-  // }
+  addToFavorite(item:Products){
+    this.myServerHttpService.addToFavorite(item);
+    this.router.navigate(['favorite-product']);
+  }
 
   createVisiblePage(valueChange: number): number[] {
     let result = [];

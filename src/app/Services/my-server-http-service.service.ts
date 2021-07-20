@@ -4,6 +4,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { Products } from '../core/models/common-models/product';
+import { flatten } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root',
@@ -132,12 +133,12 @@ export class MyServerHttpService {
       .put(url, item, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
-  // public addToDetail(item: any): Observable<any> {
-  //   const url = `${this.REST_API_SERVER}/detail`;
-  //   return this.httpClient
-  //     .put(url, item, this.httpOptions)
-  //     .pipe(catchError(this.handleError));
-  // }
+  public addToFavorite(item: any): Observable<any> {
+    const url = `${this.REST_API_SERVER}`;
+    return this.httpClient
+      .put(url, item, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
   public getPageItems(page: number, limit: number): Observable<any> {
     const url = `${this.REST_API_SERVER}/saleProducts?_page=${page}&_limit=${limit}`;
     return this.httpClient
@@ -165,11 +166,17 @@ export class MyServerHttpService {
     // Return an observable with a user-facing error message.
     return throwError('Something bad happened; please try again later.');
   }
+  // getProductDetails(id:any){
+  //   return this.httpClient.get(this.REST_API_SERVER + '?id=' + id);
+  // }
+
+
   private product$!: Observable<Products[]>;
-  baseUrl!: string;
+  // baseUrl!: string;
+
   getProducts() : Observable<Products[]>{
     if(!this.product$){
-      this.product$ = this.httpClient.get<Products[]>(this.baseUrl).pipe(shareReplay());
+      this.product$ = this.httpClient.get<Products[]>(this.REST_API_SERVER).pipe(shareReplay());
     }
     return this.product$;
   }

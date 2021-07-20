@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+exports.removeFavorite = exports.REMOVE_FAVORITE = exports.updateQuantity = exports.UPDATE_QUANTITY = exports.addProductIntoFavorite = exports.ADD_PRODUCT_INTO_FAVORITE = void 0;
+var store_2 = require("@ngrx/store");
+exports.ADD_PRODUCT_INTO_FAVORITE = "[ADD] Product into favorite";
+exports.addProductIntoFavorite = store_2.createAction(exports.ADD_PRODUCT_INTO_FAVORITE);
+exports.UPDATE_QUANTITY = '[Update] Quantity';
+exports.updateQuantity = store_2.createAction(exports.UPDATE_QUANTITY);
+exports.REMOVE_FAVORITE = "[REMOVE] favorite";
+exports.removeFavorite = store_2.createAction(exports.REMOVE_FAVORITE);

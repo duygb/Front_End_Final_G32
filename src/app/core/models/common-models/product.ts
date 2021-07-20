@@ -16,6 +16,7 @@ export class Products{
   sex!: string;
   age!: string;
   tax!: string;
+  quantity!:number;
 
 
 }

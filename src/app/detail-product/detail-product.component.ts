@@ -9,10 +9,12 @@ import { MyServerHttpService } from '../Services/my-server-http-service.service'
   styleUrls: ['./detail-product.component.scss']
 })
 export class DetailProductComponent implements OnInit {
+  productID: any;
+  productData: any;
   // param = '';
   // detailProduct?:any;
   // datadetail : any[] = [];
-  @Input() public productDetail!: Products;
+  @Input() public productDetail! : Products;
   // public getid = "";
   // public getname = "";
   constructor(private route : ActivatedRoute,
@@ -22,14 +24,19 @@ export class DetailProductComponent implements OnInit {
   ngOnInit(): void {
     let id = +this.route.snapshot.params['id'];
     this.myServerHttpService.getProductById(id).subscribe(result => this.productDetail = result);
-// this.showDetail();
-  }
-// public showDetail(){
-//   this.route.params.subscribe(data=>{
-//     this.param = data['id']
-//   })
-//   this.myServerHttpService.getId(this.param).subscribe(datadetail => {
-//     this.detailProduct = datadetail;
-//   })
-// }
+    // this. productID = this.route.snapshot.params['id'];
+    // this.loadProductDetails(this.productID);
+  }                                      
+
+  // loadProductDetails(productID : Products){
+  //   this.myServerHttpService.getProductDetails(productID).subscribe(product => {
+  //     this.productData = product;
+  //   });
+  // }
+
+  // navigation(link:any){
+  //   this.router.navigate([link]);
+  // }
+
+
 }
