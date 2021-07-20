@@ -31,7 +31,6 @@ export class FavoriteProductComponent implements OnInit {
         Math.round(
           ((100-item.discountPercent) * item.priceUnit * item.quantity) / 100 / 1000
         ) * 1000,
-
     }));
   }
 
@@ -58,5 +57,41 @@ export class FavoriteProductComponent implements OnInit {
     localStorage.setItem('favoriteProduct', JSON.stringify(favoriteProduct));
     this.store.dispatch(removeFavorite());
   }
-  
+  addToCart(product:FavoriteProduct) {
+    // deconstructing object: TODO <= need to read :))
+    /* --> SET pendingOrder INTO LOCAL STORAGE */
+    const { id, productName, priceToBuy,priceUnit, discountPercent, thumbnail,brand} = product;
+    const value: PendingOrderItem = {
+      id: id,
+      productName: productName,
+      thumbnail: thumbnail,
+      discountPercent: discountPercent,
+      priceUnit: priceUnit,
+      
+      totalPrice: 0,
+      brand:brand,
+      quantity: 1,
+    };
+    if (localStorage.getItem('pendingOrders') !== null) {
+      const pendingOrders = JSON.parse(
+        localStorage.getItem('pendingOrders') || ''
+      ) as PendingOrderItem[];
+      const foundOrder = pendingOrders.find((order) => order.id === id);
+      if (foundOrder) {
+        foundOrder.quantity = foundOrder.quantity + 1;
+      } else {
+        pendingOrders.push(value);
+      }
+      localStorage.setItem('pendingOrders', JSON.stringify(pendingOrders));
+      /*  end <-- */
+    } else {
+      const pendingOrders: PendingOrderItem[] = [];
+      pendingOrders.push(value);
+      localStorage.setItem('pendingOrders', JSON.stringify(pendingOrders));
+    }
+    /* CHANGE STATE */
+    this.store.dispatch(addProductIntoOrder());
+    alert("Đã thêm vào giỏ hàng")
+  }
+
 }
