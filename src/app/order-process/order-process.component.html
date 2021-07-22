@@ -1,5 +1,6 @@
 <app-title-box [title]="title" [thumbnail]="backgroundImage"></app-title-box>
-<div class="container">
+<div class="container-fluid">
+  <p class="status">Trạng thái đơn hàng</p>
   <ul class="progressbar">
       <li class="active">Đang đóng gói</li>
       <li>Giao cho đơn vị vận chuyển</li>
@@ -9,14 +10,13 @@
 </div>
 <div class="container-fluid">
   <div class="row">
-
       <div class="mt-4 content-history" *ngFor="let favorite of orderProcess$ | async" style="text-align: center;">
           <div class="infor-pro">
               <div class="img-info d-flex justify-content-start">
                   <div class="col-md-2"><a href="#">
                       <img src="./../../../assets/Image/SaleProduct-Image/{{favorite.thumbnail}}" height="110px" width="100px"
                               alt="" class="mt-2"></a></div>
-                  <div class="info col-lg-6 col-md-8 mt-2">
+                  <div class="info col-lg-6 col-md-8 mt-2 justify-content-start">
                       <div class="name">{{favorite.productName}}</div>
                       <div class="classify"><span>Thương hiệu:</span> {{favorite.brand}}</div>
                       <div class="amount"><span>Số lượng :</span> {{favorite.quantity}}</div>
@@ -42,8 +42,7 @@
                   </div>
               </div>
               <div class="d-flex justify-content-end col-md-6 col-lg-6  btn">
-                <button  type="submit" value="Xóa" class="btn-remove" >Xóa</button>
-                  <button  type="submit" value="Mua Lại" class="btn-repurchase">Mua lại</button>
+                <button  type="submit" value="Xóa" class="btn-remove" >Hủy đơn hàng</button>
               </div>
           </div>
       </div>
