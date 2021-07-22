@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { pendingOrdersSelection } from '../core/store/orders/orders.selector';
 import { Router } from '@angular/router';
+import { FavoriteProduct } from '../core/models/common-models/favorite';
+import { addProductIntoOrderProcess } from '../core/store/order-process/order-process.actions';
+import { OrderProcess } from '../core/models/common-models/order-process';
 
 @Component({
   selector: 'app-payment',
@@ -32,4 +35,15 @@ export class PaymentComponent implements OnInit {
       }
     }).unsubscribe;
   }
+  goOrderProcess(){
+    this.store.select(userSelection).subscribe(user => {
+      if(user !== null){
+        this.router.navigate(['/order-process']);
+      }else {
+        this.router.navigate(['/login']);
+      }
+    }).unsubscribe();
+    alert("Đặt hàng thành công")
+  }
+
 }

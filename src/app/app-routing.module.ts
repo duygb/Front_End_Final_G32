@@ -10,11 +10,11 @@ import { LoginComponent } from './login/login.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ResetPassComponent } from './reset-pass/reset-pass.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
-import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ProductsComponent } from './products/products.component';
 import { FavoriteProductComponent } from './favorite-product/favorite-product.component';
+import { OrderProcessComponent } from './order-process/order-process.component';
 
 
 
@@ -31,9 +31,9 @@ const routes: Routes = [
   { path: 'forget-pass', component: ForgetPassComponent},
   { path: 'reset-pass', component: ResetPassComponent},
   { path: 'product-detail/:id', component: DetailProductComponent},
-  { path: 'order-history', component: OrderHistoryComponent},
   { path: 'payment', component: PaymentComponent},
   { path: 'favorite-product', component: FavoriteProductComponent},
+  { path: 'order-process', component: OrderProcessComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
 ];

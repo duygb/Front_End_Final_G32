@@ -35,8 +35,7 @@ import { LoginComponent } from './login/login.component';
 import { CoreModule } from './core/core.module';
 import { EffectsModule } from '@ngrx/effects';
 import { LoginEffects } from './core/store/auth/login.effect';
-import { OrderHistoryComponent } from './order-history/order-history.component';
-import { ListOrderHistoryComponent } from './order-history/list-order-history/list-order-history.component';
+
 import { ShoppingCartComponent } from './shoping-cart/shopping-cart.component';
 import { SummaryBoxComponent } from './shoping-cart/summary-box/summary-box.component';
 import { TitleBoxComponent } from './tittle-box/title-box.component';
@@ -45,6 +44,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { TitleProductComponent } from './products/title-product/title-product.component';
 import { FavoriteProductComponent } from './favorite-product/favorite-product.component';
+import { OrderProcessComponent } from './order-process/order-process.component';
+
 
 
 
@@ -69,8 +70,6 @@ import { FavoriteProductComponent } from './favorite-product/favorite-product.co
     ResetPassComponent,
     DetailProductComponent,
     LoginComponent,
-    OrderHistoryComponent,
-    ListOrderHistoryComponent,
     ShoppingCartComponent,
     SummaryBoxComponent,
     TitleBoxComponent,
@@ -79,6 +78,7 @@ import { FavoriteProductComponent } from './favorite-product/favorite-product.co
     ProductsListComponent,
     TitleProductComponent,
     FavoriteProductComponent,
+    OrderProcessComponent,
 
 
 

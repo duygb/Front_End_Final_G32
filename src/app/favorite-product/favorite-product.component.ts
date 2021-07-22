@@ -67,7 +67,6 @@ export class FavoriteProductComponent implements OnInit {
       thumbnail: thumbnail,
       discountPercent: discountPercent,
       priceUnit: priceUnit,
-      
       totalPrice: 0,
       brand:brand,
       quantity: 1,

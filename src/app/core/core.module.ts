@@ -6,6 +6,7 @@ import { LoginEffects } from './store/auth/login.effect';
 import { ordersReducer } from './store/orders/orders.reducers';
 import { couponReducer } from './store/coupon/coupon.reducer';
 import { favoriteReducer } from './store/favorite/favorite.reducers';
+import { orderProcessReducer } from './store/order-process/order-process.reducers';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { favoriteReducer } from './store/favorite/favorite.reducers';
     StoreModule.forFeature('feature_orders', ordersReducer),
     StoreModule.forFeature('feature_coupon', couponReducer),
     StoreModule.forFeature('feature_favorite', favoriteReducer),
+    StoreModule.forFeature('feature_orderProcess', orderProcessReducer),
     EffectsModule.forFeature([LoginEffects]),
   ],
 })

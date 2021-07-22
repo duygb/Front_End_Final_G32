@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+exports.removeOrderProcess = exports.REMOVE_ORDERPROCESS = exports.updateQuantity = exports.UPDATE_QUANTITY = exports.addProductIntoOrderProcess = exports.ADD_PRODUCT_INTO_ORDERPROCESS = void 0;
+var store_1 = require("@ngrx/store");
+exports.ADD_PRODUCT_INTO_ORDERPROCESS = "[ADD] Product into orderprocess";
+exports.addProductIntoOrderProcess = store_1.createAction(exports.ADD_PRODUCT_INTO_ORDERPROCESS);
+exports.UPDATE_QUANTITY = '[Update] Quantity';
+exports.updateQuantity = store_1.createAction(exports.UPDATE_QUANTITY);
+exports.REMOVE_ORDERPROCESS = "[REMOVE] orderProcess";
+exports.removeOrderProcess = store_1.createAction(exports.REMOVE_ORDERPROCESS);

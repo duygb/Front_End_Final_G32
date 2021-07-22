@@ -15,7 +15,7 @@ import { Sorter } from './products-list/common-products/sorter';
 })
 export class ProductsComponent implements OnInit {
   title: string = 'SẢN PHẨM';
-  backgroundImage: string = "saleProduct-bg-title.jpg";
+  backgroundImage: string = "product.jpg";
 
 
   public getSizeProds!: number;
