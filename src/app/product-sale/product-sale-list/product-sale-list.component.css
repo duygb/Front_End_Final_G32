@@ -11,6 +11,7 @@ a {
   outline: none !important;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -940,6 +941,22 @@ ul.cart-list > li.total > .btn:hover {
   padding: 2px 10px;
   font-weight: 700;
   text-transform: uppercase;
+  border-bottom-left-radius: 15px;
+}
+
+.type-lb-discountPercent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 11;
+}
+
+.type-lb-discountPercent .discountPercent {
+  color: red;
+  padding: 2px 10px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /* border-bottom-left-radius: 15px; */
 }
 
 .type-lb .new {

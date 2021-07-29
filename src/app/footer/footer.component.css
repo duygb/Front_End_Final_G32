@@ -17,11 +17,26 @@ footer a {
   font-weight: 200px;
 }
 
+footer a:hover {
+  border-bottom: 1px solid azure;
+}
+
 footer .text-uppercase {
   text-decoration: underline;
 }
 
 footer button::after {
   content: "";
+}
+
+.list-unstyled {
+  height: auto;
+  width: auto;
+  text-align: left;
+  margin-left: 146px;
+}
+
+.img {
+  height: 177px;
 }
 /*# sourceMappingURL=footer.component.css.map */

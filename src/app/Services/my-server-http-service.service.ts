@@ -175,8 +175,9 @@ export class MyServerHttpService {
   // baseUrl!: string;
 
   getProducts() : Observable<Products[]>{
+    const url = `${this.REST_API_SERVER}/products`;
     if(!this.product$){
-      this.product$ = this.httpClient.get<Products[]>(this.REST_API_SERVER).pipe(shareReplay());
+      this.product$ = this.httpClient.get<Products[]>(url).pipe(shareReplay());
     }
     return this.product$;
   }

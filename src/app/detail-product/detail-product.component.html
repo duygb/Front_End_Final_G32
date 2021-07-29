@@ -1,33 +1,35 @@
 <ng-template #noProductDetail>
-<h2>Not Found 404</h2>
+<h2>Not Found Product</h2>
 </ng-template>
 <div class="container-fluid" >
   <div class="card">
     <div class="container-fliud">
-      <div class="wrapper row" >
+      <div class="wrapper row" *ngIf="productDetail;else noProductDetail">
         <div class="preview col-md-6" >
           <div class="preview-pic tab-content" >
             <div class="tab-pane active" id="pic-1"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailOne}}" /></div>
             <div class="tab-pane" id="pic-2"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailTwo}}" /></div>
             <div class="tab-pane" id="pic-3"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailThree}}" /></div>
+            <div class="tab-pane" id="pic-4"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailFour}}" /></div>
           </div>
           <ul class="preview-thumbnail nav nav-tabs">
             <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailOne}}" /></a></li>
             <li><a data-target="#pic-2" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailTwo}}" /></a></li>
             <li><a data-target="#pic-3" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailThree}}" /></a></li>
+            <li><a data-target="#pic-4" data-toggle="tab"><img src="./../../../assets/Image/SaleProduct-Image/{{productDetail.thumbnailDetailFour}}" /></a></li>
           </ul>
         </div>
 
         <div class="details col-md-6">
-          <h3 class="product-title">{{productData['p_name']}}</h3>
+          <h3 class="product-title">{{productDetail.name}}</h3>
           <div class="rating">
-            <!-- <div class="stars">
-              <span class="fa fa-star "></span>
-              <span class="fa fa-star "></span>
-              <span class="fa fa-star "></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div> -->
+            <div class="stars">
+              <span class="fa fa-star-o" style="color: yellow;font-size: 20px;"></span>
+              <span class="fa fa-star-o" style="color: yellow;font-size: 20px;"></span>
+              <span class="fa fa-star-o" style="color: yellow;font-size: 20px;"></span>
+              <span class="fa fa-star-o" style="color: yellow;font-size: 20px;"></span>
+              <span class="fa fa-star-o" style="color: yellow;font-size: 20px;"></span>
+            </div>
             <!-- <span class="review-no">41 đánh giá</span> -->
           </div>
           <p class="product-description">{{productDetail.description}}</p>
@@ -39,7 +41,7 @@
             <h6 class="count">1</h6>
             <button class="btn-adj">+</button>
           </div>
-          <h4 class="detail"><span>{{productDetail.priceToBuy}}</span></h4>
+          <h4 class="detail"><span>{{productDetail.priceToBuy | currency: "VND"}},000</span></h4>
 
            <div class="action">
             <button class="add-to-cart btn btn-default" type="button">thêm vào giỏ hàng</button>

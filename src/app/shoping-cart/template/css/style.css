@@ -1894,7 +1894,7 @@
      color: #010101;
 }
  .coupon-box .input-group .input-group-append .btn-theme {
-     background: #010101;
+      background: #d33b33;
      color: #ffffff;
      border: none;
      border-radius: 0px;
@@ -1902,7 +1902,8 @@
      padding: 0px 20px;
 }
  .coupon-box .input-group .input-group-append .btn-theme:hover {
-     background: #d33b33;
+      background: #010101;
+    
 }
  .update-box input[type="submit"]{
      background: #010101;
@@ -2403,6 +2404,9 @@
  .table-responsive .table td, .table-responsive .table th {
      vertical-align: middle;
      white-space: nowrap;
+}
+button::after{
+  content: '';
 }
 
 

@@ -27,8 +27,7 @@ export class ProductsListComponent implements OnInit {
   @Input() public sorters!: Sorter[];
   @Input() public sortCheck!: any;
   @Input() public visiblePagesNumber!: any;
-
-   selectedProduct! : Products;
+  @Input() public productDetail! : Products;
    dataDetail: any[]=[];
 
 
@@ -46,6 +45,7 @@ export class ProductsListComponent implements OnInit {
   ngOnInit(): void {}
   indexPaginationChange(valueChange: number) {
     this.onIndexPaginationChange.emit(valueChange);
+
   }
   changed(selectElement: HTMLSelectElement) {
     this.onChanged.emit(selectElement);
@@ -97,8 +97,9 @@ export class ProductsListComponent implements OnInit {
     this.store.dispatch(addProductIntoOrder());
     alert("Đã thêm vào giỏ hàng")
   }
+  /* get product id */
   onSelect(product: Products) : void{
-    this.selectedProduct = product;
+    this.productDetail = product;
     this.router.navigateByUrl("/product-detail/" + product.id);
   }
   addToFavorite(product:Products) {
@@ -139,4 +140,8 @@ export class ProductsListComponent implements OnInit {
     this.store.dispatch(addProductIntoFavorite());
     alert("Đã thêm vào sản phẩm yêu thích")
   }
+
+  // goProductDetail(){
+  //       this.router.navigate(['/product-detail']);
+  // }
 }

@@ -1,0 +1,214 @@
+.container {
+  width: 600px;
+  margin: 100px auto;
+}
+
+.status {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-transform: uppercase;
+  font-weight: bold;
+  size: 20px;
+  margin: 50px auto;
+}
+
+.progressbar {
+  counter-reset: step;
+  width: 600px;
+  margin: 50px auto;
+}
+
+.progressbar li {
+  list-style-type: none;
+  width: 25%;
+  float: left;
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7d7d7d;
+}
+
+.progressbar li:before {
+  width: 30px;
+  height: 30px;
+  content: counter(step);
+  counter-increment: step;
+  line-height: 30px;
+  border: 2px solid #7d7d7d;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progressbar li:after {
+  width: 100%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #7d7d7d;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+
+.progressbar li.active {
+  color: green;
+}
+
+.progressbar li.active:before {
+  border-color: #55b776;
+}
+
+.progressbar li.active + li:after {
+  background-color: #55b776;
+}
+
+span {
+  font-weight: 500;
+}
+
+.content-history {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: rgba(241, 238, 238, 0.959);
+  border-radius: 5px;
+}
+
+.content-history .infor-pro {
+  height: 130px;
+  width: 100%;
+}
+
+.content-history .infor-pro .img-info {
+  height: 130px;
+}
+
+.content-history .infor-pro .img-info .info {
+  height: 130px;
+  margin-left: -40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.content-history .infor-pro .img-info .info .name {
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content-history .infor-pro .img-info .price {
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 315px;
+}
+
+.content-history .sum-money {
+  height: 50px;
+  border-top: 1px solid gray;
+}
+
+.content-history .sum-money .money {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-history .manipulation {
+  height: 100px;
+}
+
+.content-history .manipulation .status-order {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content-history .manipulation .status-order .title-status .title {
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.content-history .manipulation .btn {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-history .manipulation .btn .btn-repurchase {
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  background-color: #ddda07;
+  border: none;
+}
+
+.content-history .manipulation .btn .btn-repurchase:hover {
+  background-color: #cfe66d;
+}
+
+.content-history .manipulation .btn .btn-repurchase::after {
+  content: "";
+}
+
+.content-history .manipulation .btn .btn-remove {
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  background-color: #ed143d;
+  border: none;
+}
+
+.content-history .manipulation .btn .btn-remove:hover {
+  background-color: #e95772;
+}
+
+.content-history .manipulation .btn .btn-remove::after {
+  content: "";
+}
+/*# sourceMappingURL=order-process.component.css.map */

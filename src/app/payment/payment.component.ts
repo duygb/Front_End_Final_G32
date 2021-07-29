@@ -20,12 +20,15 @@ export class PaymentComponent implements OnInit {
   backgroundImage: string = 'payment-bg-title.jpg';
 
   orders$!: Observable<PendingOrderItem[]>;
+  // orders!: PendingOrderItem[];
   constructor(private store: Store, private router: Router) {}
 
   ngOnInit(): void {
     /*  Khi người dùng click thanh toán, redirec -> payment. Nên sẽ kiểm tra đã login chưa. */
     this.checkLogin();
     this.orders$ = this.store.select(pendingOrdersSelection);
+
+
   }
 
   checkLogin() {
@@ -45,5 +48,15 @@ export class PaymentComponent implements OnInit {
     }).unsubscribe();
     alert("Đặt hàng thành công")
   }
+  // updateTotalPrice(orders: PendingOrderItem[]){
+  //   this.orders = orders.map((item) => ({
+  //     ...item,
+  //     totalPrice:
+  //       Math.round(
+  //         ((100-item.discountPercent) * item.priceUnit * item.quantity) / 100 / 1000
+  //       ) * 1000,
+
+  //   }));
+  // }
 
 }

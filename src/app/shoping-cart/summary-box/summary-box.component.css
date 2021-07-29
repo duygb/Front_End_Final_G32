@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=summary-box.component.css.map */
+button::after {
+  content: '';
+}
+
+.hvr-hover {
+  color: aliceblue;
+}
+/*# sourceMappingURL=summary-box.component.css.map */

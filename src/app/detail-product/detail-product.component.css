@@ -106,7 +106,7 @@ img {
 }
 
 .checked,
-.price span {
+.detail span {
   color: #ff9f1a;
 }
 
@@ -220,5 +220,28 @@ img {
 
 button::after {
   content: "";
+}
+
+.discount {
+  text-decoration: line-through;
+}
+
+.count-adj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.count-adj .count {
+  margin: 0px 10px;
+}
+
+.count-adj .btn-adj {
+  height: 30px;
+  width: 30px;
 }
 /*# sourceMappingURL=detail-product.component.css.map */

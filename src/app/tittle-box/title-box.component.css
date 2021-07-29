@@ -1161,7 +1161,7 @@ ul.cart-list > li.total > .btn:hover {
 /*------------------------------------------------------------------ Instagram Feed -------------------------------------------------------------------*/
 .instagram-box {
   padding: 70px 0px;
-  background: url(../images/ins-bg.jpg) no-repeat center center;
+  /*  background: url(../images/ins-bg.jpg) no-repeat center center; */
   background-size: auto auto;
   -ms-background-size: cover;
   background-size: cover;
@@ -1457,7 +1457,7 @@ ul.cart-list > li.total > .btn:hover {
 
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
 .all-title-box {
-  /* background: url("../images/all-bg-title.jpg") no-repeat center center; */
+  background: "" no-repeat center center;
   -ms-background-size: cover;
   background-size: cover;
   text-align: center;
@@ -1485,10 +1485,10 @@ ul.cart-list > li.total > .btn:hover {
 }
 
 .all-title-box .breadcrumb {
-  background: #d33b33;
+  background: crimson;
   margin: 0px;
   display: inline-block;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 
 .all-title-box .breadcrumb li {
