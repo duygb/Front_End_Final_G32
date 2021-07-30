@@ -49,7 +49,7 @@ export class PaymentComponent implements OnInit {
     alert("Đặt hàng thành công")
   }
   // updateTotalPrice(orders: PendingOrderItem[]){
-  //   this.orders = orders.map((item) => ({
+  //   this.orders$ = orders.map((item) => ({
   //     ...item,
   //     totalPrice:
   //       Math.round(

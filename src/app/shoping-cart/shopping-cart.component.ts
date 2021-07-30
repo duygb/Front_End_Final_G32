@@ -43,9 +43,7 @@ export class ShoppingCartComponent implements OnInit {
 
 
   changeQuantity(pendingOrderItem: PendingOrderItem, value: string){
-    let pendingOrders = JSON.parse(
-      localStorage.getItem('pendingOrders') || ''
-    ) as PendingOrderItem[];
+    let pendingOrders = JSON.parse(localStorage.getItem('pendingOrders') || '') as PendingOrderItem[];
     const foundOrder = pendingOrders.find((order) => order.id === pendingOrderItem.id);
     if (foundOrder) {
       foundOrder.quantity = Number.parseInt(value);

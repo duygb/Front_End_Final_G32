@@ -98,7 +98,7 @@ export class ProductsListComponent implements OnInit {
     alert("Đã thêm vào giỏ hàng")
   }
   /* get product id */
-  onSelect(product: Products) : void{
+  intoDetail(product: Products) : void{
     this.productDetail = product;
     this.router.navigateByUrl("/product-detail/" + product.id);
   }
@@ -140,8 +140,4 @@ export class ProductsListComponent implements OnInit {
     this.store.dispatch(addProductIntoFavorite());
     alert("Đã thêm vào sản phẩm yêu thích")
   }
-
-  // goProductDetail(){
-  //       this.router.navigate(['/product-detail']);
-  // }
 }

@@ -19,6 +19,7 @@ export class Products{
   age!: string;
   tax!: string;
   quantity!:number;
+  amount!:number;
 
 
 }

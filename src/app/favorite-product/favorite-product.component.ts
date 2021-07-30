@@ -47,6 +47,7 @@ export class FavoriteProductComponent implements OnInit {
     localStorage.setItem('favoriteProduct', JSON.stringify(favoriteProduct));
     this.store.dispatch(addProductIntoFavorite());
   }
+
   removePendingFavorite(id: number){
     let favoriteProduct = JSON.parse(
       localStorage.getItem('favoriteProduct') || ''
@@ -57,6 +58,7 @@ export class FavoriteProductComponent implements OnInit {
     localStorage.setItem('favoriteProduct', JSON.stringify(favoriteProduct));
     this.store.dispatch(removeFavorite());
   }
+  
   addToCart(product:FavoriteProduct) {
     // deconstructing object: TODO <= need to read :))
     /* --> SET pendingOrder INTO LOCAL STORAGE */

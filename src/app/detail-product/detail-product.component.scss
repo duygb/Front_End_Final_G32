@@ -111,7 +111,12 @@ img {
 .detail span {
     color: #ff9f1a;
 }
-
+.amount{
+  text-align: center;
+  line-height: 10px;
+  font-size:20px;
+  margin-bottom: 5px;
+}
 .product-title,
 .rating,
 .product-description,
@@ -155,6 +160,7 @@ img {
     -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
 }
+
 .add-to-cart:hover,
 .like:hover {
     background: #b36800;
@@ -223,11 +229,16 @@ button::after {
   display: flex;
   flex-direction: row;
   .count{
-    margin: 0px 10px;
+    margin: 5px 10px;
   }
   .btn-adj{
     height: 30px;
     width: 30px;
+    background-color: gray;
+    border: 1px solid rgb(88, 86, 86);
   }
+.btn-adj:hover{
+  background-color: rgb(90, 85, 85);
+}
 }
 /*# sourceMappingURL=style.css.map */

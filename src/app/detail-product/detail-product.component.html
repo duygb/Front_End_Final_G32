@@ -37,15 +37,15 @@
           <h6 class="detail">SKU: <span></span>{{productDetail.SKU}}</h6>
           <h6 class="detail">Số lượng:</h6>
           <div class="count-adj detail">
-            <button class="btn-adj">-</button>
-            <h6 class="count">1</h6>
-            <button class="btn-adj">+</button>
+            <button class="btn-adj" (click) = "reduce(productDetail)"><div class="amount">-</div></button>
+            <h6 class="count">{{productDetail.amount}}</h6>
+            <button class="btn-adj" (click) = "increase(productDetail)"><div class="amount">+</div></button>
           </div>
-          <h4 class="detail"><span>{{productDetail.priceToBuy | currency: "VND"}},000</span></h4>
+          <h4 class="detail"><span>{{productDetail.priceToBuy | currency: "VND"}}</span></h4>
 
            <div class="action">
-            <button class="add-to-cart btn btn-default" type="button">thêm vào giỏ hàng</button>
-            <button class="like btn btn-default ml-2" type="button"><span class="fa fa-heart"></span></button>
+            <button class="add-to-cart btn btn-default" type="button" (click) = "addToCart(productDetail)">thêm vào giỏ hàng</button>
+            <button (click) = "addToFavorite(productDetail)" class="like btn btn-default ml-2 heart" type="button"><span class="fa fa-heart"></span></button>
           </div>
         </div>
       </div>

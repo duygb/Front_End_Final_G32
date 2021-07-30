@@ -185,18 +185,4 @@ export class MyServerHttpService {
   getProductById(id:number) : Observable<Products> {
     return this.getProducts().pipe(flatMap(result => result), first(product => product.id==id));
   }
-
-
-  // getProductById(id:number): Observable<Products> {
-  //   return this.httpClient.get<Products>(this.REST_API_SERVER + '/product-detail/' + id)
-  //   .pipe(catchError(this.handleError)
-  //   )
-  // }
-
-  // getId(id:any){
-  //   const url = `${this.REST_API_SERVER}/${id}`;
-  //   return this.httpClient
-  //     .get(url, this.httpOptions)
-  //     .pipe(catchError(this.handleError));
-  // }
 }

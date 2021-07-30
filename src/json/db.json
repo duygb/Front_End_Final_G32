@@ -67,10 +67,11 @@
         "quantity": 10,
         "discountPercent": 0,
         "priceToBuy": 1199,
+        "amount": 1,
         "thumbnailDetailOne":"Bộ thử thách Hot Wheels Tòa Tháp Trọc Trời Lượn Vòng.jpg",
         "thumbnailDetailTwo":"Bộ thử thách Hot Wheels Tòa Tháp Trọc Trời Lượn Vòng-2.jpg",
         "thumbnailDetailThree":"Bộ thử thách Hot Wheels Tòa Tháp Trọc Trời Lượn Vòng-3.jpg",
-
+        "thumbnailDetailFour":"Bộ thử thách Hot Wheels Tòa Tháp Trọc Trời Lượn Vòng-4.jpg",
 
          "thumbnailDetail":["Bộ thử thách Hot Wheels Tòa Tháp Trọc Trời Lượn Vòng.jpg",
           "Bộ thử thách Hot Wheels Tòa Tháp Trọc Trời Lượn Vòng-2.jpg",
