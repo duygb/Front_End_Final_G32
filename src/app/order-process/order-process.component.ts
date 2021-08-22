@@ -23,6 +23,15 @@ export class OrderProcessComponent implements OnInit {
   ngOnInit(): void {
       this.orderProcess$ = this.store.select(pendingOrdersSelection);
     }
+    // updateTotalPrice(orders: PendingOrderItem[]){
+    //   this.orderProcess$ = orders.map((item) => ({
+    //     ...item,
+    //     totalPrice:
+    //       Math.round(
+    //         ((100-item.discountPercent) * item.priceUnit * item.quantity) / 100 / 1000
+    //       ) * 1000,
+    //   }));
+    // }
   }
 
 

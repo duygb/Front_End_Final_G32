@@ -21,7 +21,7 @@
                               <th class="col-2">
                                 <a href="#">
                                   <img class="img-fluid" src="../../../assets/Image/SaleProduct-Image/{{pendingOrder?.thumbnail}}" alt="" />
-                                  
+
                                 </a>
                               </th>
                               <th class="col-2">
@@ -42,7 +42,7 @@
                                 <p>{{pendingOrder?.totalPrice | currency: "VND"}}</p>
                               </th>
                               <th class="col-1">
-                                <a [routerLink]="['/shopping-cart']" style="margin-left: 5px;" (click)=removePendingOrder(pendingOrder.id)>
+                                <a  style="margin-left: 5px;" (click)="removePendingOrder(pendingOrder.id)">
                                   <i style="color: black" class="fas fa-times"></i>
                                 </a>
                               </th>

@@ -18,7 +18,7 @@ import { addProductIntoFavorite } from '../core/store/favorite/favorite.actions'
 })
 export class DetailProductComponent implements OnInit {
 
-  // productDetail$!: Observer<PendingOrderItem[]>;
+
   @Input() public productDetail!:Products;
   public getSizeProds!: number;
   constructor(private route : ActivatedRoute,
@@ -30,8 +30,17 @@ export class DetailProductComponent implements OnInit {
     //get product by id
     let id = +this.route.snapshot.params['id'];
     this.myServerHttpService.getProductById(id).subscribe(result => this.productDetail = result);
-    this.setPrice(this.productDetail);
+    // this.setPrice(this.productDetail);
+this.productDetail.priceToBuy = this.productDetail.priceToBuy * 1000;
+// this.productDetail.priceUnit = this.productDetail.priceUnit * 1000;
   }
+  //*1000
+  setPrice(products: Products) {
+      products.priceUnit *= 1000;
+      products.priceToBuy *= 1000;
+
+  }
+
   //tăng số lượng
   increase(product: Products){
     product.amount +=1;
@@ -43,22 +52,16 @@ export class DetailProductComponent implements OnInit {
     }else{
       product.amount;
     }
+  }
 
-  }
-  
-  setPrice(products: Products) {
-    products.priceUnit *= 1000;
-    products.priceToBuy *= 1000;
-  }
+
 
   updateTotalPrice(orders: PendingOrderItem){
     this.productDetail = orders.map((item: { discountPercent: number; priceUnit: number; quantity: number; }) => ({
       ...item,
       totalPrice:
         Math.round(
-          ((100-item.discountPercent) * item.priceUnit * item.quantity) / 100 / 1000
-        ) * 1000,
-    }));
+          ((100-item.discountPercent) * item.priceUnit * item.quantity) / 100 / 1000) * 1000,}));
   }
 
   addToCart(product:Products) {
@@ -96,6 +99,7 @@ export class DetailProductComponent implements OnInit {
     this.store.dispatch(addProductIntoOrder());
     alert("Đã thêm vào giỏ hàng")
   }
+
   addToFavorite(product:Products) {
     // deconstructing object: TODO <= need to read :))
     /* --> SET pendingOrder INTO LOCAL STORAGE */

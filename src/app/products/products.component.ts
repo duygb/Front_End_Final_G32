@@ -111,6 +111,7 @@ export class ProductsComponent implements OnInit {
       product.priceToBuy *= 1000;
     });
   }
+
   setSortCheck(newSort: string, newOrder: string) {
     this.sortCheck.sort = newSort;
     this.sortCheck.order = newOrder;

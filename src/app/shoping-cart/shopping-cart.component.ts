@@ -5,6 +5,7 @@ import { Store } from '@ngrx/store';
 import { Component, OnInit } from "@angular/core";
 import { MyServerHttpService } from "../Services/my-server-http-service.service";
 import { pendingOrdersSelection } from '../core/store/orders/orders.selector';
+import { removeFavorite } from '../core/store/favorite/favorite.actions';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -53,9 +54,7 @@ export class ShoppingCartComponent implements OnInit {
     this.store.dispatch(addProductIntoOrder());
   }
   removePendingOrder(id: number){
-    let pendingOrders = JSON.parse(
-      localStorage.getItem('pendingOrders') || ''
-    ) as PendingOrderItem[];
+    let pendingOrders = JSON.parse(localStorage.getItem('pendingOrders') || '') as PendingOrderItem[];
     /* lọc ra sản phẩm có Id được xoá */
     pendingOrders = pendingOrders.filter(item => item.id !== id)
     console.log(pendingOrders);

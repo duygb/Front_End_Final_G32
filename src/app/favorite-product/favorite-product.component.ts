@@ -4,8 +4,10 @@ import { FavoriteProduct } from '../core/models/common-models/favorite';
 import { PendingOrderItem } from '../core/models/common-models/pendingOrderItem';
 import { Products } from '../core/models/common-models/product';
 import { addProductIntoFavorite, removeFavorite } from '../core/store/favorite/favorite.actions';
+import { favoriteReducer } from '../core/store/favorite/favorite.reducers';
 import { pendingFavoriteSelection } from '../core/store/favorite/favorite.selector';
 import { FavoriteState } from '../core/store/favorite/favorite.state';
+import { removeOrderProcess } from '../core/store/order-process/order-process.actions';
 import { addProductIntoOrder, removeOrder } from '../core/store/orders/orders.actions';
 import { pendingOrdersSelection } from '../core/store/orders/orders.selector';
 
@@ -38,7 +40,7 @@ export class FavoriteProductComponent implements OnInit {
   changeQuantity(pendingFavoriteItem: FavoriteProduct, value: string){
     let favoriteProduct = JSON.parse(
       localStorage.getItem('favoriteProduct') || ''
-    ) as PendingOrderItem[];
+    ) as FavoriteProduct[];
     const foundFavorite = favoriteProduct.find((order) => order.id === pendingFavoriteItem.id);
     if (foundFavorite) {
       foundFavorite.quantity = Number.parseInt(value);
@@ -49,16 +51,17 @@ export class FavoriteProductComponent implements OnInit {
   }
 
   removePendingFavorite(id: number){
-    let favoriteProduct = JSON.parse(
-      localStorage.getItem('favoriteProduct') || ''
-    ) as FavoriteProduct[];
-    /* lọc ra sản phẩm có Id được xoá */
-    favoriteProduct = favoriteProduct.filter(item => item.id !== id)
-    console.log(favoriteProduct);
-    localStorage.setItem('favoriteProduct', JSON.stringify(favoriteProduct));
-    this.store.dispatch(removeFavorite());
+    // let favoriteProduct = JSON.parse(localStorage.getItem('favoriteProduct') || '') as FavoriteProduct[];
+    // favoriteProduct = favoriteProduct.filter(item => item.id !== id)
+    // console.log(favoriteProduct);
+    // localStorage.setItem('favoriteProduct', JSON.stringify(favoriteProduct));
+    // this.store.dispatch(removeFavorite());
+
+   const index =  this.favoriteProduct.findIndex(e => e.id === id);
+    this.favoriteProduct.splice(index,1);
+
   }
-  
+
   addToCart(product:FavoriteProduct) {
     // deconstructing object: TODO <= need to read :))
     /* --> SET pendingOrder INTO LOCAL STORAGE */
@@ -94,5 +97,7 @@ export class FavoriteProductComponent implements OnInit {
     this.store.dispatch(addProductIntoOrder());
     alert("Đã thêm vào giỏ hàng")
   }
+
+
 
 }
