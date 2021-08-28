@@ -1810,7 +1810,7 @@ ul.cart-list > li.total > .btn:hover {
 }
 
 .search-product button {
-  background: crimson;
+  background: #010101;
   color: #ffffff;
   font-size: 18px;
   position: absolute;
@@ -1824,7 +1824,7 @@ ul.cart-list > li.total > .btn:hover {
 }
 
 .search-product button:hover {
-  background: #010101;
+  background: #d33b33;
 }
 
 .filter-sidebar-left {
@@ -2762,9 +2762,3 @@ ul.cart-list > li.total > .btn:hover {
   vertical-align: middle;
   white-space: nowrap;
 }
-
-button::after {
-  content: "";
-}
-
-/*# sourceMappingURL=sidebar.component.css.map */

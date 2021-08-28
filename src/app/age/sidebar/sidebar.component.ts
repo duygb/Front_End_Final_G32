@@ -5,17 +5,18 @@ import { Brand } from './common/brand';
 import { Sex } from './common/sex';
 
 @Component({
-  selector: 'app-sidebar1',
+  selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent1 implements OnInit {
+export class SidebarComponent implements OnInit {
   brands: Brand[] = [];
   ages: Age[] = [];
   sexs: Sex[] = [];
   allElement: string[] = ['brands', 'ages', 'sexs'];
   checkAge: number[] = [];
   searchValue: string = '';
+
 
   @Output() onClickAge = new EventEmitter();
   @Output() onClickSex = new EventEmitter();
@@ -43,17 +44,14 @@ export class SidebarComponent1 implements OnInit {
       if (element === 'brands') {
         this.myHttp.getAll(element).subscribe((data) => {
           this.brands = data as Brand[];
-          console.log(this.brands);
         });
       } else if (element === 'ages') {
         this.myHttp.getAll(element).subscribe((data) => {
           this.ages = data as Age[];
-          console.log(this.ages);
         });
       } else if (element === 'sexs') {
         this.myHttp.getAll(element).subscribe((data) => {
           this.sexs = data as Sex[];
-          console.log(this.sexs);
         });
       }
     });
@@ -69,7 +67,6 @@ export class SidebarComponent1 implements OnInit {
     this.onClickBrand.emit(brandObject);
   }
   public clickSearch(){
-    alert(this.searchValue);
     this.onClickSearch.emit(this.searchValue);
   }
 }

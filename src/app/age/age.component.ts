@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {SidebarComponent1} from './sidebar/sidebar.component';
 import {SaleProduct} from "../core/models/common-models/sale-product";
 import {Sorter} from "../product-sale/product-sale-list/common-saleProduct/sorter";
 import {Pagination} from "../core/models/common-models/pagination";

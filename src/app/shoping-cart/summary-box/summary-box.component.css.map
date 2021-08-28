@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,AAAA,OAAO,CAAA;EACX,OAAO,EAAE,EAAE;CACZ;;AACD,AAAA,UAAU,CAAA;EACR,KAAK,EAAE,SAAS;CACjB",
-    "sources": [
-        "summary-box.component.scss"
-    ],
-    "names": [],
-    "file": "summary-box.component.css"
-}
+{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"summary-box.component.css"}

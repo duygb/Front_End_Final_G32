@@ -538,7 +538,7 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
     font-weight: 700;
 }
 .cart-list h6 a:hover{
-    color: #d33b33;
+    color: crimson;
 }
 ul.cart-list p .price{
     font-weight: normal;
@@ -555,7 +555,7 @@ ul.cart-list p .price{
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
-    background: #d33b33;
+    background: crimson;
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 0.3s;
@@ -1034,6 +1034,7 @@ ul.cart-list > li.total > .btn:hover{
 /*------------------------------------------------------------------ Instagram Feed -------------------------------------------------------------------*/
 .instagram-box{
     padding: 70px 0px;
+    background: url(../images/ins-bg.jpg) no-repeat center center;
     background-size: auto auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1301,6 +1302,7 @@ ul.cart-list > li.total > .btn:hover{
 }
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
 .all-title-box{
+    background: url("../images/all-bg-title.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
@@ -1548,7 +1550,7 @@ ul.cart-list > li.total > .btn:hover{
     opacity: 1;
 }
 .search-product button {
-    background: #010101;
+    background: crimson;
     color: #ffffff;
     font-size: 18px;
     position: absolute;
@@ -1561,7 +1563,7 @@ ul.cart-list > li.total > .btn:hover{
     height: 100%;
 }
 .search-product button:hover{
-    background: #d33b33;
+    background: #010101;
 }
 .filter-sidebar-left{
     margin-bottom: 20px;
@@ -1659,7 +1661,7 @@ ul.cart-list > li.total > .btn:hover{
 .price-box-slider p button{
     border: none;
     color: #ffffff;
-    float: left;
+    float: right;
 }
 .brand-box {
     display: inline-block;
@@ -2359,86 +2361,6 @@ ul.cart-list > li.total > .btn:hover{
     vertical-align: middle;
     white-space: nowrap;
 }
-.container {
-  display: block;
-  position: relative;
-  margin-left:1px;
-  padding-left: 28px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 18px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
+button::after{
+  content: '';
 }
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-.container {
-  &:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-
-  input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container {
-  input:checked ~ .checkmark:after {
-    display: block;
-  }
-
-  .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  sup{
-    font-size: 80%;
-    vertical-align: top;
-    position: relative;
-    top: 1px;
-  }
-
-  .wrapper{
-    display: table;
-    width: 100%;
-    height: 100%;
-  }
-
-  .container{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  }
